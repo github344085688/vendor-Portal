@@ -31,6 +31,10 @@ export default class Login extends Vue {
         passWord: "ssa"
     };
 
+    isshowPassword = true;
+    showPassword():void{
+        this.isshowPassword = ! this.isshowPassword;
+    }
     login = '';
     v$ = useVuelidate();
 
