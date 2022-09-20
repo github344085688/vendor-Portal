@@ -1,8 +1,12 @@
-import { Options, Vue } from 'vue-class-component';
+import { Options } from 'vue-class-component';
 import template from "./login.vue";
 import './login.scss';
+import baseVue from '../../utils/base-vue';
 import useVuelidate from '@vuelidate/core';
+import { getCurrentInstance } from 'vue'
+import { Watch } from "vue-property-decorator";
 import { required, minLength, maxLength, email,sameAs } from '@vuelidate/validators'
+
 @Options({
     validations: {
         formData: {
@@ -23,14 +27,24 @@ import { required, minLength, maxLength, email,sameAs } from '@vuelidate/validat
         propMessage: String
     },
 })
-export default class Login extends Vue {
+export default class Login extends baseVue {
+
 
 
      formData: object = {
         firstName: "ss",
         passWord: "ssa"
     };
-
+  /*  @Watch("message", { immediate: true, deep: true })
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    onChangeValue(newVal: number, oldVal: number) {
+        // todo...
+        // console.log(newVal);
+        if (newVal > 110) {
+            this.store.commit("testModule/updateTestData", newVal);
+            // console.log(this.store.state.testModule.test);
+        }
+    }*/
     isshowPassword = true;
     showPassword():void{
         this.isshowPassword = ! this.isshowPassword;
@@ -39,8 +53,13 @@ export default class Login extends Vue {
     v$ = useVuelidate();
 
     // 生命周期
-     created(){
-        // this.init();
+    mounted(){
+
+    }
+
+    signIn(){
+        this.$success('ssssss');
+        // console.log(this.proxy);
     }
 
 }

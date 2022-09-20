@@ -1,3 +1,11 @@
+
+
+declare const API_CONTEXT_PATH: string;
+
+
+/*
+
+
 declare module "*.vue" {
     import Vue from "vue";
     export default Vue;
@@ -22,8 +30,8 @@ declare module 'moment' {
   export default moment;
 }
 
-declare const API_CONTEXT_PATH: string;
+
 declare const STATIC_CONTENT_CONTEXT_PATH: string;
 declare const TMS_DOMAIN: string;
 declare const DEPOSIT_API_BASE_URL: string;
-declare const isPermissionDisabled: boolean;
+declare const isPermissionDisabled: boolean;*/

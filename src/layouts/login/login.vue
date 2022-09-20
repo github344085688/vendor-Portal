@@ -1,11 +1,4 @@
 <template>
-<!--    <div>
-        <h2>watch 基本使用方法</h2>
-        <h2>{{ counter }}</h2>
-        <button @click="add">+</button>
-        <button @click="minus">-</button>
-        {{name}}&#45;&#45;{{age}}&#45;&#45;{{id}}
-    </div>-->
     <div class="d-flex win100 flex-column justify-content-center align-items-center po-r" style="height: 100%;" >
         <div class="shadows shadows3 p-4 login-moudle po-a m-auto" style="height: 90%; width: 45%"  >
             <div class="d-flex media-t-4 mediaju-center-to-left">
