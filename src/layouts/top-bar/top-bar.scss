@@ -1,0 +1,22 @@
+.item-childs-link {
+	transition: all 0.5s;
+	display: flex;
+	border-radius: 6px;
+	align-items: center;
+	font-size: 14px;
+	min-height: 42px;
+	box-sizing: border-box;
+	margin-bottom: 1px;
+	padding-left: 10px;
+	margin-left: 17px;
+	transition: all 0.5s;
+	&:hover {
+		background: rgba(200, 216, 228, 0.7);
+		transition: all 0.5s;
+	}
+}
+
+.link_active {
+	background: rgba(200, 216, 228, 0.7);
+	transition: all 0.5s;
+}

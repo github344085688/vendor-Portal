@@ -2,8 +2,7 @@
     <Transition name="top" mode="out-in" appear>
         <section id="message" v-if="msgOueue.length > 0">
             <transition-group name="top">
-                <div
-                        class="d-flex align-items-center br-ra4 br-red100  br-1 p-4 message"
+                <div  class="d-flex align-items-center justify-content-start br-ra4 br-red100  br-1 p-4 message"
                         v-for="item in msgOueue"
                         :key="item.uid"
                         :style="
@@ -16,12 +15,14 @@
             ';'
           "
                 >
-                    <span class=" ml-5" :class="item.config.icon"></span>
+
                     <div class="f-18">{{ item.config.content }}</div>
+                    <div class="icon_box ml-auto" @click.prevent.stop = "onClose"  :style="
+            'background:' +
+            item.config.color
+          "><i class="icon-30"></i></div>
                 </div>
             </transition-group>
         </section>
     </transition>
 </template>
-
-<style lang="scss"  src="./popup-head.scss"/>

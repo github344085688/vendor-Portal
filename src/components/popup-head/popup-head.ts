@@ -4,6 +4,7 @@
 import { Options, Vue } from 'vue-class-component';
 import { Prop, Watch } from "vue-property-decorator";
 import WiseVue from "../../utils/base-vue";
+import './popup-head.scss';
 import template from "./popup-head.vue";
 @Options({
     mixins: [template]

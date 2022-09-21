@@ -62,7 +62,6 @@ export default class Login extends baseVue {
         this.$normals('normal');
         this.$errors('error');
         this.$warnings('warning');
-        this.setRouter({ name: 'Layouts'})
 
         // console.log(this.proxy);
     }

@@ -1,0 +1,132 @@
+
+.login-moudle{
+	min-height: 800px; width: 45%
+}
+.col-media{
+}
+.media-l-4{
+	margin-left: 1.5rem !important;
+}
+.media-t-4{
+	margin-top: 1.5rem !important;
+}
+.mediaju-center-to-left{
+	justify-content: center !important;
+	text-align: center;
+}
+.media-logo{
+	height: 63px
+}
+.product-modal{
+	width: 560px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 16px;
+}
+.productModal-animation{
+	-webkit-animation: marginTop 0.25s linear;
+	-moz-animation: marginTop 0.25s linear;
+	-ms-animation: marginTop 0.25s linear;
+	-o-animation: marginTop 0.25s linear;
+	animation: marginTop 0.25s linear;
+}
+.m-t-20{
+	margin-top:10%;
+}
+.login-up-link{
+	margin-left: 15px;
+	cursor: pointer;
+	color: #488492 !important;
+	font-weight: bold;
+}
+.media-d-no{
+	display: block;
+}
+.media-wid100{
+	width: 100%;
+	height: 100%;
+	.media-pl-80{
+		padding-left: 80px;
+	}
+	.media-pl-30{
+		padding-left: 30px;
+	}
+	.media-logo{
+		width: 180px;height: auto;
+	}
+
+}
+@media only screen and (max-width: 640px), only screen and (max-device-width:640px) {
+	#sidebar{
+		display: none;
+	}
+	#riehgRouterView{
+		width: 100%;
+		position: inherit;
+		top: 0;
+		height: 100%;
+	}
+	.login-moudle{
+		height: auto; width: 100%;
+		background: #ffffff;
+		box-shadow: 0px 0px 0px rgba(44, 60, 89, 0.07);
+	}
+	.col-media{
+		margin-left: 0!important;
+		width: 100% !important;
+		-webkit-box-flex: 0!important;
+		-ms-flex: 0 0 100%!important;
+		flex: 0 0 100%!important;
+		max-width: 100%!important;
+		margin-right: 0!important;
+		margin-top: 1.5rem!important;
+	}
+	.media-l-4{
+		margin-left: 0 !important;
+	}
+	.media-t-4{
+		margin-top: 0 !important;
+	}
+	.mediaju-center-to-left{
+		justify-content: flex-start;
+		text-align: left;
+	}
+	.media-logo{
+		height: 40px;
+		margin-bottom: 40px;
+	}
+	.product-modal{
+		width: 96%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.productModal-animation{
+		-webkit-animation: marginTop 0.25s linear;
+		-moz-animation: marginTop 0.25s linear;
+		-ms-animation: marginTop 0.25s linear;
+		-o-animation: marginTop 0.25s linear;
+		animation: marginTop 0.25s linear;
+	}
+	.m-t-20{
+		margin-top:25px;
+	}
+	.media-wid100{
+		width: 90%; padding-top: 10px; height: 100%; margin: auto;
+		.media-pl-80{
+			padding-left: 0;
+		}
+		.media-pl-30{
+			padding-left: 0;
+		}
+		.media-logo{
+			width: 100px;height: auto;
+		}
+	}
+	.media-d-no{
+		display: none;
+	}
+}
+
+
+
+

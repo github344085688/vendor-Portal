@@ -49,17 +49,11 @@ export default {
      app.config.globalProperties.$error = error;
      },*/
     install (app: any) {
-        // 1.实例化并绑定组件
         const MESSage_EXTEND = createApp(Error);
-        const MESSage_CREATE_EL:any = MESSage_EXTEND.mount(
+        const MESSage_CREATE_EL: any = MESSage_EXTEND.mount(
             document.createElement("div"),
         );
-
-
         document.body.appendChild(MESSage_CREATE_EL.$el);
-
-
-        // 3.调用显示的方法
         const PUBLIC_FN = {
 
             hexToRgb (hex: any, opacity: any = 1) {
@@ -70,18 +64,22 @@ export default {
             success (content: any) {
                 const UID = String(counts)
                 var config:any = {}
-
                 config.uid = UID;
                 config.color = "#67C23A";
                 config.background = this.hexToRgb("#e1f3d8");
                 config.icon = "el-icon-success";
-                config.borderColor = "#67C23A"
+                config.borderColor = "#67C23A";
                 config.content = content;
-
-                this.show(config)
+                config.moudel = 'success';
+                this.show(config, MESSage_CREATE_EL, true)
             },
 
             error (content: any) {
+               /* const MESSage_ERROR = createApp(Error);
+                const MESSage_ERROR_EL: any = MESSage_ERROR.mount(
+                    document.createElement("div"),
+                );
+                document.body.appendChild(MESSage_ERROR_EL.$el);*/
 
                 var config:any = {}
 
@@ -89,11 +87,10 @@ export default {
                 config.uid = UID;
                 config.color = "#F56C6C";
                 config.background = this.hexToRgb("#fde2e2");
-                config.icon = "el-icon-error";
                 config.content = content;
-                config.borderColor = "#F56C6C"
-
-                this.show(config)
+                config.borderColor = "#F56C6C";
+                config.moudel = 'error';
+                this.show(config, MESSage_CREATE_EL, true);
             },
 
             warning (content: any) {
@@ -106,7 +103,7 @@ export default {
                 config.content = content;
                 config.borderColor = "#E6A23C"
 
-                this.show(config)
+                this.show(config,MESSage_CREATE_EL, true)
             },
 
             normal (content: any) {
@@ -115,11 +112,10 @@ export default {
                 config.uid = UID;
                 config.color = "#303133";
                 config.background = this.hexToRgb("#909399");
-                config.icon = "el-icon-info";
                 config.content = content;
                 config.borderColor = "#303133"
 
-                this.show(config)
+                this.show(config,MESSage_CREATE_EL, true)
             },
 
             self (content: any, color: any = "#303133", background : any= "#909399", icon : any= "el-icon-info", bgop: any = 1) {
@@ -129,24 +125,21 @@ export default {
                 config.background = this.hexToRgb(background, bgop);
                 config.icon = icon;
                 config.content = content;
-                this.show(config)
+                this.show(config,MESSage_CREATE_EL, true)
             },
 
-            show (config: any) {
+            show (config: any , el:any, isClose: boolean = true) {
                 const UID = String(counts);
-                MESSage_CREATE_EL.uid = UID;
+                el.uid = UID;
 
-                if (MESSage_CREATE_EL.msgOueue.length > 5) {
-                    MESSage_CREATE_EL.msgOueue.shift()
+                if (el.msgOueue.length > 5) {
+                    el.msgOueue.shift()
                 }
 
-                console.log('config', config);
-
                 counts++;
-                MESSage_CREATE_EL.msgOueue.push({uid: counts, config: config});
-
-                setTimeout(() => {
-                    MESSage_CREATE_EL.onClose();
+                el.msgOueue.push({uid: counts, config: config});
+               if(isClose) setTimeout(() => {
+                   el.onClose();
                 }, 3000)
             },
         };
