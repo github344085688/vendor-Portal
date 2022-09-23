@@ -5,6 +5,7 @@ import baseVue from '../../utils/base-vue';
 import useVuelidate from '@vuelidate/core';
 import { getCurrentInstance } from 'vue'
 import { Watch } from "vue-property-decorator";
+import LoginServers from "../../services/loginServers";
 import { required, minLength, maxLength, email,sameAs } from '@vuelidate/validators'
 
 @Options({
@@ -26,123 +27,108 @@ import { required, minLength, maxLength, email,sameAs } from '@vuelidate/validat
     props: {
         propMessage: String
     },
+    watch: {
+        count: { handler: 'countChanged', immediate: true ,deep: true},
+    },
 })
 export default class Login extends baseVue {
-
-
-
-     formData: object = {
-        firstName: "ss",
-        passWord: "ssa"
+    public count = 1;
+    public isLoding:boolean = true;
+    public formData: object = {
+        firstName: "",
+        passWord: ""
     };
-  /*  @Watch("message", { immediate: true, deep: true })
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    onChangeValue(newVal: number, oldVal: number) {
-        // todo...
-        // console.log(newVal);
-        if (newVal > 110) {
-            this.store.commit("testModule/updateTestData", newVal);
-            // console.log(this.store.state.testModule.test);
-        }
-    }*/
-    isshowPassword = true;
-    showPassword():void{
+
+    public countChanged(value: number, oldValue: number): void {
+        // this.$log(`countChanged`, { value, oldValue });
+    }
+
+    public isshowPassword = true;
+    public showPassword():void{
         this.isshowPassword = ! this.isshowPassword;
     }
     login = '';
-    v$ = useVuelidate();
+    v$: any = useVuelidate();
 
     // 生命周期
     mounted(){
 
     }
+    /*    submitForm(){
+     console.log(this.v$);
+     this.v$.$validate();
+     if(!this.v$.$error){
+     alert('Form successfully submitted')
+     }else{
+     alert('Form failed validation')
+     }
 
-    signIn(){
-        this.$success('success');
-        this.$normals('normal');
-        this.$errors('error');
-        this.$warnings('warning');
+     }*/
+    public signIn(){
+        this.v$.$validate();
+        console.log(this.v$);
+        /* if(!this.v$.$error){
+         alert('Form successfully submitted')
+         }else{
+         alert('Form failed validation')
+         }*/
+        // this.$success('success');
+        /* */
+        this.$reconfirm({
+            title: 'Remove Small Parcel',
+            content: 'Are You Sure You Want To remove this small parcel? ',
+            confirm: 'Yes',
+            cancel: 'No',
+        })
+            .then((ord: any) => {
+                this.isLoding = false;
+                console.log(ord);
+            })
+            .catch((err: any) => {
+                console.log(err);
+            });
+        /*
+         this.$normals('normal');
+         this.$errors('error');
+         this.$warnings('warning');*/
+        // ;
         this.setRouter({ name: 'Layouts'})
 
-        // console.log(this.proxy);
+    }
+
+
+
+    private locationHrefSpId(demo: any, url: any, name: any) {
+        LoginServers.getLocationHrefSpId(demo).subscribe(
+            (res: any) => {
+                if (res) {
+                    if (name == "google") {
+                        if (res.data) window.location.href = `${url}${res.data.google_sp_entity_id}`;
+                    }
+                    if (name == "facebook") {
+                        if (res.data) window.location.href = `${url}${res.data.facebook_sp_entity_id}`;
+                    }
+                }
+            },
+            err => {
+                if (err.response.data && err.response.data.message) {
+                    if (err.response.data.message.company_id) {
+                        this.$errors(err.response.data.message.company_id[0]);
+                        return;
+                    }
+                    this.$errors(err.response.data.message);
+                }
+            }
+        )
+
+    }
+
+
+    public getRegisterLoging(name: string) {
+        const host = window.location.hostname;
+        if (host === "localhost" || host === "shipdev.unisco.com" || host === "shipstage.unisco.com") {
+            this.locationHrefSpId(0, 'https://stagesso.unisco.com/samlsso?spEntityID=', name);
+        }
     }
 
 }
-
-/*
-
-
-import { defineComponent, computed, reactive, toRefs, watch, ref } from 'vue'
-import BaseVue from "@/shared/base-vue";
-
-import { useVuelidate } from '@vuelidate/core';
-import { required } from '@vuelidate/validators';
-
-interface IPerson {
-    readonly id: number
-    name: string
-    age ? : number
-    sex ? : string
-};
-export default defineComponent({
-    mixins: [template],
-    components: {
-    },
-    name:'Login',
-    setup(props) {
-        const v$ = useVuelidate();
-        const user: IPerson = reactive({
-            id:1,
-            name: 'unis',
-            age: 15,
-        });
-        const formData  = reactive({
-            userName:''
-        });
-        const getName = computed(() => {
-            return "getName invoked";
-        });
-
-        const counter = ref(0);
-        let  isshowLogin = ref(true);
-
-        const onSignUp = () => {
-            counter.value = counter.value + 1
-        }
-
-        const minus = () => {
-            counter.value = counter.value - 1
-        }
-
-        watch(counter, (newValue, oldValue) => {
-            console.log('counter 发生了变化，最新的值是：', newValue)
-        })
-
-        /!*reactive 和 ref 都是用来定义响应式数据的 reactive更推荐去定义复杂的数据类型 ref 更推荐定义基本类型
-         ref 和 reactive 本质我们可以简单地理解为ref是对reactive的二次包装， ref定义的数据访问的时候要多一个.value
-         使用ref定义基本数据类型，ref也可以定义数组和对象。*!/
-        /!*  watch(active, (val) => {
-         if (val) loaded.value = true
-         });*!/
-        const validations = ()=>{
-            return {
-                formData: {
-                        userName: { required }
-
-                }
-            }
-        }
-
-        return {
-            ...toRefs(user),
-            getName,
-            counter,
-            onSignUp,
-            minus,
-            formData,
-            v$
-        }
-    },
-});
-
-*/

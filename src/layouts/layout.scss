@@ -1,14 +1,22 @@
-.top-bar{
+.top-bar {
 	position: absolute;
 	top: 0px;
 	left: 240px;
 	right: 0;
+	transition: left 0.5s;
 }
-.main-section{
+
+.main-section {
 	position: absolute;
 	top: 60px;
 	left: 240px;
 	bottom: 0;
 	right: 0;
+	transition: left 0.5s;
+}
+
+.side-spread {
+	left: 70px;
+	transition: left 0.5s;
 }
 

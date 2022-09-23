@@ -12,5 +12,13 @@ import TopBar from './top-bar'
     }
 })
 export default class Layouts extends baseVue {
+    public isSideSpread: boolean = true;
+    public sideSpread: any = {};
+
+    public togoaside(isSpread: boolean): void {
+        this.isSideSpread = isSpread;
+        this.sideSpread.bb = isSpread;
+        this.sideSpread.aaa = 'bbb';
+    }
 
 }

@@ -1,6 +1,6 @@
 <template>
     <Transition name="top" mode="out-in" appear>
-        <section id="message" v-if="msgOueue.length > 0">
+        <section id="message" >
             <transition-group name="top">
                 <div  class="d-flex align-items-center justify-content-start br-ra4 br-red100  br-1 p-4 message"
                         v-for="item in msgOueue"

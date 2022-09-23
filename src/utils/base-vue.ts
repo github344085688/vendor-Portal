@@ -9,31 +9,35 @@ export default class BaseVue extends Vue {
         return globalProperties
     }
 
-    proxy:any = this.useCurrentInstance();
-    $router:any = useRouter();
+    gb_proxy:any = this.useCurrentInstance();
+    gb_router:any = useRouter();
     $success(msg: any){
-         this.proxy.$message.success(msg) ;
+         this.gb_proxy.$message.success(msg) ;
     }
 
     $errors(msg: any){
-         this.proxy.$message.error(msg) ;
+         this.gb_proxy.$message.error(msg) ;
     }
 
     $warnings(msg: any){
-         this.proxy.$message.warning(msg) ;
+         this.gb_proxy.$message.warning(msg) ;
     }
 
     $normals(msg: any){
-        this.proxy.$message.normal(msg) ;
+        this.gb_proxy.$message.normal(msg) ;
+    }
+
+    $reconfirm(options: any){
+       return this.gb_proxy.$reconfirm(options) ;
     }
 
     setRouter(params: any){
-        this.$router.push(params);
+        this.gb_router.push(params);
     }
 
     getRouter(params: any){
        return {
-           query: this.$router.currentRoute.value
+           query: this.gb_router.currentRoute.value
        };
     }
 

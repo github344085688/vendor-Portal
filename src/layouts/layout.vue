@@ -1,9 +1,9 @@
 <template>
-    <section class="top-bar">
+    <section class="top-bar" :class="[isSideSpread?'':'side-spread']">
         <top-bar></top-bar>
     </section>
-    <side-nav></side-nav>
-    <section class="main-section">
+    <side-nav @togoaside="togoaside" :sideSpread="sideSpread"></side-nav>
+    <section class="main-section" :class="[isSideSpread?'':'side-spread']">
         <router-view />
     </section>
 </template>

@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex win100 flex-column justify-content-center align-items-center po-r" style="height: 100%;" >
         <div class="shadows shadows3 pt-0 p-4 login-moudle po-a m-auto"  >
-            <div class="d-flex media-t-4 mediaju-center-to-left">
+            <div class="d-flex media-t-4 mediaju-center-to-left" v-loding="isLoding">
                 <svg width="162" height="64" viewBox="0 0 162 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.63713 45.2463C9.63713 51.1203 13.1456 54.9301 19.3074 54.9301C25.4637 54.9301 28.9445 51.1203 28.9445 45.2463V17.1172H38.5816V46.1686C38.5816 56.297 31.0849 63.1537 19.3074 63.1537C7.52987 63.1537 0 56.297 0 46.1686V17.1172H9.63713V45.2463Z" fill="#D61515"/>
                     <path d="M77.5938 33.8663C77.5938 27.9924 74.0853 24.1825 67.9235 24.1825C61.7672 24.1825 58.2864 27.9924 58.2864 33.8663V61.9955H48.6548V32.9441C48.6548 22.8156 56.1516 15.959 67.9291 15.959C79.701 15.959 87.2309 22.8156 87.2309 32.9441V61.9955H77.5938V33.8663Z" fill="#009D48"/>
@@ -18,6 +18,13 @@
             <div class="d-flex media-t-4 mediaju-center-to-left f-b align-items-center ">
                 Are you a new or existing customer?<button class="unis-btn unis-btn-text" @click.stop.prevent="onSignUp()">Sign up</button>
             </div>
+          <!--  <Form @submit="onSubmit" :validation-schema="schema">
+                <TextField label="Name" class="unis-input large-border" name="name" placeholder="Name" />
+                <TextField label="Email" class="unis-input large-border" name="email" placeholder="Email" />
+                <TextField label="Password" class="unis-input large-border" name="password" type="password" />
+
+                <button>Submit</button>
+            </Form>-->
             <div class="win100  po-r mb-5">
                 <label>Email or Username</label>
                 <input class="unis-input large-border" type="text"
@@ -58,16 +65,9 @@
 
             </div>
             <div class="win100 mt-4">
-                <button type="submit" class="unis-btn unis-btn-primary unis-lag justify-content-center" @click.stop.prevent="signIn">Log in
-                    <div class="loading ml-4" >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div></button>
+                <button type="submit" class="unis-btn unis-btn-primary unis-lag justify-content-center align-items-center" @click.stop.prevent="signIn" v-butloding="isLoding">Log in
+                   </button>
             </div>
-
-
-
 
             <div class="win100 mt-4 d-flex justify-content-center align-items-center">
                 <input type="checkbox" name="layout" id="KeepMeLoggedIin" class="unis-checkbox"  @click="remeberMe" v-model="formData.remeberMe">

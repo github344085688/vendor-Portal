@@ -3,10 +3,12 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import '@/assets/css/unis.css';
-import plugin from './utils/plugin';
+import plugin from '@/utils/plugin';
+import {loding,butloding} from '@/directives/loding';
 const app = createApp(App);
-// installElementPlus(app);
 app.use(plugin);
+app.directive('loding', loding);
+app.directive('butloding', butloding);
 app.use(router);
 app.use(store);
 

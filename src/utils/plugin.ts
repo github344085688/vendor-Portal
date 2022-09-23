@@ -1,7 +1,8 @@
 import { createApp } from "vue";
-import Error from "../components/popup-head/popup-head";
+import PopupHead from "../components/popup-head";
+import PopupReconfirm from "../components/popup-reconfirm";
 
-var counts = 10;
+let counts = 10;
 declare module '@vue/runtime-core' {
     interface ComponentCustomProperties {
         $message: any,
@@ -10,46 +11,8 @@ declare module '@vue/runtime-core' {
 }
 
 export default {
-    /*    install (app: any) {
-     const MESSage_EXTEND = createApp(Error);
-     const MESSage_CREATE_EL: any = MESSage_EXTEND.mount(
-     document.createElement("div"),
-     );
-     document.body.appendChild(MESSage_CREATE_EL.$el);
-     /!*  console.log(app);
-     const MESSage_EXTEND = createApp(MESSage);
-     const MESSage_CREATE_EL = MESSage_EXTEND.mount(
-     document.createElement("div"),
-     );
-
-
-     document.body.appendChild(MESSage_CREATE_EL.$el);*!/
-
-     const PUBLIC_FN = {
-     name: '梅长苏',
-     weapons: '长剑',
-     title: '刺客'
-     };
-
-     const error = (msg: string, config: any = {}) =>{
-     let instance: any;
-     if (!instance) {
-     console.log('MESSage_EXTEND', MESSage_CREATE_EL.show);
-     MESSage_CREATE_EL.show = false;
-     MESSage_CREATE_EL.set(MESSage_CREATE_EL,'show',true);
-     // MESSage_CREATE_EL.show = true;
-
-     }
-
-
-     };
-
-
-     app.config.globalProperties.$message = PUBLIC_FN;
-     app.config.globalProperties.$error = error;
-     },*/
     install (app: any) {
-        const MESSage_EXTEND = createApp(Error);
+        const MESSage_EXTEND = createApp(PopupHead);
         const MESSage_CREATE_EL: any = MESSage_EXTEND.mount(
             document.createElement("div"),
         );
@@ -63,11 +26,10 @@ export default {
 
             success (content: any) {
                 const UID = String(counts)
-                var config:any = {}
+                let config:any = {}
                 config.uid = UID;
                 config.color = "#67C23A";
                 config.background = this.hexToRgb("#e1f3d8");
-                config.icon = "el-icon-success";
                 config.borderColor = "#67C23A";
                 config.content = content;
                 config.moudel = 'success';
@@ -75,14 +37,7 @@ export default {
             },
 
             error (content: any) {
-               /* const MESSage_ERROR = createApp(Error);
-                const MESSage_ERROR_EL: any = MESSage_ERROR.mount(
-                    document.createElement("div"),
-                );
-                document.body.appendChild(MESSage_ERROR_EL.$el);*/
-
-                var config:any = {}
-
+                let config:any = {}
                 const UID = String(counts)
                 config.uid = UID;
                 config.color = "#F56C6C";
@@ -94,7 +49,7 @@ export default {
             },
 
             warning (content: any) {
-                var config:any = {}
+                let config:any = {}
                 const UID = String(counts)
                 config.uid = UID;
                 config.color = "#E6A23C";
@@ -107,7 +62,7 @@ export default {
             },
 
             normal (content: any) {
-                var config:any = {}
+                let config:any = {}
                 const UID = String(counts)
                 config.uid = UID;
                 config.color = "#303133";
@@ -119,7 +74,7 @@ export default {
             },
 
             self (content: any, color: any = "#303133", background : any= "#909399", icon : any= "el-icon-info", bgop: any = 1) {
-                var config:any = {}
+                let config:any = {}
                 config.show = true;
                 config.color = color;
                 config.background = this.hexToRgb(background, bgop);
@@ -138,12 +93,40 @@ export default {
 
                 counts++;
                 el.msgOueue.push({uid: counts, config: config});
-               if(isClose) setTimeout(() => {
+                if(isClose) setTimeout(() => {
                    el.onClose();
                 }, 3000)
             },
         };
 
+        const reconfirm = (options: any)=>{
+            const POPUP_RECONFIRM = createApp(PopupReconfirm);
+            const POPUP_RECONFIRM_EL: any = POPUP_RECONFIRM.mount(
+                document.createElement("div"),
+            );
+            return new Promise((resolve, reject) => {
+                options.show = true;
+                document.body.appendChild(POPUP_RECONFIRM_EL.$el);
+                POPUP_RECONFIRM_EL.options = options;
+                let successBtn = POPUP_RECONFIRM_EL.onDetermine;
+                let cancelBtn = POPUP_RECONFIRM_EL.onCancel;
+                let closeBtn = POPUP_RECONFIRM_EL.onClose;
+                POPUP_RECONFIRM_EL.onDetermine = () => {
+                    successBtn();
+                    resolve('Confirm');
+                };
+                POPUP_RECONFIRM_EL.onCancel = () => {
+                    cancelBtn();
+                    reject('Cancel');
+                };
+                POPUP_RECONFIRM_EL.onClose = () => {
+                    closeBtn();
+                    reject('Close');
+                };
+            });
+
+        };
         app.config.globalProperties.$message = PUBLIC_FN;
+        app.config.globalProperties.$reconfirm = reconfirm;
     }
 }

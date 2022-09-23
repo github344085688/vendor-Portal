@@ -56,13 +56,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex">
-                        <button class="unis-btn compact unis-btn-wIcon justify-content-start align-items-center" style="color:#ECECEC " @click.stop.prevent="logOut">
+                    <div class="d-flex" >
+                        <button class="unis-btn compact full unis-btn-wIcon align-items-center" :class="[isFold ? 'justify-content-center' : 'justify-content-start']" style="color:#ECECEC " @click.stop.prevent="logOut">
                             <svg width="16" height="16" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.6992 0.916016H9.30339V12.7543H11.6992V0.916016ZM15.9638 3.80455L14.2268 5.52109C16.2992 6.7641 17.6888 9.00153 17.6888 11.5704C17.6888 15.4889 14.4664 18.6734 10.5013 18.6734C6.5362 18.6734 3.3138 15.4889 3.3138 11.5704C3.3138 9.00153 4.70339 6.7641 6.7638 5.50925L5.0388 3.80455C2.54714 5.50925 0.917969 8.35043 0.917969 11.5704C0.917969 16.8029 5.20651 21.041 10.5013 21.041C15.7961 21.041 20.0846 16.8029 20.0846 11.5704C20.0846 8.35043 18.4555 5.50925 15.9638 3.80455Z" fill="#ECECEC"/>
                             </svg>
-
-                            <span class="mr-2 ml-4">Log Out</span>
+                            <span class="mr-2 ml-4" v-if="!isFold">Log Out</span>
                         </button>
                     </div>
                 </div>
