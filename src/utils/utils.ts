@@ -12,7 +12,7 @@ export const filterRouterTopMap =  (nav: any, childRouters: Array<any>, filters:
             childRouters.push(router);
         }
 
-        if (childNav.childs) filterRouterTopMap(childNav.childs, childRouters,filters);
+        if (childNav.children) filterRouterTopMap(childNav.children, childRouters,filters);
     });
     else if(nav.path && nav.name && nav.component){
         let router:any = {};

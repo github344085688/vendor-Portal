@@ -1,10 +1,10 @@
 import { Options } from 'vue-class-component';
 import template from "./side-nav.vue";
 import './side-nav.scss';
-import baseVue from '../../utils/base-vue';
-import {SideNavConfig} from '@/router';
+import baseVue from '@/utils/base-vue';
+import SideNavConfig from '@/router/side-nav-config';
 import {find} from 'lodash-es';
-import {filterRouterTopMap} from '../../utils/utils'
+import {filterRouterTopMap} from '@/utils/utils'
 @Options({
     mixins: [template],
     components: {
@@ -74,16 +74,16 @@ export default class SideNav extends baseVue {
     public foldDetails(isFoldDetails: any, item: any) {
         if (this.navName == item.name) this.navName = '';
         else this.navName = item.name;
-        if (item.path && item.name) this.setRouter({name: item.name, params: {userId: '123'}})
+        if (item.path && item.name) this.setRouter({name: item.name})
     }
 
     public foldChildetails(item: any) {
         this.itemChildsLink = item.name;
-        if (item.path && item.name) this.setRouter({name: item.name, params: {userId: '123'}})
+        if (item.path && item.name) this.setRouter({name: item.name})
     }
 
     public logOut() {
-        this.setRouter({name: 'home'})
+        this.setRouter({name: 'SignIn'})
     }
 
 }

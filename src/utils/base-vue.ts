@@ -31,13 +31,18 @@ export default class BaseVue extends Vue {
        return this.gb_proxy.$reconfirm(options) ;
     }
 
+    onSignInOrUp(routerName: any){
+        if(routerName == 'Sign up') this.gb_router.push({ name: 'SignUp'});
+        if(routerName == 'Sign in') this.setRouter({name:'SignIn'});
+    }
+
     setRouter(params: any){
         this.gb_router.push(params);
     }
 
-    getRouter(params: any){
+    getRouter(){
        return {
-           query: this.gb_router.currentRoute.value
+           query: this.gb_router.currentRoute
        };
     }
 

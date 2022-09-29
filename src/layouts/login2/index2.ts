@@ -1,6 +1,6 @@
 import { Options } from 'vue-class-component';
-import template from "./login.vue";
-import './login.scss';
+import template from "../login/login.vue";
+import '../login/login.scss';
 import baseVue from '../../utils/base-vue';
 import useVuelidate from '@vuelidate/core';
 import { getCurrentInstance } from 'vue'
@@ -35,8 +35,7 @@ export default class Login extends baseVue {
     formData: object = {
         firstName: "",
         passWord: ""
-    };
-    /*  @Watch("message", { immediate: true, deep: true })
+    };    /*  @Watch("message", { immediate: true, deep: true })
      // eslint-disable-next-line @typescript-eslint/no-unused-vars
      onChangeValue(newVal: number, oldVal: number) {
      // todo...

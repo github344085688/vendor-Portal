@@ -13428,7 +13428,7 @@ side-side-navigation {
   width: auto;
   height: 100%;
   bottom: 0;
-  z-index: 9999999;
+  z-index: 99;
 }
 
 .overflow-y {

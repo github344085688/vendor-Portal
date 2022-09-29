@@ -26,17 +26,3 @@
 	padding-right: 4rem;
 }
 
-.topIn-enter-from,
-.topIn-leave-to {
-	transform: translate3d(0, -180%, 0);
-}
-.topIn-leave-from,
-.topIn-enter-to {
-	transform: translate3d(0, 0, 0);
-}
-.topIn-enter-active{
-	transition: all 0.2s;
-}
-.topIn-leave-active {
-	transition: all 0.8s;
-}

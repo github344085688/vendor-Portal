@@ -1,122 +1,73 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import login from '../layouts/login'
-import Layouts from '../layouts'
-import Invoices from '../layouts/invoices'
-import InvoiceHistory from '../layouts/invoice-history'
-import {filterRouterTopMap} from '../utils/utils'
-declare interface SideNavList {
-    groupName: string;
-    childs?: Array<SideNavChilds>;
+import Main from '@/layouts'
+import {filterRouterTopMap} from '@/utils/utils'
+import SideNavConfig from './side-nav-config'
+import SignInRouters from './sign-in-routers'
+import SignUpRouters from './sign-up-routers'
+
+import SignUp from '@/layouts/sign-up';
+import ChangeUserSignUp from '@/layouts/sign-up/change-user-sign-up';
+import {
+    createRouter,
+    createWebHistory,
+    NavigationFailure,
+    NavigationGuardNext,RouteRecordRaw,
+    RouteLocationNormalized,
+    RouteLocationNormalizedLoaded,
+    RouteLocationRaw,
+    Router,
+    RouteRecordNormalized,
+} from 'vue-router';
+
+
+type ScrollPositionCoordinates = {
+    behavior?: ScrollOptions['behavior'];
+    left?: number;
+    top?: number;
+};
+
+interface ScrollPositionElement extends ScrollToOptions {
+    el: string | Element;
 }
-declare interface SideNavChilds {
-    title: string;
-    icon: any;
-    path?: string,
-    name?: string,
-    component?: any
-    childs?: Array<any>;
-}
 
-export const SideNavConfig: Array<SideNavList> = [
-    {
-        groupName: '',
-        childs: [{
-            title: 'Dashboard',
-            name:'Dashboard',
-            icon: require('../assets/img/tms2.svg'),
-            childs: [],
 
-        },]
-    },
-    {
-        groupName: 'MAIN MENU', childs: [
-        {
-            title: 'TMS',
-            name:'TMS',
-            icon: require('../assets/img/tms2.svg'),
-            childs: [{
-                parentName:'TMS',
-                path: 'TMS/invoices',
-                name: 'Invoices',
-                component: Invoices,
-                title: 'Invoices'
-            }, {
-                parentName:'TMS',
-                path: 'TMS/invoice-history',
-                name: 'InvoiceHistory',
-                component: InvoiceHistory,
-                title: 'Invoice History'
-            }],
-        }
-    ]
-    },
-    {
-        groupName: 'MY BUSINESS', childs: [
-        {
-            title: 'Payments ',
-            name:'Payments',
-            icon: require('../assets/img/tms2.svg'),
-            childs: [{
-                parentName:'Payments',
-                path: 'payments/business',
-                name: 'Business',
-                component: Invoices,
-                title: 'Business'
-            }, {
-                parentName:'Payments',
-                path: 'payments/invoice-history',
-                name: 'businessHistory',
-                component: InvoiceHistory,
-                title: 'Business History'
-            }],
-        }, {
-            title: 'Business Info  ',
-            name:'BusinessInfo',
-            icon: require('../assets/img/tms2.svg'),
-        },
-    ]
-    },
-    {
-        groupName: 'GENERAL', childs: [
-        {
-            title: 'Message Center ',
-            name:'MessageCenter',
-            icon: require('../assets/img/tms2.svg'),
-        }, {
-            title: 'Settings',
-            name:'Settings',
-            icon: require('../assets/img/tms2.svg'),
-        },
-    ]
-    },
 
-];
-
-const childsRouter = ()=>{
+const childrenRouters = ()=>{
     let childRouters:Array<any> = [];
     filterRouterTopMap(SideNavConfig, childRouters, ['path','name','component']);
     return childRouters;
 }
-
-
-const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    name: 'home',
-    component: login
-  },
-  {
-    path: '/layouts',
-    name: 'Layouts',
-    component: Layouts,
+const mainRoutes:any=[ {
+    path: '/main',
+    name: 'Main',
+    component: Main,
     redirect: {name: 'Invoices'},
-    children:childsRouter()
-  }
-]
+    children:childrenRouters()
+}];
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+const routes: Array<RouteRecordRaw> = [...SignInRouters,...SignUpRouters,...mainRoutes];
+console.log(routes);
+
+const router: Router = createRouter({
+    history: createWebHistory(process.env.BASE_URL),
+    routes,
+    async scrollBehavior(
+        to: RouteLocationNormalized,
+        from: RouteLocationNormalizedLoaded,
+        savedPosition: ScrollPositionCoordinates | null
+    ): Promise<ScrollPositionCoordinates | ScrollPositionElement | false | void> {
+        if (savedPosition) {
+            return savedPosition;
+        }
+
+        if (to.hash) {
+            return { el: to.hash };
+        }
+        const [component]: RouteRecordNormalized[] = to.matched;
+
+        if (component.meta.scrollToTop) {
+            return { left: 0, top: 0 };
+        }
+    },
+});
 
 export default router;
