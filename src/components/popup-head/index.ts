@@ -7,6 +7,7 @@ import './popup-head.scss';
 import template from "./popup-head.vue";
 @Options({
     mixins: [template],
+    name: 'PopupHead',
     props: {
         show: {
             type: Boolean,

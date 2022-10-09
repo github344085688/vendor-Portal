@@ -3,6 +3,7 @@ import template from "./change-user-sign-in.vue";
 import baseVue from '@/utils/base-vue';
 @Options({
     mixins: [template],
+    name: 'ChangeUser',
     components: {
     },
 

@@ -4,7 +4,12 @@ import template from "./default-select.vue";
 import { ref } from "vue";
 @Options({
     mixins: [template],
+    mame:'DefaultSelect',
     props: {
+        name: {
+            type: String,
+            default: '',
+        },
         selectdata: {
             type: Object,
             default: {},
@@ -29,9 +34,9 @@ import { ref } from "vue";
             type: String,
             default: '',
         },
-        value: {
-            type: Object,
-            default: {},
+        modelValue: {
+            type: [Object,String,Number],
+            default: '',
         },
         addMes: {
             type: Object,
@@ -52,16 +57,17 @@ import { ref } from "vue";
         }
     },
     watch: {
-        error: {handler: 'watchError'},
-        selectdata: {handler: 'watchSelectdata'},
-        value: {handler: 'watchValue'},
+        error: {handler : 'watchError'},
+        selectdata: {handler : 'watchSelectdata'},
+        modelValue: {handler : 'watchModelValue'},
     }
 })
 export default class DefaultSelect extends WiseVue {
 
+    public name!: string;
     public selectdata!: any;
     public placeholder!: string;
-    public value!: any;
+    public modelValue!: any;
     public filterKey!: string;
     public syncKey!: string;
     public returnStructure!: string;
@@ -88,11 +94,12 @@ export default class DefaultSelect extends WiseVue {
             this.priSelectdata = val;
         }
         if (this.filterKey && val && val.length > 0) {
-            this.assignmentTransitionValue(this.value);
+            this.assignmentTransitionValue(this.modelValue);
         }
     }
 
-    public  watchValue(val: any, oldVal: any) {
+    public  watchModelValue(val: any, oldVal: any) {
+        console.log('watchValue',val);
         if (!val) {
             this.transitionValue = '';
         }
@@ -114,11 +121,14 @@ export default class DefaultSelect extends WiseVue {
 
     public  mounted() {
         this.defaultSelect = ref<any>(null);
-        if (this.value && typeof (this.value) == 'object') this.transitionValue = this.value[this.filterKey];
+        console.log('this.value1', this.modelValue);
+        if (this.modelValue && typeof (this.modelValue) == 'object') this.transitionValue = this.modelValue[this.filterKey];
         else if (this.filterKey && this.selectdata && this.selectdata.length > 0) {
-            this.assignmentTransitionValue(this.value);
+            // console.log('this.value', this.value);
+            this.assignmentTransitionValue(this.modelValue);
         } else {
-            this.transitionValue = this.value;
+            console.log('this.value2', this.modelValue);
+            this.transitionValue = this.modelValue;
         }
         if (this.selectdata) this.priSelectdata = this.selectdata;
 

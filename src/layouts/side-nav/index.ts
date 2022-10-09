@@ -7,6 +7,7 @@ import {find} from 'lodash-es';
 import {filterRouterTopMap} from '@/utils/utils'
 @Options({
     mixins: [template],
+    name: 'SideNav',
     components: {
     },
     props: {

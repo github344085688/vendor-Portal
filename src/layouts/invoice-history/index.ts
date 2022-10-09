@@ -5,6 +5,7 @@ import baseVue from '../../utils/base-vue';
 
 @Options({
     mixins: [template],
+    name: 'InvoiceHistory',
     components: {
     },
     props: {

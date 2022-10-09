@@ -4,6 +4,7 @@ import './top-bar.scss';
 import baseVue from '../../utils/base-vue';
 @Options({
     mixins: [template],
+    name:'topBar',
     components: {
     },
     props: {

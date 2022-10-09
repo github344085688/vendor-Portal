@@ -7,6 +7,7 @@ import './popup-reconfirm.scss';
 import template from "./popup-reconfirm.vue";
 @Options({
     mixins: [template],
+    name: 'PopupReconfirm',
 
 })
 export default class PopupReconfirm extends WiseVue {

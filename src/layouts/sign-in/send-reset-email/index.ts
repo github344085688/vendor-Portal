@@ -5,6 +5,7 @@ import LoginServers from "@/services/loginServers";
 import { Field, Form, useField } from 'vee-validate';
 @Options({
     mixins: [template],
+    name: 'SendResetEmail',
     components: {
         Field,
         Form,

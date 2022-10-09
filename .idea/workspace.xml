@@ -2,62 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="175c7981-bea1-4ccb-85af-d64f682dce6b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/portal/ches.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/portal/logon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/portal/track.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/primary-modal/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/primary-modal/primary-modal.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/primary-modal/primary-modal.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/login2/components/TextInput.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/login2/components/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/login2/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/login2/login2.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/login2/ss.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-in/change-user-sign-in/change-user-sign-in.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-in/change-user-sign-in/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-in/enter-email/enter-email.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-in/enter-email/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-in/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-in/send-reset-email/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-in/send-reset-email/send-reset-email.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/sign-in-page.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/change-user-sign-up.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/existing-customer-sign-up.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/resend-email/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/resend-email/resend-email.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/sign-up.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/verify-email-tips.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/verify-email/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/sign-up/verify-email/verify-email.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/router/side-nav-config.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/router/sign-in-routers.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/router/sign-up-routers.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue.config.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/layouts/login/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/layouts/login/login.scss" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/css/main.scss" afterPath="$PROJECT_DIR$/src/assets/css/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/css/unis.css" afterPath="$PROJECT_DIR$/src/assets/css/unis.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/popup-head/popup-head.scss" afterPath="$PROJECT_DIR$/src/components/popup-head/popup-head.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/popup-reconfirm/popup-reconfirm.scss" afterPath="$PROJECT_DIR$/src/components/popup-reconfirm/popup-reconfirm.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/popup-reconfirm/popup-reconfirm.vue" afterPath="$PROJECT_DIR$/src/components/popup-reconfirm/popup-reconfirm.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/default-select/default-select.vue" afterPath="$PROJECT_DIR$/src/components/default-select/default-select.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/default-select/index.ts" afterPath="$PROJECT_DIR$/src/components/default-select/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/pager/index.ts" afterPath="$PROJECT_DIR$/src/components/pager/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/popup-head/index.ts" afterPath="$PROJECT_DIR$/src/components/popup-head/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/popup-reconfirm/index.ts" afterPath="$PROJECT_DIR$/src/components/popup-reconfirm/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/primary-modal/index.ts" afterPath="$PROJECT_DIR$/src/components/primary-modal/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/index.ts" afterPath="$PROJECT_DIR$/src/layouts/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/invoice-history/index.ts" afterPath="$PROJECT_DIR$/src/layouts/invoice-history/index.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/invoices/index.ts" afterPath="$PROJECT_DIR$/src/layouts/invoices/index.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/invoices/invoices.vue" afterPath="$PROJECT_DIR$/src/layouts/invoices/invoices.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/side-nav/index.ts" afterPath="$PROJECT_DIR$/src/layouts/side-nav/index.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/side-nav/side-nav.vue" afterPath="$PROJECT_DIR$/src/layouts/side-nav/side-nav.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-in/change-user-sign-in/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-in/change-user-sign-in/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-in/enter-email/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-in/enter-email/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-in/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-in/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-in/send-reset-email/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-in/send-reset-email/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-up/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-up/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-up/resend-email/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-up/resend-email/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/sign-up/verify-email/index.ts" afterPath="$PROJECT_DIR$/src/layouts/sign-up/verify-email/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layouts/top-bar/index.ts" afterPath="$PROJECT_DIR$/src/layouts/top-bar/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.ts" afterPath="$PROJECT_DIR$/src/main.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.ts" afterPath="$PROJECT_DIR$/src/router/index.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/base-vue.ts" afterPath="$PROJECT_DIR$/src/utils/base-vue.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/utils.ts" afterPath="$PROJECT_DIR$/src/utils/utils.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/layouts/login/index2.ts" afterPath="$PROJECT_DIR$/src/layouts/login2/index2.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/layouts/login/login.vue" afterPath="$PROJECT_DIR$/src/layouts/sign-in/sign-in.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,82 +39,108 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="verify-email.vue" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email/verify-email.vue">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="420">
-                    <caret line="114" column="136" lean-forward="false" selection-start-line="114" selection-start-column="88" selection-end-line="114" selection-end-column="136" />
-                    <folding>
-                      <element signature="n#style#0;n#Field#0;n#div#3;n#Form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                      <element signature="n#div#1;n#div#4;n#Form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="existing-customer-sign-up.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/existing-customer-sign-up.vue">
+      <file leaf-file-name="default-select.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/default-select/default-select.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1456">
-              <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+            <state relative-caret-position="168">
+              <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/index.ts">
+        <entry file="file://$PROJECT_DIR$/src/router/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1648">
-              <caret line="75" column="40" lean-forward="false" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+            <state relative-caret-position="308">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#376#568#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/resend-email/index.ts">
+        <entry file="file://$PROJECT_DIR$/src/store/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="112">
+              <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="invoices.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/layouts/invoices/invoices.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="980">
+              <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
+                <element signature="n#table#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#primary-modal#0;n#div#0;n#template#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign-in-page.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/sign-in-page.vue">
+      <file leaf-file-name="main-routers.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/router/main-routers.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="58" column="26" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="58" selection-end-column="26" />
+            <state relative-caret-position="616">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#38#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/index.ts">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="37" column="105" lean-forward="false" selection-start-line="37" selection-start-column="105" selection-end-line="37" selection-end-column="105" />
+            <state relative-caret-position="140">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pager.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/pager/pager.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+              <folding>
+                <element signature="n#li#4;n#ul#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign-in-routers.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/router/sign-in-routers.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#38#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,60 +148,10 @@
       <file leaf-file-name="sign-up-routers.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/router/sign-up-routers.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="34" />
+            <state relative-caret-position="168">
+              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
               <folding>
-                <element signature="e#38#77#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="verify-email-tips.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/verify-email-tips.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="14" column="83" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/index.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="verify-email.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email/verify-email.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="104" column="47" lean-forward="true" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#Field#0;n#div#3;n#Form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#4;n#Form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#button#0;n#div#5;n#Form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email/index.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-                <element signature="e#1996#2004#0" expanded="false" />
-                <element signature="e#2172#2180#0" expanded="false" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,43 +163,43 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>isShowGroup</find>
-      <find>checkPageName</find>
-      <find>changePage</find>
-      <find>showPageName</find>
-      <find>Keep me logged in</find>
-      <find>watchShowPageName</find>
-      <find>Already have an account</find>
-      <find>SideNavConfig</find>
-      <find>SideNavList</find>
-      <find>enter-from</find>
-      <find>returnToLogin</find>
-      <find>useCurrentInstance</find>
-      <find>childs</find>
-      <find>onSubmit</find>
-      <find>fade-leave-active</find>
-      <find>watch</find>
-      <find>e</find>
-      <find>es</find>
-      <find>-es</find>
-      <find>transition</find>
-      <find>tms</find>
-      <find>err</find>
-      <find>tmsServiceToJson</find>
-      <find>img</find>
-      <find>has</find>
-      <find>verifyEmail</find>
-      <find>useField</find>
-      <find>moudleName</find>
-      <find>Tell us about your business</find>
-      <find>src/foundation-data/organization/common/template/newInbound.html</find>
+      <find>keyByPriSelectdatas</find>
+      <find>filtersName</find>
+      <find>returnStructure</find>
+      <find>error</find>
+      <find>select</find>
+      <find>isSelect</find>
+      <find>tms-errors</find>
+      <find>onItemSelect</find>
+      <find>disabled</find>
+      <find>placeholder</find>
+      <find>countIsNext</find>
+      <find>isFocused</find>
+      <find>transitionValue</find>
+      <find>interface</find>
+      <find>Any</find>
+      <find>object</find>
+      <find>modelValue</find>
+      <find>70px</find>
+      <find>pageSize</find>
+      <find>pageSizePage</find>
+      <find>default-select</find>
+      <find>ref&lt;any&gt;</find>
+      <find>min-height: '2rem', min-width: '70px', width: '70px'</find>
+      <find>mame</find>
+      <find>this.watchModelValue</find>
+      <find>ComponentOptionsBase</find>
+      <find>ref</find>
+      <find>store</find>
+      <find>生命周期</find>
+      <find>useStore</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -266,57 +212,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/layouts/login/loging-page/loging-page.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/login/loging-page/index.ts" />
-        <option value="$PROJECT_DIR$/src/utils/utils.ts" />
-        <option value="$PROJECT_DIR$/src/router/main-routers.ts" />
-        <option value="$PROJECT_DIR$/src/router/side-nav-config.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/login/change-user/index.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/login/forgot-password/index.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/login/login.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/login/forgot-password/forgot-password.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/login/login-page/index.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/login/send-reset-email/enter-email.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/login/enter-email/index.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/login/send-reset-email/send-reset-email.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/login/sign-up/index.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/login/index.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/login/change-user/change-user.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/login/login-page/login-page.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/login/enter-email/enter-email.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/login/sign-up/sign-up.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/login/change-user-sign-in/index.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/login/change-user-sign-up/index.ts" />
-        <option value="$PROJECT_DIR$/src/router/user-routers.ts" />
         <option value="$PROJECT_DIR$/src/layouts/login/send-reset-email/index.ts" />
         <option value="$PROJECT_DIR$/src/layouts/sign-in/sign-in.scss" />
         <option value="$PROJECT_DIR$/src/layouts/side-nav/side-nav.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/side-nav/index.ts" />
         <option value="$PROJECT_DIR$/src/layouts/sign-in/login-page/index.ts" />
         <option value="$PROJECT_DIR$/src/layouts/sign-in/login-page/login-page.vue" />
-        <option value="$PROJECT_DIR$/src/router/index.ts" />
-        <option value="$PROJECT_DIR$/src/router/sign-in-routers.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/sign-in/change-user-sign-in/index.ts" />
         <option value="$PROJECT_DIR$/src/utils/base-vue.ts" />
         <option value="$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/change-user-sign-up.vue" />
         <option value="$PROJECT_DIR$/src/layouts/sign-in/change-user-sign-in/change-user-sign-in.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/sign-up/index.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/sign-in/index.ts" />
         <option value="$PROJECT_DIR$/src/components/popup-head/popup-head.scss" />
-        <option value="$PROJECT_DIR$/src/layouts/sign-in/sign-in.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/sign-up/sign-up.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/index.ts" />
         <option value="$PROJECT_DIR$/src/assets/css/main.scss" />
         <option value="$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/existing-customer-sign-up.vue" />
         <option value="$PROJECT_DIR$/src/layouts/sign-up/resend-email/resend-email.vue" />
-        <option value="$PROJECT_DIR$/src/layouts/sign-up/resend-email/index.ts" />
         <option value="$PROJECT_DIR$/src/layouts/sign-up/verifyEmail/index.ts" />
         <option value="$PROJECT_DIR$/src/router/sign-up-routers.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/index.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/index.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/layout.vue" />
+        <option value="$PROJECT_DIR$/src/router/sign-in-routers.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-in/sign-in.vue" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-up/sign-up.vue" />
         <option value="$PROJECT_DIR$/src/layouts/sign-up/verify-email/verify-email.vue" />
+        <option value="$PROJECT_DIR$/src/assets/css/unis.css" />
+        <option value="$PROJECT_DIR$/src/components/pager/pager.scss" />
+        <option value="$PROJECT_DIR$/src/components/default-select/defaultSelect.scss" />
+        <option value="$PROJECT_DIR$/src/components/default-select/ss.ts" />
+        <option value="$PROJECT_DIR$/src/components/default-select/ss.html" />
+        <option value="$PROJECT_DIR$/src/components/pager/index.ts" />
+        <option value="$PROJECT_DIR$/src/components/popup-head/index.ts" />
+        <option value="$PROJECT_DIR$/src/components/popup-reconfirm/index.ts" />
+        <option value="$PROJECT_DIR$/src/components/primary-modal/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/invoice-history/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/side-nav/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-up/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/top-bar/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/index.ts" />
         <option value="$PROJECT_DIR$/src/layouts/sign-up/verify-email/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-up/resend-email/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-in/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-in/send-reset-email/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-in/enter-email/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/sign-in/change-user-sign-in/index.ts" />
+        <option value="$PROJECT_DIR$/src/layouts/invoices/index.ts" />
+        <option value="$PROJECT_DIR$/src/components/default-select/index.ts" />
+        <option value="$PROJECT_DIR$/src/components/default-select/default-select.vue" />
+        <option value="$PROJECT_DIR$/src/layouts/invoices/invoices.vue" />
+        <option value="$PROJECT_DIR$/src/components/pager/pager.vue" />
+        <option value="$PROJECT_DIR$/src/router/index.ts" />
+        <option value="$PROJECT_DIR$/src/main.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -437,195 +383,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sign-up" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sign-up" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="verify-email" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sign-up" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resend-email" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sign-up" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="existing-customer-sign-up" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sign-in" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sign-in" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sign-in-page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="primary-modal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor-Portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="popup-reconfirm" />
+              <option name="myItemId" value="invoices" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -661,7 +419,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -679,11 +441,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="default-select" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -716,18 +478,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\vendor_portal\vendor-Portal\src\assets\img\portal" />
-      <recent name="F:\vendor_portal\vendor-Portal\src\layouts\sign-up" />
-      <recent name="F:\vendor_portal\vendor-Portal\src\layouts\sign-up\verify-email" />
-      <recent name="F:\vendor_portal\vendor-Portal\src\layouts\sign-up\existing-customer-sign-up" />
-      <recent name="F:\vendor_portal\vendor-Portal\src\layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\vendor_portal\vendor-Portal\src\layouts\login2" />
       <recent name="F:\vendor_portal\vendor-Portal\src\layouts\login2\components" />
       <recent name="F:\vendor_portal\vendor-Portal\src\layouts" />
       <recent name="F:\vendor_portal\vendor-Portal\src\components\pops" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\vendor_portal\vendor-Portal\src" />
+      <recent name="F:\vendor_portal\vendor-Portal\src\components\default-select" />
+      <recent name="F:\vendor_portal\vendor-Portal\src\components\pager" />
+      <recent name="F:\vendor_portal\vendor-Portal\src\components" />
+      <recent name="F:\vendor_portal\vendor-Portal\src\assets\img\portal" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -839,7 +601,12 @@
       <workItem from="1663724972317" duration="29627000" />
       <workItem from="1663897295458" duration="16411000" />
       <workItem from="1664156651079" duration="24020000" />
-      <workItem from="1664243256989" duration="57178000" />
+      <workItem from="1664243256989" duration="61025000" />
+      <workItem from="1664502688626" duration="5054000" />
+      <workItem from="1665193689963" duration="10691000" />
+      <workItem from="1665212163601" duration="8098000" />
+      <workItem from="1665279009263" duration="5013000" />
+      <workItem from="1665284920058" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="vue 3 cli">
       <created>1663560836564</created>
@@ -876,35 +643,42 @@
       <option name="project" value="LOCAL" />
       <updated>1663923330688</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="vue 3 cli">
+      <created>1664438561026</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664438561026</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169218000" />
+    <option name="totallyTimeSpent" value="201954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1934" height="1047" extended-state="0" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16595517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274918" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Word Book" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32858709" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Word Book" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -951,471 +725,365 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/router/index.ts</url>
-          <line>31</line>
+          <line>33</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/layouts/login/enter-email/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="71" column="41" lean-forward="false" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/login/enter-email/enter-email.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="40" column="104" lean-forward="false" selection-start-line="40" selection-start-column="104" selection-end-line="40" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/login/send-reset-email/send-reset-email.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="20" column="139" lean-forward="false" selection-start-line="20" selection-start-column="126" selection-end-line="20" selection-end-column="139" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/login/login-page/login-page.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="73" column="60" lean-forward="true" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/login/change-user-sign-up/change-user-sign-up.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="12" column="100" lean-forward="false" selection-start-line="12" selection-start-column="100" selection-end-line="12" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/login/change-user-sign-up/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/login/change-user-sign-in/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/login/send-reset-email/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/login/change-user-sign-in/change-user-sign-in.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="12" column="121" lean-forward="false" selection-start-line="12" selection-start-column="121" selection-end-line="12" selection-end-column="121" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sian-in/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/sign-in.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/login.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/side-nav/side-nav.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-605">
-          <caret line="39" column="72" lean-forward="false" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/side-nav/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="85" column="37" lean-forward="false" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/login2/index.ts" />
+    <entry file="file://$PROJECT_DIR$/src/layouts/main/index.ts" />
+    <entry file="file://$PROJECT_DIR$/src/layouts/main/side-nav.vue" />
     <entry file="file://$PROJECT_DIR$/src/layouts/layout.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="364">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/sign-up.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email/verify-email.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="149" column="60" lean-forward="false" selection-start-line="149" selection-start-column="60" selection-end-line="149" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="450" column="20" lean-forward="true" selection-start-line="450" selection-start-column="20" selection-end-line="450" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pager/pager.scss" />
+    <entry file="file://$PROJECT_DIR$/src/components/default-select/defaultSelect.scss" />
+    <entry file="file://$PROJECT_DIR$/src/assets/css/unis.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123032">
+          <caret line="4394" column="34" lean-forward="false" selection-start-line="4394" selection-start-column="2" selection-end-line="4394" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/default-select/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2044">
+          <caret line="73" column="6" lean-forward="true" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/default-select/default-select.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/side-nav-config.ts">
+    <entry file="file://$PROJECT_DIR$/src/components/primary-modal/primary-modal.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-          <folding>
-            <element signature="e#38#79#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/popup-reconfirm/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-366">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/index.ts">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="186">
+          <caret line="474" column="59" lean-forward="false" selection-start-line="474" selection-start-column="53" selection-end-line="474" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/popup-head/popup-head.scss">
+    <entry file="file://$PROJECT_DIR$/src/layouts/invoices/invoices.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/sign-in.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#transition-group#0;n#Transition#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#transition-group#0;n#Transition#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/change-user-sign-up.vue">
+    <entry file="file://$PROJECT_DIR$/node_modules/vue-class-component/dist/vue-class-component.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
-          <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
+          <caret line="51" column="58" lean-forward="true" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/primary-modal/index.ts">
+    <entry file="file://$PROJECT_DIR$/src/components/pager/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="34" column="3" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="36" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="224">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@vue/runtime-core/dist/runtime-core.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="1928" column="19" lean-forward="true" selection-start-line="1928" selection-start-column="3" selection-end-line="1928" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="354">
+          <caret line="454" column="40" lean-forward="true" selection-start-line="454" selection-start-column="40" selection-end-line="454" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/change-user-sign-in/change-user-sign-in.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/popup-head/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/popup-reconfirm/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/primary-modal/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/directives/loding.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#div#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/change-user-sign-in/index.ts">
+    <entry file="file://$PROJECT_DIR$/src/layouts/invoice-history/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/index.ts">
+    <entry file="file://$PROJECT_DIR$/src/layouts/side-nav/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/unis.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="1320" column="1" lean-forward="true" selection-start-line="1320" selection-start-column="1" selection-end-line="1320" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="56">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="9" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/index.ts">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/top-bar/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="15" selection-end-column="5" />
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/resend-email/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/existing-customer-sign-up.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/change-user-sign-up.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="43" column="11" lean-forward="true" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/change-user-sign-up/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/send-reset-email/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/enter-email/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/change-user-sign-in/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/invoices/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/default-select/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="66" column="15" lean-forward="false" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/default-select/default-select.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/invoices/invoices.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <element signature="n#table#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#primary-modal#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pager/pager.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding>
+            <element signature="n#li#4;n#ul#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/main-routers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#38#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/sign-in-routers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#38#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/sign-up-routers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/router/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="44" column="3" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+        <state relative-caret-position="308">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#376#568#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/main.scss">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="458" column="14" lean-forward="false" selection-start-line="458" selection-start-column="14" selection-end-line="458" selection-end-column="14" />
-          <folding>
-            <element signature="e#6844#7003#0" expanded="false" />
-            <element signature="e#7007#7029#0" expanded="false" />
-            <element signature="e#7114#8443#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/enter-email/enter-email.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1176">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="140">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/enter-email/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/send-reset-email/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/send-reset-email/send-reset-email.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/base-vue.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/sign-in-routers.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/resend-email/resend-email.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="60" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/img/portal/track.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/sign-up.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/img/portal/ches.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/verify-email-tips.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="14" column="83" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/sign-up-routers.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="34" />
-          <folding>
-            <element signature="e#38#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email-tips/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/existing-customer-sign-up.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1456">
-          <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/sign-in-page.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="58" column="26" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="58" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/resend-email/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-in/sign-in-page/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="37" column="105" lean-forward="false" selection-start-line="37" selection-start-column="105" selection-end-line="37" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/existing-customer-sign-up/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1648">
-          <caret line="75" column="40" lean-forward="false" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-            <element signature="e#1996#2004#0" expanded="false" />
-            <element signature="e#2172#2180#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/sign-up/verify-email/verify-email.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="104" column="47" lean-forward="true" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#Field#0;n#div#3;n#Form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#4;n#Form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#div#5;n#Form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

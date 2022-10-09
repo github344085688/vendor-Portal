@@ -7,6 +7,7 @@ import DefaultSelect from '@/components/default-select';
 import Pager from '@/components/pager';
 @Options({
     mixins: [template],
+    name: 'Invoices',
     components: {
         PrimaryModal,
         DefaultSelect,
@@ -16,7 +17,7 @@ import Pager from '@/components/pager';
         propMessage: String
     },
 })
-export default class InvoiceHistory extends BaseVue {
+export default class Invoices extends BaseVue {
     public isShowMoudal:boolean = false;
     public searchParams:any = {};
     public paging: any = {
@@ -27,6 +28,10 @@ export default class InvoiceHistory extends BaseVue {
     };
     public onShowMoudal(isShowMoudal:boolean){
         this.isShowMoudal=true;
+    }
+
+    public getList(paging: any){
+        console.log(paging);
     }
 
 

@@ -6,6 +6,7 @@ import { Field, Form } from 'vee-validate';
 import { forEach } from 'lodash-es';
 @Options({
     mixins: [template],
+    name:'ExistingCustomerSignUp',
     components: {
         Field,
         Form,

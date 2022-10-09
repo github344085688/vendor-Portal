@@ -5,6 +5,7 @@ import { uniq, sortBy } from 'lodash-es';
 import DefaultSelect from '@/components/default-select';
 @Options({
     mixins: [template],
+    mame:'Pager',
     components: {
         DefaultSelect,
     },
@@ -46,7 +47,7 @@ export default class Pager extends WiseVue {
 
 
     pager = {activedPage: 1, totalPage: 0, pagerShowCount: 0, halfPagerShowCount: 0, low: 0, high: 0};
-    pageSize = 0;
+    pageSize = 10;
     inputPage = 1;
     lastPageSize = 0;
     lastTotalCount = 0;
@@ -131,6 +132,7 @@ export default class Pager extends WiseVue {
     }
 
     public pageSizePage(pageSize: any) {
+        console.log(pageSize);
         this.pageSize = pageSize;
         this.changeActivePage(1, true);
     }

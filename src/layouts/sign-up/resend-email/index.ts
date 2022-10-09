@@ -4,6 +4,7 @@ import baseVue from '@/utils/base-vue';
 import LoginServers from "@/services/loginServers";
 @Options({
     mixins: [template],
+    name:'ResendEmail',
 })
 export default class ResendEmail extends baseVue {
 

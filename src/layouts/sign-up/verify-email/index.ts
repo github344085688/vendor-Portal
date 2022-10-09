@@ -7,13 +7,14 @@ import DefaultSelect from '@/components/default-select';
 import { forEach } from 'lodash-es';
 @Options({
     mixins: [template],
+    name:'VerifyEmail',
     components: {
         Field,
         Form,
         DefaultSelect
     },
 })
-export default class VerifyEmailTips extends baseVue {
+export default class VerifyEmail extends baseVue {
     public schema = {
         firstName: (value: any) => {
             if (value && value.length) {

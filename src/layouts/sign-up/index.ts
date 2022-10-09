@@ -3,6 +3,7 @@ import template from "./sign-up.vue";
 import baseVue from '@/utils/base-vue';
 @Options({
     mixins: [template],
+    name: 'SignUp',
     components: {
     },
 

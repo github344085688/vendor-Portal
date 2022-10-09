@@ -1,5 +1,5 @@
 <template>
-    <button class="unis-select unis-dropdown " ref="defaultSelect">
+    <button class="unis-select unis-dropdown " :name="name" ref="defaultSelect">
         <input type="button"
                :disabled="disabled"
                v-on:focus="handleFocus"

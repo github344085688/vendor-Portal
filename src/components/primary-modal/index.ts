@@ -4,6 +4,7 @@ import './primary-modal.scss';
 import template from "./primary-modal.vue";
 @Options({
     mixins: [template],
+    name: 'PrimaryModal',
     props: {
         show: {
             type: Boolean,

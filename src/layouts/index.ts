@@ -6,6 +6,7 @@ import SideNav from './side-nav'
 import TopBar from './top-bar'
 @Options({
     mixins: [template],
+    name:'Layouts',
     components: {
         SideNav,
         TopBar

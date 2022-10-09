@@ -7,9 +7,8 @@ import plugin from '@/utils/plugin';
 import {loding,butloding} from '@/directives/loding';
 const app = createApp(App);
 app.use(plugin);
-app.directive('loding', loding);
-app.directive('butloding', butloding);
 app.use(router);
 app.use(store);
-
+app.directive('loding', loding);
+app.directive('butloding', butloding);
 app.mount("#app");
