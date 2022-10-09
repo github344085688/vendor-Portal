@@ -3,12 +3,14 @@ import template from "./verify-email.vue";
 import baseVue from '@/utils/base-vue';
 import LoginServers from "@/services/loginServers";
 import { Field, Form } from 'vee-validate';
+import DefaultSelect from '@/components/default-select';
 import { forEach } from 'lodash-es';
 @Options({
     mixins: [template],
     components: {
         Field,
-        Form
+        Form,
+        DefaultSelect
     },
 })
 export default class VerifyEmailTips extends baseVue {
@@ -32,7 +34,7 @@ export default class VerifyEmailTips extends baseVue {
 
     verifyEmail: any = {};
     businessVerify: any = {};
-    moudleName: string = "welcomeToUnis";
+    moudleName: string = "tellUsAboutYourBusiness";
     // moudleName: string = "tellUsAboutYourBusiness";
     // moudleState: string = "complete";
     moudleState: string = "operation";
@@ -63,19 +65,22 @@ export default class VerifyEmailTips extends baseVue {
         }
     }
 
-    onSubmitTellBusiness(scope: any) {
+
+    public onTellUsAboutSubmit(tagName: string) {
 
     }
 
-    clickFold(tagName: string) {
+    public onSubmit(tagName: string) {
 
+    }
+    public onInvalidSubmit(msg:any) {
+        this.moudleName = 'tellUsAboutYourBusiness';
     }
 
     mounted() {
         let name, value, str = location.href, num = str.indexOf("?");
         str = str.substr(num + 1);
         let arr = str.split("&");
-        console.log('arr', arr);
         let  parameter:any = {};
         for (let i = 0; i < arr.length; i++) {
             num = arr[i].indexOf("=");

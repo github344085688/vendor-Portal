@@ -1,5 +1,5 @@
 <template>
-    <div class="media-wid100">
+    <div style="display: flex; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%">
         <div class="d-flex" style="height: 100%" v-if="moudleState=='operation'">
 
             <div class="col-8 media-pl-80 col-media pr-0">
@@ -10,6 +10,10 @@
                             class="icon-8"></i>&nbsp;&nbsp; <span style="color: #777879"
                                                                   :class="{'login-up-link':(moudleName =='tellUsAboutYourBusiness')}">About your business</span></span>
                 </div>
+
+
+
+
                 <div class="wid100 d-flex media-t-4 flex-wrap" style="position: relative">
                     <div class="col-8 col-media media-pl-80 pr-0" v-if="moudleName =='welcomeToUnis'">
                         <Form @submit="onSubmit" class="d-flex flex-column" :validation-schema="schema"
@@ -108,65 +112,47 @@
 
 
                             </div>
-                            <div class="win100 mt-4 po-r mb-2">
-
-
-                                <!-- <input :type="isshowPassword?'password':'text'" class="unis-input large-border "   v-model='verifyEmail.password'
-                                        v-validate="{ rules : {'required': true, regex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/},}"
-                                        :name="'password'"
-                                        :error="errors.has('verifyEmail.password') "/>
-                                 <pre class="message"
-                                      v-if="errors.has('verifyEmail.password')">{{ errors.first('verifyEmail.password')=='Required' ? 'Required':'At least 8 characters,Uppercase letter,Lowercase letter, a number ' }}</pre>
-                                 <button class="unis-btn unis-btn-text po-a " style="right: 10px; top: 25px;"
-                                         @click.stop.prevent=" isshowPassword=!isshowPassword">Show
-                                 </button>
-                                 -->
-                            </div>
 
                             <div class="win100 mt-4 po-r mb-2">
-                                <button type="submit" class="unis-btn  compact unis-btn-primary " v-loding>Continue
+                                <button type="submit" class="unis-btn  compact unis-btn-primary " >Continue
                                 </button>
                             </div>
                         </form>
                     </div>
+
+
+
+
                     <div class="col-8 col-media media-pl-80 pr-0" v-if="moudleName =='tellUsAboutYourBusiness'">
-                        <form @submit.stop.prevent="onSubmitTellBusiness('tellBusiness')" data-vv-scope="tellBusiness">
-                            <div class="media-t-4 f-b " style="font-size: 32px; ">
-                                Tell us about your business
-                            </div>
-                            <div class="win100 mt-4 po-r mb-2">
-                                <label>Company name</label>
-                                <input class="unis-input large-border" type="text"
-                                       :name="'companyName'"
-                                       placeholder="Company Name"
-                                       v-model='businessVerify.company_name'>
-                            </div>
+                        <div class="media-t-4 f-b " style="font-size: 32px; ">
+                            Tell us about your business
+                        </div>
+                        <Form @submit="onTellUsAboutSubmit" class="d-flex flex-column" :validation-schema="schema" v-slot="{ meta, errors }" @invalid-submit="onInvalidSubmit">
 
                             <div class="win100 mt-4 po-r mb-2">
-                                <label>Business type</label>
-                                <uins-default-select
-                                        :name="'reditCardCountry'"
-                                        v-model="businessVerify.business_type"
-                                        :selectdata="businessTypes"
-                                        :placeholder="'Status'"
-                                        key="name04"
-                                        :filterKey="'title'"
-                                        :syncKey="'key'"
-                                        class="wid100"
-                                ></uins-default-select>
-                                <!--        <pre class="message"
-                                             v-if="errors.has('tellBusiness.businessType')">{{ errors.first('tellBusiness.businessType') }}</pre>-->
+                                <label>Company name <span class="ft-red900">*</span></label>
+                                <Field name="companyName" type="text" class="unis-input br-b-1"
+                                       v-model='businessVerify.companyName'
+                                       :error="errors.companyName"/>
+
+                                <pre class="message"
+                                     v-if="errors.firstName">{{errors.firstName}}
+                                </pre>
                             </div>
                             <div class="win100 mt-4 po-r mb-2">
-                                <button type="submit" class="unis-btn  compact unis-btn-primary ">Continue
-                                    <div class="loading ml-4" v-if="isTellBusinessLoding">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </button>
+                                <label>Business type</label>
+                                <default-select
+                                        :name="'reditCardCountry'"
+                                        v-model="businessVerify.business_type"
+                                        :selectdata="['businessVerify','business','type','Status']"
+                                        :placeholder="'Status'"
+                                        key="name04"
+                                        class="wid100 br-b-1"
+                                ></default-select>
+
                             </div>
-                        </form>
+                        </Form>
+
                     </div>
                 </div>
 

@@ -1,11 +1,8 @@
 import Main from '@/layouts'
 import {filterRouterTopMap} from '@/utils/utils'
-import SideNavConfig from './side-nav-config'
 import SignInRouters from './sign-in-routers'
 import SignUpRouters from './sign-up-routers'
-
-import SignUp from '@/layouts/sign-up';
-import ChangeUserSignUp from '@/layouts/sign-up/change-user-sign-up';
+import MainRouters from './main-routers'
 import {
     createRouter,
     createWebHistory,
@@ -33,7 +30,7 @@ interface ScrollPositionElement extends ScrollToOptions {
 
 const childrenRouters = ()=>{
     let childRouters:Array<any> = [];
-    filterRouterTopMap(SideNavConfig, childRouters, ['path','name','component']);
+    filterRouterTopMap(MainRouters, childRouters, ['path','name','component']);
     return childRouters;
 }
 const mainRoutes:any=[ {
