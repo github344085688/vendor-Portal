@@ -3,13 +3,6 @@ import {filterRouterTopMap} from '@/utils/utils'
 import SignInRouters from './sign-in-routers'
 import SignUpRouters from './sign-up-routers'
 import MainRouters from './main-routers'
-/*import { useRouter } from 'vue-router'
-const mockPush = jest.fn();
-jest.mock('vue-router', () => ({
-    useRouter: () => ({
-        push: mockPush,
-    }),
-}));*/
 import {
     createRouter,
     createWebHistory,
