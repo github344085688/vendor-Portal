@@ -23,6 +23,7 @@ declare interface UserRouter {
     component?: any;
     redirect?: any;
     children?: Array<UserChildrenRouter>;
+    meta?: any;
 }
 
 const userRouters: Array<UserRouter> = [

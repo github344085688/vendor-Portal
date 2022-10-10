@@ -3,14 +3,12 @@ import template from "./invoices.vue";
 import './invoices.scss';
 import BaseVue from '../../utils/base-vue';
 import PrimaryModal from '@/components/primary-modal';
-import DefaultSelect from '@/components/default-select';
 import Pager from '@/components/pager';
 @Options({
     mixins: [template],
     name: 'Invoices',
     components: {
         PrimaryModal,
-        DefaultSelect,
         Pager
     },
     props: {

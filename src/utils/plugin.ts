@@ -1,6 +1,7 @@
-import { createApp } from "vue";
-import PopupHead from "../components/popup-head";
-import PopupReconfirm from "../components/popup-reconfirm";
+import {createApp} from "vue";
+import PopupHead from "@/components/popup-head";
+import PopupReconfirm from "@/components/popup-reconfirm";
+import DefaultSelect from "@/components/default-select";
 
 let counts = 10;
 declare module '@vue/runtime-core' {
@@ -12,12 +13,13 @@ declare module '@vue/runtime-core' {
 
 export default {
     install (app: any) {
+        app.component('default-select', DefaultSelect);
         const MESSage_EXTEND = createApp(PopupHead);
-        /*const MESSage_CREATE_EL: any = MESSage_EXTEND.mount(
+        const MESSage_CREATE_EL: any = MESSage_EXTEND.mount(
             document.createElement("div"),
-        );*/
-        // document.body.appendChild(MESSage_CREATE_EL.$el);
-     /*   const PUBLIC_FN = {
+        );
+        document.body.appendChild(MESSage_CREATE_EL.$el);
+        const PUBLIC_FN = {
 
 
             hexToRgb (hex: any, opacity: any = 1) {
@@ -27,7 +29,7 @@ export default {
 
             success (content: any) {
                 const UID = String(counts)
-                let config:any = {}
+                let config: any = {}
                 config.uid = UID;
                 config.color = "#67C23A";
                 config.background = this.hexToRgb("#e1f3d8");
@@ -38,7 +40,7 @@ export default {
             },
 
             error (content: any) {
-                let config:any = {}
+                let config: any = {}
                 const UID = String(counts)
                 config.uid = UID;
                 config.color = "#F56C6C";
@@ -50,7 +52,7 @@ export default {
             },
 
             warning (content: any) {
-                let config:any = {}
+                let config: any = {}
                 const UID = String(counts)
                 config.uid = UID;
                 config.color = "#E6A23C";
@@ -59,11 +61,11 @@ export default {
                 config.content = content;
                 config.borderColor = "#E6A23C"
 
-                this.show(config,MESSage_CREATE_EL, true)
+                this.show(config, MESSage_CREATE_EL, true)
             },
 
             normal (content: any) {
-                let config:any = {}
+                let config: any = {}
                 const UID = String(counts)
                 config.uid = UID;
                 config.color = "#303133";
@@ -71,20 +73,20 @@ export default {
                 config.content = content;
                 config.borderColor = "#303133"
 
-                this.show(config,MESSage_CREATE_EL, true)
+                this.show(config, MESSage_CREATE_EL, true)
             },
 
-            self (content: any, color: any = "#303133", background : any= "#909399", icon : any= "el-icon-info", bgop: any = 1) {
-                let config:any = {}
+            self (content: any, color: any = "#303133", background: any = "#909399", icon: any = "el-icon-info", bgop: any = 1) {
+                let config: any = {}
                 config.show = true;
                 config.color = color;
                 config.background = this.hexToRgb(background, bgop);
                 config.icon = icon;
                 config.content = content;
-                this.show(config,MESSage_CREATE_EL, true)
+                this.show(config, MESSage_CREATE_EL, true)
             },
 
-            show (config: any , el:any, isClose: boolean = true) {
+            show (config: any, el: any, isClose: boolean = true) {
                 const UID = String(counts);
                 el.uid = UID;
 
@@ -94,15 +96,14 @@ export default {
 
                 counts++;
                 el.msgOueue.push({uid: counts, config: config});
-                if(isClose) setTimeout(() => {
-                   el.onClose();
+                if (isClose) setTimeout(() => {
+                    el.onClose();
                 }, 3000)
             },
         };
         app.config.globalProperties.$message = PUBLIC_FN;
-*/
 
-        const reconfirm = (options: any)=>{
+        const reconfirm = (options: any) => {
             const POPUP_RECONFIRM = createApp(PopupReconfirm);
             const POPUP_RECONFIRM_EL: any = POPUP_RECONFIRM.mount(
                 document.createElement("div"),

@@ -2,12 +2,10 @@ import { Options } from 'vue-class-component';
 import WiseVue from "../../utils/base-vue";
 import template from "./pager.vue";
 import { uniq, sortBy } from 'lodash-es';
-import DefaultSelect from '@/components/default-select';
 @Options({
     mixins: [template],
     mame:'Pager',
     components: {
-        DefaultSelect,
     },
     props: {
         customizePageSize: {
