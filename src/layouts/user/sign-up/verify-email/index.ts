@@ -15,8 +15,18 @@ import { forEach } from 'lodash-es';
     },
 })
 export default class VerifyEmail extends baseVue {
+    public isSwitchWelcomeToUnis:boolean = false;
+    public isSwitchTellUsAboutYourBusiness:boolean = false;
+
     public schema = {
         firstName: (value: any) => {
+            if (value && value.length) {
+                if(value.length < 6) return 'User name is too simple';
+                else return true;
+            }
+            return 'Incorrect email';
+        },
+        lastName: (value: any) => {
             if (value && value.length) {
                 if(value.length < 6) return 'User name is too simple';
                 else return true;
@@ -35,7 +45,7 @@ export default class VerifyEmail extends baseVue {
 
     verifyEmail: any = {};
     businessVerify: any = {};
-    moudleName: string = "tellUsAboutYourBusiness";
+    moudleName: string = "welcomeToUnis";
     // moudleName: string = "tellUsAboutYourBusiness";
     // moudleState: string = "complete";
     moudleState: string = "operation";
@@ -75,6 +85,8 @@ export default class VerifyEmail extends baseVue {
 
     }
     public onInvalidSubmit(msg:any) {
+        this.isSwitchWelcomeToUnis = false;
+        this.isSwitchTellUsAboutYourBusiness = true;
         this.moudleName = 'tellUsAboutYourBusiness';
     }
 
@@ -94,6 +106,7 @@ export default class VerifyEmail extends baseVue {
         }
         this.verifyEmail.email = parameter['email'];
         this.verifyEmail.code = parameter['code'];
+        this.isSwitchWelcomeToUnis= true;
     }
 
     returnToSignIn() {

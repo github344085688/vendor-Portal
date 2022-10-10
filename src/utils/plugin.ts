@@ -13,11 +13,12 @@ declare module '@vue/runtime-core' {
 export default {
     install (app: any) {
         const MESSage_EXTEND = createApp(PopupHead);
-        const MESSage_CREATE_EL: any = MESSage_EXTEND.mount(
+        /*const MESSage_CREATE_EL: any = MESSage_EXTEND.mount(
             document.createElement("div"),
-        );
-        document.body.appendChild(MESSage_CREATE_EL.$el);
-        const PUBLIC_FN = {
+        );*/
+        // document.body.appendChild(MESSage_CREATE_EL.$el);
+     /*   const PUBLIC_FN = {
+
 
             hexToRgb (hex: any, opacity: any = 1) {
                 return 'rgba(' + parseInt('0x' + hex.slice(1, 3)) + ',' + parseInt('0x' + hex.slice(3, 5))
@@ -98,6 +99,8 @@ export default {
                 }, 3000)
             },
         };
+        app.config.globalProperties.$message = PUBLIC_FN;
+*/
 
         const reconfirm = (options: any)=>{
             const POPUP_RECONFIRM = createApp(PopupReconfirm);
@@ -126,7 +129,6 @@ export default {
             });
 
         };
-        app.config.globalProperties.$message = PUBLIC_FN;
         app.config.globalProperties.$reconfirm = reconfirm;
     }
 }

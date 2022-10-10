@@ -14,6 +14,7 @@ import { Field, Form, useField } from 'vee-validate';
 
 })
 export default class SendResetEmail extends baseVue {
+    public isLoding:boolean = false;
     public  returnToLogin():void{
         this.setRouter({ name: 'ChangeUserSignIn'})
     }

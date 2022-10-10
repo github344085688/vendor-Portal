@@ -32,7 +32,7 @@ export default class ChangeUser extends baseVue {
     // 生命周期
     mounted(){
         const pathname = window.location.pathname.slice(1);
-        console.log('pathname', pathname);
+        // console.log('pathname', pathname);
     }
 
     beforeUnmount(){
