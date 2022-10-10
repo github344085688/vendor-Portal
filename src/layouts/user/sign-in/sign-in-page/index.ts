@@ -60,8 +60,9 @@ export default class SignInPage extends baseVue {
         // alert(JSON.stringify(values, null, 2));
     }
     onInvalidSubmit(msg:any) {
-        this.setRouter({ name: 'Main'})
-        this.$reconfirm({
+        this.$errors('ssss');
+        // this.setRouter({ name: 'Main'})
+       /* this.$reconfirm({
             title: 'Remove Small Parcel',
             content: 'Are You Sure You Want To remove this small parcel? ',
             confirm: 'Yes',
@@ -74,7 +75,7 @@ export default class SignInPage extends baseVue {
             .catch((err: any) => {
                 console.log(err);
             });
-        this.validate = msg;
+        this.validate = msg;*/
         // console.log(this.validate.errors);
     }
 

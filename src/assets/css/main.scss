@@ -286,7 +286,7 @@
 .topInLoging-enter-from,
 .topInLoging-leave-to {
 	pacity: 0;
-	transform: translate3d(0, -280%, 0);
+	transform: translate3d(0, -180%, 0);
 }
 .topInLoging-leave-from,
 .topInLoging-enter-to {
@@ -298,10 +298,6 @@
 .topInLoging-leave-active {
 	transition: all 1s cubic-bezier(0.42,-0.21,1,1);
 }
-
-
-
-
 
 .login-moudle{
 	min-height: 800px; width: 45%
@@ -437,6 +433,21 @@
 	}
 }
 
+.leftLoging-enter-from,
+.leftLoging-leave-to {
+	pacity: 0;
+	transform: translate3d(0, -120%, 0);
+}
+.leftLoging-leave-from,
+.leftLoging-enter-to {
+	transform: translate3d(0, 0, 0);
+}
+.leftLoging-enter-active{
+	transition: all0 1s ease-out;
+}
+.leftLoging-leave-active {
+	transition: all 1s cubic-bezier(0.42,-0.21,1,1);
+}
 
 .fade-enter-from, .fade-leave-to {
 	transform: translateX(20px);
@@ -458,4 +469,10 @@
 .tram-ov{
 	height: 70px;
 	transition: all 0.5s ;
+}
+.bg-no{
+	background: inherit!important;
+}
+.wid70 {
+	width: 70% !important;
 }

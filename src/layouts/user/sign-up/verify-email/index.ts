@@ -1,22 +1,29 @@
 import { Options } from 'vue-class-component';
 import template from "./verify-email.vue";
 import baseVue from '@/utils/base-vue';
-import LoginServers from "@/services/loginServers";
 import { Field, Form } from 'vee-validate';
-import DefaultSelect from '@/components/default-select';
-import { forEach } from 'lodash-es';
 @Options({
     mixins: [template],
     name:'VerifyEmail',
     components: {
         Field,
-        Form,
-        DefaultSelect
+        Form
     },
 })
 export default class VerifyEmail extends baseVue {
+    public isSwitchWelcomeToUnis:boolean = false;
+    public isSwitchTellUsAboutYourBusiness:boolean = false;
+    public isSwitchComplete:boolean = false;
+
     public schema = {
         firstName: (value: any) => {
+            if (value && value.length) {
+                if(value.length < 6) return 'User name is too simple';
+                else return true;
+            }
+            return 'Incorrect email';
+        },
+        lastName: (value: any) => {
             if (value && value.length) {
                 if(value.length < 6) return 'User name is too simple';
                 else return true;
@@ -33,18 +40,13 @@ export default class VerifyEmail extends baseVue {
         },
     }
 
-    verifyEmail: any = {};
-    businessVerify: any = {};
-    moudleName: string = "tellUsAboutYourBusiness";
-    // moudleName: string = "tellUsAboutYourBusiness";
-    // moudleState: string = "complete";
-    moudleState: string = "operation";
-    confirmPassword: boolean = true;
-    isshowPassword: boolean = true;
-    isVerifyEmail: boolean = false;
-    isTellBusinessLoding: boolean = false;
-    isVerifyEmailToBusiness: boolean = false;
-    businessTypes: Array<any> = [
+    public verifyEmail: any = {};
+    public businessVerify: any = {};
+    public moudleName: string = "welcomeToUnis";
+    public moudleState: string = "operation";
+    public isshowPassword: boolean = true;
+    public isVerifyEmailToBusiness: boolean = false;
+    public businessTypes: Array<any> = [
         { key: 1, code: null, title: "Residential/End user" },
         { key: 2, code: "CON", title: "Sole Proprietor/Small business" },
         { key: 3, code: "SHOW", title: "Medium - Large business" },
@@ -61,24 +63,37 @@ export default class VerifyEmail extends baseVue {
     }
 
     linkBusiness() {
-        if (this.isVerifyEmailToBusiness) {
-            this.moudleName = 'welcomeToUnis';
+        if (this.isSwitchTellUsAboutYourBusiness) {
+            this.isSwitchWelcomeToUnis =  true;
+            this.isSwitchTellUsAboutYourBusiness = false;
+            this.isSwitchComplete = false;
+
         }
     }
 
 
     public onTellUsAboutSubmit(tagName: string) {
+        alert('ss')
 
     }
 
     public onSubmit(tagName: string) {
 
     }
+    public onBusinessSubmit(msg:any) {
+        this.isSwitchWelcomeToUnis = false;
+        this.isSwitchTellUsAboutYourBusiness = false;
+        this.isSwitchComplete = true;
+    }
+
     public onInvalidSubmit(msg:any) {
+        this.isSwitchWelcomeToUnis = false;
+        this.isSwitchComplete = false;
+        this.isSwitchTellUsAboutYourBusiness = true;
         this.moudleName = 'tellUsAboutYourBusiness';
     }
 
-    mounted() {
+    activated() {
         let name, value, str = location.href, num = str.indexOf("?");
         str = str.substr(num + 1);
         let arr = str.split("&");
@@ -94,9 +109,13 @@ export default class VerifyEmail extends baseVue {
         }
         this.verifyEmail.email = parameter['email'];
         this.verifyEmail.code = parameter['code'];
+        this.isSwitchTellUsAboutYourBusiness = false;
+        this.isSwitchComplete= false;
+        this.isSwitchWelcomeToUnis = true;
     }
 
     returnToSignIn() {
+        this.setRouter({ name: 'SignIn'})
 
     }
 

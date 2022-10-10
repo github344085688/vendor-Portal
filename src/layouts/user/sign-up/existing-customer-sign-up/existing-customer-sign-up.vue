@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-0 p-4 login-moudle po-a m-auto" >
+    <div class="pt-0 p-4 login-moudle m-auto" >
         <div class="d-flex flex-column justify-content-center align-items-center"  >
         </div>
         <div class="d-flex media-t-4 mediaju-center-to-left">
@@ -19,7 +19,7 @@
             <div class="win100  po-r mb-4">
                 <label class="pb-0">Email address*</label>
 
-                <Field name="firstName" type="text" class="unis-input br-b-1" v-model="formData.firstName" placeholder="name@company.com"
+                <Field name="firstName" type="text" :class = "[errors.firstName?'':'br-grey900']" class="unis-input br-b-1  bg-no" v-model="formData.firstName" placeholder="name@company.com"
                        :error="errors.firstName"/>
                 <div class="d-flex align-items-center mt-1"
                      style="position: absolute;top:100% ;left: 0; height: 15px">
@@ -43,21 +43,21 @@
                 </p>
                 <div    :class="[roleRelated.tms ? 'tram-ov':'tram-hi']">
                     <label class=" p-0 m-0">Account code</label>
-                    <input type="text" class="unis-input br-b-1 mt-0">
+                    <input type="text"  class="unis-input br-b-1 br-grey900 bg-no mt-0">
                 </div>
                 <p class="mt-2"><input type="checkbox" name="layout" id="SERVICE" v-model="roleRelated.service" class="unis-checkbox">
                     <label for="SERVICE">SERVICE</label>
                 </p>
                 <div    :class="[roleRelated.service ? 'tram-ov':'tram-hi']">
                     <label class=" p-0 m-0">Account code</label>
-                    <input type="text" class="unis-input br-b-1 mt-0">
+                    <input type="text" class="unis-input br-b-1 mt-0 br-grey900 bg-no">
                 </div>
                 <p class="mt-2"><input  type="checkbox" name="layout" id="BROKERAGE" v-model="roleRelated.brokerage" class="unis-checkbox">
                     <label for="BROKERAGE">BROKERAGE</label>
                 </p>
                 <div    :class="[roleRelated.brokerage ? 'tram-ov':'tram-hi']">
                     <label class=" p-0 m-0">Account code</label>
-                    <input type="text" class="unis-input br-b-1 mt-0">
+                    <input type="text" class="unis-input br-b-1 mt-0 br-grey900 bg-no">
                 </div>
                 </div>
 

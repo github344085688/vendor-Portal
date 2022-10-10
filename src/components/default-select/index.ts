@@ -121,13 +121,10 @@ export default class DefaultSelect extends WiseVue {
 
     public  mounted() {
         this.defaultSelect = ref<any>(null);
-        console.log('this.value1', this.modelValue);
         if (this.modelValue && typeof (this.modelValue) == 'object') this.transitionValue = this.modelValue[this.filterKey];
         else if (this.filterKey && this.selectdata && this.selectdata.length > 0) {
-            // console.log('this.value', this.value);
             this.assignmentTransitionValue(this.modelValue);
         } else {
-            console.log('this.value2', this.modelValue);
             this.transitionValue = this.modelValue;
         }
         if (this.selectdata) this.priSelectdata = this.selectdata;

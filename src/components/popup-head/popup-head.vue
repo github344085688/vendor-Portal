@@ -1,7 +1,7 @@
 <template>
-    <Transition name="top" mode="out-in" appear>
+    <Transition name="topIn" mode="out-in" appear>
         <section id="message" >
-            <transition-group name="top">
+            <transition-group  >
                 <div  class="d-flex align-items-center justify-content-start br-ra4 br-red100  br-1 p-4 message"
                         v-for="item in msgOueue"
                         :key="item.uid"

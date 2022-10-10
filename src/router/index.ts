@@ -1,15 +1,7 @@
 import Main from '@/layouts'
 import {filterRouterTopMap} from '@/utils/utils'
-import SignInRouters from './sign-in-routers'
-import SignUpRouters from './sign-up-routers'
+import UserRouters from './user-routers'
 import MainRouters from './main-routers'
-/*import { useRouter } from 'vue-router'
-const mockPush = jest.fn();
-jest.mock('vue-router', () => ({
-    useRouter: () => ({
-        push: mockPush,
-    }),
-}));*/
 import {
     createRouter,
     createWebHistory,
@@ -46,7 +38,7 @@ const mainRoutes:any=[ {
     children:childrenRouters()
 }];
 
-const routes: Array<RouteRecordRaw> = [...SignInRouters,...SignUpRouters,...mainRoutes];
+const routes: Array<RouteRecordRaw> = [...UserRouters,...mainRoutes];
 
 const router: Router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
