@@ -1,7 +1,7 @@
 import { Options } from 'vue-class-component';
 import template from "./invoice-history.vue";
 import './invoice-history.scss';
-import baseVue from '../../utils/base-vue';
+import BaseVue from '../../utils/base-vue';
 
 @Options({
     mixins: [template],
@@ -12,7 +12,7 @@ import baseVue from '../../utils/base-vue';
         propMessage: String
     },
 })
-export default class InvoiceHistory extends baseVue {
+export default class InvoiceHistory extends BaseVue {
 
 
 }

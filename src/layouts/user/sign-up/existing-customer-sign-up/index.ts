@@ -1,6 +1,6 @@
 import { Options } from 'vue-class-component';
 import template from "./existing-customer-sign-up.vue";
-import baseVue from '@/utils/base-vue';
+import BaseVue from '@/utils/base-vue';
 import LoginServers from "@/services/loginServers";
 import { Field, Form } from 'vee-validate';
 import { forEach } from 'lodash-es';
@@ -15,7 +15,7 @@ import { forEach } from 'lodash-es';
         roleRelated: {handler: 'watchRoleRelated', immediate: true ,deep: true},
     },
 })
-export default class ExistingCustomerSignUp extends baseVue {
+export default class ExistingCustomerSignUp extends BaseVue {
     public roleRelated: any = {};
 
 

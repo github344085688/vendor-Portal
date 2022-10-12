@@ -1,6 +1,6 @@
 import { Options } from 'vue-class-component';
 import template from "./change-user-sign-up.vue";
-import baseVue from '@/utils/base-vue';
+import BaseVue from '@/utils/base-vue';
 @Options({
     mixins: [template],
     name:'ChangeUserSignUp',
@@ -8,7 +8,7 @@ import baseVue from '@/utils/base-vue';
     },
 
 })
-export default class ChangeUserSignUp extends baseVue {
+export default class ChangeUserSignUp extends BaseVue {
     public onChangeUser(name: string):void{
         this.setRouter({ name: 'ExistingCustomerSignUp'})
        /* this.showPageName = 'loginPage';*/

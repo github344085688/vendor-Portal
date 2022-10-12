@@ -1,6 +1,6 @@
 import { Options } from 'vue-class-component';
 import template from "./verify-email.vue";
-import baseVue from '@/utils/base-vue';
+import BaseVue from '@/utils/base-vue';
 import { Field, Form } from 'vee-validate';
 @Options({
     mixins: [template],
@@ -10,7 +10,7 @@ import { Field, Form } from 'vee-validate';
         Form
     },
 })
-export default class VerifyEmail extends baseVue {
+export default class VerifyEmail extends BaseVue {
     public isSwitchWelcomeToUnis:boolean = false;
     public isSwitchTellUsAboutYourBusiness:boolean = false;
     public isSwitchComplete:boolean = false;

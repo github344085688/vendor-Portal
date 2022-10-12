@@ -1,17 +1,17 @@
 import { Options } from 'vue-class-component';
 import template from "./top-bar.vue";
 import './top-bar.scss';
-import baseVue from '../../utils/base-vue';
+import BaseVue from '../../utils/base-vue';
 @Options({
     mixins: [template],
-    name:'topBar',
+    name:'TopBar',
     components: {
     },
     props: {
         propMessage: String
     },
 })
-export default class topBar extends baseVue {
+export default class TopBar extends BaseVue {
     public isInSearchBox: boolean = false;
     public isShowNotif: boolean = false;
     public isShowUser: boolean = false;

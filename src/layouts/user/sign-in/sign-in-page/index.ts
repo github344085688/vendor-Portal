@@ -1,6 +1,6 @@
 import { Options } from 'vue-class-component';
 import template from "./sign-in-page.vue";
-import baseVue from '@/utils/base-vue';
+import BaseVue from '@/utils/base-vue';
 import LoginServers from "@/services/loginServers";
 import { Field, Form, useField } from 'vee-validate';
 @Options({
@@ -12,7 +12,7 @@ import { Field, Form, useField } from 'vee-validate';
         useField
     }
 })
-export default class SignInPage extends baseVue {
+export default class SignInPage extends BaseVue {
     public showPageName!:string;
     public isLoding:boolean = false;
     public isShowGroup:boolean = false;
@@ -60,8 +60,7 @@ export default class SignInPage extends baseVue {
         // alert(JSON.stringify(values, null, 2));
     }
     onInvalidSubmit(msg:any) {
-        this.$errors('ssss');
-        // this.setRouter({ name: 'Main'})
+        this.setRouter({ name: 'Main'})
        /* this.$reconfirm({
             title: 'Remove Small Parcel',
             content: 'Are You Sure You Want To remove this small parcel? ',
@@ -103,8 +102,6 @@ export default class SignInPage extends baseVue {
         this.setRouter({ name: 'Main'});
     }
     public signIn(){
-
-
         this.$reconfirm({
             title: 'Remove Small Parcel',
             content: 'Are You Sure You Want To remove this small parcel? ',

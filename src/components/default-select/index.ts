@@ -1,5 +1,5 @@
 import { Options } from 'vue-class-component';
-import WiseVue from "../../utils/base-vue";
+import BaseVue from "@/utils/base-vue";
 import template from "./default-select.vue";
 import { ref } from "vue";
 @Options({
@@ -62,7 +62,7 @@ import { ref } from "vue";
         modelValue: {handler : 'watchModelValue'},
     }
 })
-export default class DefaultSelect extends WiseVue {
+export default class DefaultSelect extends BaseVue {
 
     public name!: string;
     public selectdata!: any;

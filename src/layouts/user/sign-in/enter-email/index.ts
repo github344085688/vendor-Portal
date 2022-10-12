@@ -1,6 +1,6 @@
 import { Options } from 'vue-class-component';
 import template from "./enter-email.vue";
-import baseVue from '@/utils/base-vue';
+import BaseVue from '@/utils/base-vue';
 import LoginServers from "@/services/loginServers";
 import { Field, Form, useField } from 'vee-validate';
 @Options({
@@ -19,7 +19,7 @@ import { Field, Form, useField } from 'vee-validate';
     },
 
 })
-export default class EnterEmail extends baseVue {
+export default class EnterEmail extends BaseVue {
     public showPageName!:string;
     public isLoding:boolean = true;
 

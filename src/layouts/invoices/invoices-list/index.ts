@@ -1,21 +1,22 @@
 import { Options } from 'vue-class-component';
-import template from "./invoices.vue";
+import template from "./invoices-list.vue";
 import BaseVue from '@/utils/base-vue';
+import PrimaryModal from '@/components/primary-modal';
 import Pager from '@/components/pager';
 @Options({
     mixins: [template],
-    name: 'Invoices',
+    name: 'InvoicesList',
     components: {
+        PrimaryModal,
         Pager
     },
     props: {
         propMessage: String
     },
 })
-export default class Invoices extends BaseVue {
+export default class InvoicesList extends BaseVue {
     public isShowMoudal:boolean = false;
     public searchParams:any = {};
-    public isShowMoudle:string = 'Invoices';
     public paging: any = {
         pageSize: 10,
         currentPage: 1,
@@ -27,17 +28,10 @@ export default class Invoices extends BaseVue {
     }
 
     public routerImportExport():void {
-         this.isShowMoudle  = 'Import & Export';
-         this.setRouter({name:'ImportExport'})
-    }
-
-    public activated():void {
-        if(this.getRouter().query.name == 'ImportExport') this.isShowMoudle  = 'Import & Export';
-        if(this.getRouter().query.name == 'InvoicesList') this.isShowMoudle  = 'Invoices';
+        this.setRouter({name:'ImportExport'})
     }
 
     public routerInvoices():void {
-        this.isShowMoudle  = 'Invoices';
         this.setRouter({name:'Invoices'})
     }
 

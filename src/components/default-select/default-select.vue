@@ -1,6 +1,6 @@
 <template>
     <button class="unis-select unis-dropdown " :name="name" ref="defaultSelect">
-        <input type="button"
+        <input type="text"
                :disabled="disabled"
                v-on:focus="handleFocus"
                v-model="transitionValue"

@@ -1,9 +1,9 @@
 import { Options } from 'vue-class-component';
 import template from "./side-nav.vue";
 import './side-nav.scss';
-import baseVue from '@/utils/base-vue';
+import BaseVue from '@/utils/base-vue';
 import SideNavConfig from '@/router/main-routers';
-import {find} from 'lodash-es';
+import {find,forEach} from 'lodash-es';
 import {filterRouterTopMap} from '@/utils/utils'
 @Options({
     mixins: [template],
@@ -17,7 +17,7 @@ import {filterRouterTopMap} from '@/utils/utils'
         "sideSpread.aaa": { handler: 'countSideSpread', immediate: true ,deep: true},
     },
 })
-export default class SideNav extends baseVue {
+export default class SideNav extends BaseVue {
 
     public itemChildsLink: string = 'Invoices';
     public isShowSidebar: boolean = false;
@@ -34,32 +34,29 @@ export default class SideNav extends baseVue {
         this.navLink = SideNavConfig;
         const pathname = window.location.pathname.slice(1);
         let routerConfigs: Array<any> = [];
-        filterRouterTopMap(SideNavConfig, routerConfigs, ['path', 'name', 'parentName']);
+        filterRouterTopMap(SideNavConfig, routerConfigs, ['path', 'name', 'parentName'] );
         let findRouter = find(routerConfigs, {path: pathname});
         if (findRouter && findRouter.name) {
             this.itemChildsLink = findRouter.name;
             this.navName = findRouter.parentName;
         }
-        /* onBeforeRouteUpdate(async (to, from) => {
-         console.log('to', to);
-         console.log('from', from);
-         });
-         onBeforeRouteLeave((to, from) => {
-         console.log('to', to);
-         console.log('from', from);
-         this.destroyWatch()
-         })*/
-
 
     }
 
-    public  destroyWatch() {
-        /* watch(() => route.query, (newValue, oldValue) => {
-         console.log('destroyWatch')
-         data.searchInfo = {...data.searchInfo, ...newValue};
-         data.timeArr = [Number(data.searchInfo.start_time)*1000,Number(data.searchInfo.end_time)*1000]
-         getList()
-         }, {immediate: true, deep: true})*/
+    public childrenHeight(childrens: any) {
+        let length: number = 0;
+        forEach(childrens, children => {
+            if (children.title) length++;
+        });
+        return (48 * length)+'px';
+    }
+
+    public setItemChildren(childrens: any) {
+        let itemChildren: Array<any> = [];
+        forEach(childrens, children => {
+            if (children.title) itemChildren.push(children);
+        });
+        return itemChildren;
     }
 
     public showCode() {
