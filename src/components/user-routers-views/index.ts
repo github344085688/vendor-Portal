@@ -1,6 +1,6 @@
 import { Options } from 'vue-class-component';
 import template from "./user-routers-views.vue";
-import baseVue from '@/utils/base-vue';
+import BaseVue from '@/utils/base-vue';
 import RouterViews from '@/components/router-views';
 @Options({
     mixins: [template],
@@ -9,7 +9,7 @@ import RouterViews from '@/components/router-views';
         RouterViews
     }
 })
-export default class UserRouters extends baseVue {
+export default class UserRouters extends BaseVue {
     public isShowPageName: boolean =false;
 
     public mounted():void{

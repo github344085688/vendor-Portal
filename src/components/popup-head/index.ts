@@ -2,7 +2,7 @@
  * Created by f on 2018/5/22.
  */
 import { Options, Vue } from 'vue-class-component';
-import WiseVue from "../../utils/base-vue";
+import BaseVue from "../../utils/base-vue";
 import './popup-head.scss';
 import template from "./popup-head.vue";
 @Options({
@@ -15,7 +15,7 @@ import template from "./popup-head.vue";
         }
     },
 })
-export default class PopupHead extends WiseVue {
+export default class PopupHead extends BaseVue {
 
     public show!: Boolean;
     public msgOueue: any = [];

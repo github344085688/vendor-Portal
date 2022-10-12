@@ -1,19 +1,24 @@
 .top-bar {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 240px;
 	right: 0;
 	transition: left 0.5s;
+	z-index: 99;
 }
 
 .main-section {
-	position: absolute;
+	position: fixed;
+	max-height:calc(100% - 60px);
+	overflow-y: auto;
 	top: 60px;
 	left: 240px;
 	bottom: 0;
 	right: 0;
+	z-index: 0;
 	transition: left 0.5s;
 }
+
 
 .side-spread {
 	left: 70px;

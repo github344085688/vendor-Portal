@@ -1,12 +1,12 @@
 import { Options } from 'vue-class-component';
 import template from "./resend-email.vue";
-import baseVue from '@/utils/base-vue';
+import BaseVue from '@/utils/base-vue';
 import LoginServers from "@/services/loginServers";
 @Options({
     mixins: [template],
     name:'ResendEmail',
 })
-export default class ResendEmail extends baseVue {
+export default class ResendEmail extends BaseVue {
 
 
     public onSubmit(values:any) {

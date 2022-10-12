@@ -2,6 +2,8 @@
  * Created by f on 2022/9/28.
  */
 import Invoices from '@/layouts/invoices'
+import InvoicesList from '@/layouts/invoices/invoices-list'
+import ImportExport from '@/layouts/invoices/import-export'
 import InvoiceHistory from '@/layouts/invoice-history'
 declare interface SideNavList {
     groupName: string;
@@ -37,8 +39,18 @@ const SideNavConfig: Array<SideNavList> = [
                 path: 'TMS/invoices',
                 name: 'Invoices',
                 component: Invoices,
-                title: 'Invoices'
-            }, {
+                title: 'Invoices',
+                redirect: {name: 'InvoicesList'},
+                children:[{
+                    path: 'invoices-list',
+                    name: 'InvoicesList',
+                    component: InvoicesList,
+                },{
+                    path: 'import-export',
+                    name: 'ImportExport',
+                    component: ImportExport,
+                },]
+            },{
                 parentName:'TMS',
                 path: 'TMS/invoice-history',
                 name: 'InvoiceHistory',

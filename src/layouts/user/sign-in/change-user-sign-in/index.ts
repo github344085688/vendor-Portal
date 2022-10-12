@@ -1,6 +1,6 @@
 import { Options } from 'vue-class-component';
 import template from "./change-user-sign-in.vue";
-import baseVue from '@/utils/base-vue';
+import BaseVue from '@/utils/base-vue';
 @Options({
     mixins: [template],
     name: 'ChangeUser',
@@ -8,7 +8,7 @@ import baseVue from '@/utils/base-vue';
     },
 
 })
-export default class ChangeUser extends baseVue {
+export default class ChangeUser extends BaseVue {
     public showPageName:string = 'login';
     public checkPageName(name:string ): void {
         this.showPageName = name;

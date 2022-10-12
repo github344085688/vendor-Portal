@@ -1,5 +1,5 @@
 import {Options} from 'vue-class-component';
-import WiseVue from "../../utils/base-vue";
+import BaseVue from "../../utils/base-vue";
 import './primary-modal.scss';
 import template from "./primary-modal.vue";
 @Options({
@@ -37,7 +37,7 @@ import template from "./primary-modal.vue";
         show: {handler: 'watchShow'},
     },
 })
-export default class PrimaryModal extends WiseVue {
+export default class PrimaryModal extends BaseVue {
     public show !: Boolean;
     public isShowMoudal: boolean = false;
     public isShowGroup: boolean = false;

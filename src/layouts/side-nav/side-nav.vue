@@ -19,7 +19,8 @@
                             <div v-for="(item, childsIndex) in child.children" :key="childsIndex"
                                  class="item_connect">
                                 <div class="item_box" @click.stop.prevent="foldDetails(isFoldDetails,item)"
-                                     :class="{'active':navName==item.name}">
+                                     :class="{'active':navName==item.name}"
+                                     :init="itemChildren = setItemChildren(item.children)">
                                     <div class="img-box"><img :src="item.icon"></div>
                                     <div class="pro-ab">
                                         <div class="text-box">
@@ -32,12 +33,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div :class="[isFold?'hover-details':'childs-box',(navName != item.name && !isFold)?'show-childs':'']"
-                                     v-if="item.children && item.children.length>0"
-                                     :style="{'height':(48* item.children.length)+'px'}">
+                                <div :class="[isFold?'hover-details':'childs-box',(navName != item.name && !isFold)?'show-childs':'']"  v-if="itemChildren.length>0"
+                                     :style="{'height':(48* itemChildren.length)+'px'}">
                                     <div :class="[isFold?'hover-details-box':'' ]">
-                                        <div class="pt-0 pb-0 pl-0" :class="[isFold?'hover-details-item':'child-item' ]"
-                                             v-for="nav in item.children">
+                                        <div class="pt-0 pb-0 pl-0" :class="[isFold?'hover-details-item':'child-item' ]"  v-for="nav in itemChildren">
                                             <div class="line"></div>
                                             <div class="item-childs-link pr-2  justify-content-between align-items-center"
                                                  :class="[itemChildsLink == nav.name ? 'link_active' :'']" @click.stop.prevent="foldChildetails(nav)" > {{nav.title}}
