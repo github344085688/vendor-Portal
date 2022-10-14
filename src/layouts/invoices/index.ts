@@ -31,10 +31,20 @@ export default class Invoices extends BaseVue {
          this.setRouter({name:'ImportExport'})
     }
 
-    public activated():void {
-        if(this.getRouter().query.name == 'ImportExport') this.isShowMoudle  = 'Import & Export';
-        if(this.getRouter().query.name == 'InvoicesList') this.isShowMoudle  = 'Invoices';
+    public mounted(){
+        this.isShowMoudle  = 'Invoices';
     }
+
+    public routeChange(routerName: any){
+        console.log(routerName);
+        if(routerName=='ImportExport' )  this.isShowMoudle  = 'Import & Export';
+        if(routerName=='InvoicesList' )  this.isShowMoudle  = 'Invoices';
+    }
+
+  /*  public activated():void {
+        if(this.getRouter().query.name == 'ImportExport')
+        if(this.getRouter().query.name == 'InvoicesList') this.isShowMoudle  = 'Invoices';
+    }*/
 
     public routerInvoices():void {
         this.isShowMoudle  = 'Invoices';

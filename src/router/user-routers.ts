@@ -75,20 +75,20 @@ const userRouters: Array<UserRouter> = [
                 path: "/signUp/verifyEmailTips",
                 name: "VerifyEmailTips",
                 component: VerifyEmailTips,
-            },
-            {
-                path: "/signUp/resendEmail",
-                name: "ResendEmail",
-                component: ResendEmail,
-            },
-            {
-                path: "/signUp/verifyEmail",
-                name: "VerifyEmail",
-                component: VerifyEmail,
-            },
+            }
 
         ]
-    }
+    },
+    {
+        path: "/signUp/resendEmail",
+        name: "ResendEmail",
+        component: ResendEmail,
+    },
+    {
+        path: "/signUp/verifyEmail",
+        name: "VerifyEmail",
+        component: VerifyEmail,
+    },
 ];
 
 export default userRouters;

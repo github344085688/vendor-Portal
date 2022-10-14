@@ -6,7 +6,7 @@
         </div>
         <div class="flex-grow-1 po-r">
             <router-view v-slot="{ Component, route }">
-                <transition name="fadee" class="tra-inset">
+                <transition name="fade" class="tra-inset" :init="routeChange(route.name)">
                     <keep-alive>
                         <component :is="Component" :key="route.path"/>
                     </keep-alive>

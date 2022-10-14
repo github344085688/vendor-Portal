@@ -30,7 +30,7 @@ export default class SideNav extends BaseVue {
     public countSideSpread(value: number, oldValue: number): void {
         // console.log('ss',value);
     }
-    public mounted() {
+    public mounted(): void {
         this.navLink = SideNavConfig;
         const pathname = window.location.pathname.slice(1);
         let routerConfigs: Array<any> = [];
@@ -63,24 +63,24 @@ export default class SideNav extends BaseVue {
         this.idShowCode = !this.idShowCode;
     }
 
-    public togoaside(isfold: any) {
+    public togoaside(isfold: any): void {
         if (this.isFoldDetails) this.isLevelSmall = true;
         this.isFold = !isfold;
         this.$emit("togoaside", isfold)
     }
 
-    public foldDetails(isFoldDetails: any, item: any) {
+    public foldDetails(isFoldDetails: any, item: any): void {
         if (this.navName == item.name) this.navName = '';
         else this.navName = item.name;
         if (item.path && item.name) this.setRouter({name: item.name})
     }
 
-    public foldChildetails(item: any) {
+    public foldChildetails(item: any): void {
         this.itemChildsLink = item.name;
         if (item.path && item.name) this.setRouter({name: item.name})
     }
 
-    public logOut() {
+    public logOut(): void {
         this.setRouter({name: 'SignIn'})
     }
 

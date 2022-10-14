@@ -14,7 +14,6 @@ export default class VerifyEmail extends BaseVue {
     public isSwitchWelcomeToUnis:boolean = false;
     public isSwitchTellUsAboutYourBusiness:boolean = false;
     public isSwitchComplete:boolean = false;
-
     public schema = {
         firstName: (value: any) => {
             if (value && value.length) {
@@ -39,7 +38,6 @@ export default class VerifyEmail extends BaseVue {
             return 'Incorrect password';
         },
     }
-
     public verifyEmail: any = {};
     public businessVerify: any = {};
     public moudleName: string = "welcomeToUnis";
@@ -93,7 +91,7 @@ export default class VerifyEmail extends BaseVue {
         this.moudleName = 'tellUsAboutYourBusiness';
     }
 
-    activated() {
+    public mounted(){
         let name, value, str = location.href, num = str.indexOf("?");
         str = str.substr(num + 1);
         let arr = str.split("&");
@@ -113,7 +111,6 @@ export default class VerifyEmail extends BaseVue {
         this.isSwitchComplete= false;
         this.isSwitchWelcomeToUnis = true;
     }
-
     returnToSignIn() {
         this.setRouter({ name: 'SignIn'})
 

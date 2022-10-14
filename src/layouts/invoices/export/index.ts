@@ -1,12 +1,11 @@
 import { Options } from 'vue-class-component';
-import template from "./import-export.vue";
+import template from "./export.vue";
 import BaseVue from '@/utils/base-vue';
 import PrimaryModal from '@/components/primary-modal';
 import ImportDrap from '@/components/import-drap';
-import './import-export.scss';
 @Options({
     mixins: [template],
-    name: 'ImportExport',
+    name: 'Export',
     components: {
         PrimaryModal,
         ImportDrap
@@ -15,7 +14,7 @@ import './import-export.scss';
         propMessage: String
     },
 })
-export default class ImportExport extends BaseVue {
+export default class Export extends BaseVue {
     public isShowMoudal:boolean = false;
     public searchParams:any = {};
     public paging: any = {
@@ -39,11 +38,6 @@ export default class ImportExport extends BaseVue {
 
     public getList(paging: any){
         console.log(paging);
-    }
-
-
-    public onExport(paging: any):void{
-        this.setRouter({name:'Export'})
     }
 
 

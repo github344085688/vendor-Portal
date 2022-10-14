@@ -4,6 +4,7 @@
 import Invoices from '@/layouts/invoices'
 import InvoicesList from '@/layouts/invoices/invoices-list'
 import ImportExport from '@/layouts/invoices/import-export'
+import Export from '@/layouts/invoices/export'
 import InvoiceHistory from '@/layouts/invoice-history'
 declare interface SideNavList {
     groupName: string;
@@ -49,6 +50,10 @@ const SideNavConfig: Array<SideNavList> = [
                     path: 'import-export',
                     name: 'ImportExport',
                     component: ImportExport,
+                },{
+                    path: 'export',
+                    name: 'Export',
+                    component: Export,
                 },]
             },{
                 parentName:'TMS',
