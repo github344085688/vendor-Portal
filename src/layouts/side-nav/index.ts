@@ -5,6 +5,7 @@ import BaseVue from '@/utils/base-vue';
 import SideNavConfig from '@/router/main-routers';
 import {find,forEach} from 'lodash-es';
 import {filterRouterTopMap} from '@/utils/utils'
+
 @Options({
     mixins: [template],
     name: 'SideNav',
@@ -16,8 +17,10 @@ import {filterRouterTopMap} from '@/utils/utils'
     watch: {
         "sideSpread.aaa": { handler: 'countSideSpread', immediate: true ,deep: true},
     },
+    inject: ['changeView']
 })
 export default class SideNav extends BaseVue {
+    public changeView!:any;
 
     public itemChildsLink: string = 'Invoices';
     public isShowSidebar: boolean = false;
@@ -28,20 +31,20 @@ export default class SideNav extends BaseVue {
     public navName: string = 'TMS';
     public navLink: Array<any> = [];
     public countSideSpread(value: number, oldValue: number): void {
-        // console.log('ss',value);
     }
     public mounted(): void {
         this.navLink = SideNavConfig;
-        const pathname = window.location.pathname.slice(1);
+        const routers: any= this.getRouter();
         let routerConfigs: Array<any> = [];
         filterRouterTopMap(SideNavConfig, routerConfigs, ['path', 'name', 'parentName'] );
-        let findRouter = find(routerConfigs, {path: pathname});
+        let findRouter = find(routerConfigs, {name: routers.query.name});
         if (findRouter && findRouter.name) {
             this.itemChildsLink = findRouter.name;
-            this.navName = findRouter.parentName;
+            if(findRouter.parentName) this.navName = findRouter.parentName;
+            else this.navName = findRouter.name;
         }
-
     }
+
 
     public childrenHeight(childrens: any) {
         let length: number = 0;
@@ -70,6 +73,7 @@ export default class SideNav extends BaseVue {
     }
 
     public foldDetails(isFoldDetails: any, item: any): void {
+        if(this.navName==item.name) return;
         if (this.navName == item.name) this.navName = '';
         else this.navName = item.name;
         if (item.path && item.name) this.setRouter({name: item.name})
@@ -82,6 +86,11 @@ export default class SideNav extends BaseVue {
 
     public logOut(): void {
         this.setRouter({name: 'SignIn'})
+    }
+
+
+    public test( ) {
+        console.log('test');
     }
 
 }

@@ -4,6 +4,7 @@
 import Invoices from '@/layouts/invoices'
 import InvoicesList from '@/layouts/invoices/invoices-list'
 import ImportExport from '@/layouts/invoices/import-export'
+import Service from '@/layouts/service'
 import Export from '@/layouts/invoices/export'
 import InvoiceHistory from '@/layouts/invoice-history'
 declare interface SideNavList {
@@ -23,62 +24,71 @@ const SideNavConfig: Array<SideNavList> = [
         groupName: '',
         children: [{
             title: 'Dashboard',
-            name:'Dashboard',
+            name: 'Dashboard',
             icon: require('../assets/img/tms2.svg'),
             children: [],
 
         },]
     },
     {
-        groupName: 'MAIN MENU', children: [
-        {
-            title: 'TMS',
-            name:'TMS',
-            icon: require('../assets/img/tms2.svg'),
-            children: [{
-                parentName:'TMS',
-                path: 'TMS/invoices',
-                name: 'Invoices',
-                component: Invoices,
-                title: 'Invoices',
-                redirect: {name: 'InvoicesList'},
-                children:[{
-                    path: 'invoices-list',
-                    name: 'InvoicesList',
-                    component: InvoicesList,
-                },{
-                    path: 'import-export',
-                    name: 'ImportExport',
-                    component: ImportExport,
-                },{
-                    path: 'export',
-                    name: 'Export',
-                    component: Export,
-                },]
-            },{
-                parentName:'TMS',
-                path: 'TMS/invoice-history',
-                name: 'InvoiceHistory',
-                component: InvoiceHistory,
-                title: 'Invoice History'
-            }],
-        }
-    ]
+        groupName: 'MAIN MENU',
+        children: [
+            {
+                title: 'TMS',
+                name: 'TMS',
+                icon: require('../assets/img/tms2.svg'),
+                children: [{
+                    parentName: 'TMS',
+                    path: 'TMS/invoices',
+                    name: 'Invoices',
+                    component: Invoices,
+                    title: 'Invoices',
+                    redirect: {name: 'InvoicesList'},
+                    children: [{
+                        path: 'invoices-list',
+                        name: 'InvoicesList',
+                        component: InvoicesList,
+                    }, {
+                        path: 'import-export',
+                        name: 'ImportExport',
+                        component: ImportExport,
+                    }, {
+                        path: 'export',
+                        name: 'Export',
+                        component: Export,
+                    },]
+                }, {
+                    parentName: 'TMS',
+                    path: 'TMS/invoice-history',
+                    name: 'InvoiceHistory',
+                    component: InvoiceHistory,
+                    title: 'Invoice History'
+                }],
+            },
+            {
+                title: 'Service',
+                name: 'Service',
+                path: 'service',
+                component: Service,
+                icon: require('../assets/img/tms2.svg'),
+
+            }
+        ]
     },
     {
         groupName: 'MY BUSINESS', children: [
         {
             title: 'Payments ',
-            name:'Payments',
+            name: 'Payments',
             icon: require('../assets/img/tms2.svg'),
             children: [{
-                parentName:'Payments',
+                parentName: 'Payments',
                 path: 'payments/business',
                 name: 'Business',
                 component: Invoices,
                 title: 'Business'
             }, {
-                parentName:'Payments',
+                parentName: 'Payments',
                 path: 'payments/invoice-history',
                 name: 'businessHistory',
                 component: InvoiceHistory,
@@ -86,7 +96,7 @@ const SideNavConfig: Array<SideNavList> = [
             }],
         }, {
             title: 'Business Info  ',
-            name:'BusinessInfo',
+            name: 'BusinessInfo',
             icon: require('../assets/img/tms2.svg'),
         },
     ]
@@ -95,11 +105,11 @@ const SideNavConfig: Array<SideNavList> = [
         groupName: 'GENERAL', children: [
         {
             title: 'Message Center ',
-            name:'MessageCenter',
+            name: 'MessageCenter',
             icon: require('../assets/img/tms2.svg'),
         }, {
             title: 'Settings',
-            name:'Settings',
+            name: 'Settings',
             icon: require('../assets/img/tms2.svg'),
         },
     ]

@@ -12,7 +12,6 @@ export default class RouterViews extends BaseVue {
     }
 
     public routeChange(routerName: any){
-        console.log(routerName);
         if(routerName=='ExistingCustomerSignUp'||routerName=='VerifyEmailTips') this.isShowShadows = false;
         else this.isShowShadows = true;
     }

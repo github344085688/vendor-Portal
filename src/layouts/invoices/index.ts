@@ -36,7 +36,6 @@ export default class Invoices extends BaseVue {
     }
 
     public routeChange(routerName: any){
-        console.log(routerName);
         if(routerName=='ImportExport' )  this.isShowMoudle  = 'Import & Export';
         if(routerName=='InvoicesList' )  this.isShowMoudle  = 'Invoices';
     }

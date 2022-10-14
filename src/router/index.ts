@@ -26,7 +26,6 @@ interface ScrollPositionElement extends ScrollToOptions {
 const childrenRouters = ()=>{
     let childRouters:Array<any> = [];
     filterRouterTopMap(MainRouters, childRouters, ['path','name','component','redirect'] );
-    console.log(childRouters);
     return childRouters;
 }
 const mainRoutes:any=[ {
