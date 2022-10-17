@@ -89,8 +89,5 @@ export default class SideNav extends BaseVue {
     }
 
 
-    public test( ) {
-        console.log('test');
-    }
 
 }

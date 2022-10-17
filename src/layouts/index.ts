@@ -4,7 +4,8 @@ import './layout.scss';
 import BaseVue from '@/utils/base-vue';
 import SideNav from './side-nav';
 import TopBar from './top-bar';
-import { ref } from "vue";
+import { ref  } from "vue";
+import { useEventbus } from '@/utils/useEventbus';
 @Options({
     mixins: [template],
     name:'Layouts',
@@ -24,6 +25,7 @@ export default class Layouts extends BaseVue {
     public sideSpread: any = {};
     public routers: any = {};
     public treeRef: any ;
+    public eventbus = useEventbus();
     public togoaside(isSpread: boolean): void {
         this.isSideSpread = isSpread;
         this.sideSpread.bb = isSpread;
@@ -36,6 +38,7 @@ export default class Layouts extends BaseVue {
         this.treeRef = ref<any>();
     }
     public  mounted() {
+        this.eventbus.customOn('foo', (e:any) => console.log('foo', e) )
 
     }
 

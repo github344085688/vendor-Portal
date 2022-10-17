@@ -3,6 +3,7 @@ import template from "./import-export.vue";
 import BaseVue from '@/utils/base-vue';
 import PrimaryModal from '@/components/primary-modal';
 import ImportDrap from '@/components/import-drap';
+import { useEventbus } from '@/utils/useEventbus';
 import './import-export.scss';
 @Options({
     mixins: [template],
@@ -18,12 +19,17 @@ import './import-export.scss';
 export default class ImportExport extends BaseVue {
     public isShowMoudal:boolean = false;
     public searchParams:any = {};
+    public eventbus = useEventbus();
+    public emitter:any ;
     public paging: any = {
         pageSize: 10,
         currentPage: 1,
         totalSize: 2000,
         text: 'tasks'
     };
+    public mounted( ):void{
+    }
+
     public onShowMoudal(isShowMoudal:boolean){
         this.isShowMoudal=true;
     }
@@ -42,8 +48,9 @@ export default class ImportExport extends BaseVue {
     }
 
 
-    public onExport(paging: any):void{
-        this.setRouter({name:'Export'})
+    public onExport(paging: any){
+        this.eventbus.customEmit('foo',{a:'1454'});
+        // this.setRouter({name:'Export'})
     }
 
 

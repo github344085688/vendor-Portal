@@ -54,5 +54,8 @@ export default class Invoices extends BaseVue {
         console.log(paging);
     }
 
+    public test( ) {
+        console.log('test');
+    }
 
 }
