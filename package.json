@@ -11,6 +11,7 @@
     "@vuelidate/core": "^2.0.0-alpha.44",
     "@vuelidate/validators": "^2.0.0-alpha.31",
     "axios": "^0.27.2",
+    "chart.js": "^3.9.1",
     "echarts": "^5.4.0",
     "lodash-es": "^4.17.21",
     "mitt": "^3.0.0",
@@ -20,10 +21,8 @@
     "vue": "^3.2.13",
     "vue-chartjs": "^4.1.2",
     "vue-class-component": "^8.0.0-0",
-    "vue-echarts": "^6.2.3",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^4.0.3",
-    "vue3-apexcharts": "^1.4.1",
     "vuex": "^4.0.0",
     "yup": "^0.32.11"
   },
