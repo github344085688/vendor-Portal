@@ -1,16 +1,7 @@
 <template>
-    <div class="" style="width: 400px; height: 200px; margin-top: 150px">
-        <Line
-                :chart-options="chartOptions"
-                :chart-data="chartData"
-                :chart-id="chartId"
-                :dataset-id-key="datasetIdKey"
-                :plugins="plugins"
-                :css-classes="cssClasses"
-                :styles="styles"
-                :width="width"
-                :height="height"
-        />
+    <div class="row">
+        <div class="col-6"><mixed-chart/></div>
+        <div class="col-6"><chart-line height="250" width="100%"/></div>
     </div>
 
 </template>
