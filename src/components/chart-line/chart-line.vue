@@ -3,11 +3,9 @@
         <Line
                 :chart-options="chartOptions"
                 :chart-data="chartData"
-                :chart-id="chartId"
-                :dataset-id-key="datasetIdKey"
-
+                :chart-id="'chartId1'"
+                :dataset-id-key="'datasetIdKey1'"
                 :css-classes="cssClasses"
-
                 :width="width"
                 :height="height"
         />
