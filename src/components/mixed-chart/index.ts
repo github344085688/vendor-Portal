@@ -59,10 +59,18 @@ ChartJS.register(
         plugins: {
             type: Array as PropType<Plugin<'line'>[]>,
             default: () => []
+        },
+        datasets: {
+            type: Array,
+            default: () => [ ],
         }
     },
+    watch:{
+        datasets:{handler : 'watchDatasets', immediate: true ,deep: true}
+    }
 })
 export default class MixedChart extends BaseVue {
+    public datasets!:Array<any>;
 
 
     public isSideSpread: boolean = true;
@@ -74,6 +82,19 @@ export default class MixedChart extends BaseVue {
                 type: 'line',
                 label: 'circle',
                 data: [5, 20, 35, 45, 80, 110, null, null ],
+                /*data: [{
+                    x: -10,
+                    y: 0
+                }, {
+                    x: 0,
+                    y: 10
+                }, {
+                    x: 10,
+                    y: 5
+                }, {
+                    x: 0.5,
+                    y: 5.5
+                }, null, null, null, null],*/
                 borderColor: '#488492',
                 backgroundColor: '#488492',
                 /* pointStyle: 'triangle',
@@ -91,7 +112,27 @@ export default class MixedChart extends BaseVue {
 
         ]
     }
+    public watchDatasets(value: number, oldValue: number): void {
+       this.chartData.datasets[0].data = value;
+        console.log(value);
+    }
 
+    public mounted():void{
+        this.chartData.datasets[0].data = this.datasets.length>0 ? this.datasets:[5, 20, 35, 45, 80, 110, null, null ];
+    }
+
+    private adjustRadiusBasedOnData(ctx: any) {
+        // const v:any = ctx.parsed.y;
+        const index:any = ctx.dataIndex;
+        if(index == 0) return 2;
+        else if(ctx.dataset.data && !ctx.dataset.data[index+1]) return 5;
+        else return 0;
+        /*return v < 10 ? 5
+         : v < 25 ? 7
+         : v < 50 ? 9
+         : v < 75 ? 11
+         : 15;*/
+    }
 
     public chartOptions: any = {
         responsive: true, // 长宽，100%.如果要单设长和宽的话，要将responsive 设为false
@@ -108,9 +149,9 @@ export default class MixedChart extends BaseVue {
          bottom: 0
          }
          },*/
-        animation: {//设置不做动画 （可以提高性能）
-            duration: 0// general animation time
-        },
+       /* animation: {//设置不做动画 （可以提高性能）
+            duration: 10// general animation time
+        },*/
         hover: {
             animationDuration: 0// duration of animations when hovering an item
         },
@@ -174,14 +215,18 @@ export default class MixedChart extends BaseVue {
 
                 display: true,//是显示
                 grid: {
-                    borderColor: '#E0DDDD',
+                    display:true,
+                    circular:true,
+                    drawBorder:true,
                     offset:true,
+                    // z:999999,
+                    borderDash:[60,220,220 ],
+                    borderColor: '#E0DDDD',
                     tickLength:-1,
                     tickWidth:0,
                     lineWidth:0.3,//**
-                    borderDashOffset:1,
+                    borderDashOffset:200,
                     borderWidth:1,
-                    circular:true,
                     color:'#E0DDDD',//网格颜色。
                     tickColor:'#E0DDDD',
                 },
@@ -192,8 +237,8 @@ export default class MixedChart extends BaseVue {
                 },
                 gridLines: {
                     borderColor: '#f6f3f3',
-                    display: false,
-                    drawBorder: false,
+                    display: true,
+                    drawBorder: true,
                     color: 'transparent',
                     zeroLineColor: '#832828'
                 }
@@ -273,7 +318,7 @@ export default class MixedChart extends BaseVue {
                 // radius: 2,
                 backgroundColor: "#488492",
                 // hoverBackgroundColor: "#a2ffa5",
-                // radius: this.adjustRadiusBasedOnData,
+                radius: this.adjustRadiusBasedOnData,
                 // pointStyle: this.alternatePointStyles,
                 // hoverRadius: 15,
             },

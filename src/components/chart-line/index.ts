@@ -195,14 +195,18 @@ export default class ChartLine extends BaseVue {
 
                 display: true,//是显示
                 grid: {
-                    borderColor: '#E0DDDD',
+                    display:true,
+                    circular:true,
+                    drawBorder:true,
                     offset:true,
+                    // z:999999,
+                    borderDash:[90,200,200 ],
+                    borderColor: '#E0DDDD',
                     tickLength:-1,
                     tickWidth:0,
                     lineWidth:0.3,//**
-                    borderDashOffset:1,
+                    borderDashOffset:200,
                     borderWidth:1,
-                    circular:true,
                     color:'#E0DDDD',//网格颜色。
                     tickColor:'#E0DDDD',
                 },
