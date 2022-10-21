@@ -1,1 +1,5 @@
-　*.js linguist-language=TypeScript
+*.js linguist-language=TypeScript
+*.css linguist-language=TypeScript
+*.html linguist-language=TypeScript
+*.png linguist-language=TypeScript
+*.jpg linguist-language=TypeScript
