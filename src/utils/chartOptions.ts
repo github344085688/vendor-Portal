@@ -5,10 +5,14 @@
 
 const adjustRadiusBasedOnData = (ctx: any)=>{
     // const v:any = ctx.parsed.y;
-    const index:any = ctx.dataIndex;
-    if(index == 0) return 2;
-    else if(ctx.dataset.data && !ctx.dataset.data[index+1]) return 5;
-    else return 0;
+    if(ctx.dataset.spot == 'none') return;
+    if(ctx.dataset.spot == 'last'){
+        const index:any = ctx.dataIndex;
+        if(index == 0) return 2;
+        else if(ctx.dataset.data && !ctx.dataset.data[index+1]) return 5;
+        else return 0;
+    }
+
     /*return v < 10 ? 5
      : v < 25 ? 7
      : v < 50 ? 9
@@ -86,10 +90,10 @@ export const chartLine = {
                  //更多配置http://www.chartjs.org/docs/latest/axes/radial/linear.html*/
             },
             grid: {
-                borderColor: '#f6f3f3',
+                borderColor: 'rgba(255, 99, 132, 0)',
                 display:false,
                 offset:true,
-                tickLength:10,
+                tickLength:-1,
             },
 
 
@@ -99,17 +103,18 @@ export const chartLine = {
             display: true,//是显示
             grid: {
                 display:true,
+                tickLength:-1,
+                borderCapStyle:'black',
+                borderDash:[100,200,200],
+                borderDashOffset:200,
+
                 circular:true,
                 drawBorder:true,
-                offset:true,
+                // offset:true,
                 // z:999999,
-                borderDash:[80,200,200],
-                borderCapStyle:'black',
                 borderColor: '#E0DDDD',
-                tickLength:-1,
-                tickWidth:0,
-                lineWidth:0.3,//**
-                borderDashOffset:200,
+                tickWidth:1,
+                lineWidth:1,//!**
                 borderWidth:1,
                 color:'#E0DDDD',//网格颜色。
                 tickColor:'#E0DDDD',

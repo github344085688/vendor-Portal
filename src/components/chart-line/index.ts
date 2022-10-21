@@ -4,6 +4,15 @@ import BaseVue from '@/utils/base-vue';
 import { chartLine } from '@/utils/chartOptions';
 import { defineComponent, h, PropType } from 'vue'
 import { Line } from 'vue-chartjs'
+import {forEach,isArray} from 'lodash-es';
+type CartConfig = {
+    type?: string,
+    label?: string,
+    data:[],
+    borderColor?: string,
+    backgroundColor?: string,
+    spot?: string,
+};
 import {
     Chart as ChartJS,
     Title,
@@ -56,42 +65,28 @@ ChartJS.register(
         plugins: {
             type: Array as PropType<Plugin<'line'>[]>,
             default: () => []
+        },
+        datasets: {
+            type: Array,
+            default: () => [],
         }
     },
+    watch:{
+        datasets:{handler : 'watchDatasets', immediate: true ,deep: true}
+    }
 })
 export default class ChartLine extends BaseVue {
-
-
     public chartId!:string;
     public cssClasses!:string;
     public width!: number;
     public height!: number;
     public styles!:Object;
     public plugins!: any;
+    public datasets!: Array<any>;
 
     public chartData: any = {
         labels: ["April 1","","","May 1","","","","June 1" ],
-        datasets: [
-          {
-                // type: 'line',
-                label: 'circle',
-                data: [5, 20, 35, 45, 80, 110, null, null ],
-                borderColor: '#488492',
-                backgroundColor: '#488492',
-               /* pointStyle: 'triangle',
-                pointRadius: 6,*/
-            },
-            {
-                // type: 'line',
-                label: 'aim',
-                data: [2, 10, 25, 30,50, 60, 65, 75],
-                borderColor: 'rgba(0, 0, 0, 0.1)',
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                pointStyle: 'none',
-                pointRadius: 0,
-            },
-
-        ]
+        datasets:[],
     }
 
     private alternatePointStyles(ctx: any) {
@@ -103,6 +98,28 @@ export default class ChartLine extends BaseVue {
         else return 'none';
     }
     public  chartOptions: any =  chartLine;
+    public watchDatasets(value: Array<number> ): void {
+        this.fillCartData(value);
 
+    }
+
+    private fillCartData(datas:Array<number>){
+        forEach(datas, (val: any, index: any) => {
+            let cart: CartConfig = {
+                type: val.type ? val.type : 'line',
+                label: val.label ? val.label : '',
+                data: val.data,
+                borderColor: val.borderColor ? val.borderColor : '#488492',
+                backgroundColor: val.backgroundColor ? val.backgroundColor : '#488492',
+                spot: val.spot ? val.spot : '',
+            };
+            this.chartData.datasets.push(cart);
+        });
+    }
+
+    public mounted():void{
+        this.fillCartData(this.datasets);
+        /* this.chartData.datasets[0].data = this.datasets.length>0 ? this.datasets:[5, 20, 35, 45, 80, 110, null, null ];*/
+    }
 
 }

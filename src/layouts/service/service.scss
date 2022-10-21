@@ -1,0 +1,15 @@
+.service-box {
+	width: 90%;
+	margin: auto;
+	.car {
+		background: #F6F6F6;
+		border-radius: 8px;
+		width: 100%;
+		min-height: 150px;
+	}
+	.car-edit{
+		position: absolute;
+		right: 25px;
+		top:25px;
+	}
+}

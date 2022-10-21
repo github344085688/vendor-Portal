@@ -21,6 +21,7 @@
     "vue": "^3.2.13",
     "vue-chartjs": "^4.1.2",
     "vue-class-component": "^8.0.0-0",
+    "vue-datepicker-next": "^1.0.2",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0",
@@ -35,5 +36,11 @@
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "typescript": "~4.5.5"
-  }
+  },
+  "keywords": [
+    "vue3",
+    "vue-datepicker",
+    "vue-class-component",
+    "Carts"
+  ]
 }

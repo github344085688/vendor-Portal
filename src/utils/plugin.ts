@@ -3,6 +3,7 @@ import PopupHead from "@/components/popup-head";
 import PopupReconfirm from "@/components/popup-reconfirm";
 import DefaultSelect from "@/components/default-select";
 import StatusColors from "@/components/status-colors";
+import DefaultSelectTriangle from "@/components/default-select-triangle";
 
 let counts = 10;
 declare module '@vue/runtime-core' {
@@ -16,6 +17,7 @@ export default {
     install (app: any) {
         app.component('default-select', DefaultSelect);
         app.component('status-colors',  StatusColors);
+        app.component('default-select-triangle',  DefaultSelectTriangle);
         const MESSage_EXTEND = createApp(PopupHead);
         const MESSage_CREATE_EL: any = MESSage_EXTEND.mount(
             document.createElement("div"),

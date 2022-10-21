@@ -654,3 +654,51 @@
 .transition-5 {
 	transition: all 0.5s;
 }
+.unis-select-icon-47{
+	cursor: pointer;
+	padding :0  10px  0 0 !important;
+	min-height: inherit!important;
+	min-width: 120px!important;
+	width: inherit!important;
+	background: inherit!important;
+}
+.unis-select-icon-47::after {
+	display:none !important;
+}
+.unis-select-icon-47::before {
+	font-family: "unis" !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #969696;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: "" !important;
+	position: absolute;
+	top: 15%;
+	right: 15px;
+	border-color: currentcolor !important;
+	opacity: 1;
+	transform: scale(0.5, 0.4) !important;
+	-ms-transform: scale(0.5, 0.4) !important;
+	-moz-transform: scale(0.5, 0.4) !important;
+	-webkit-transform: scale(0.5, 0.4) !important;
+	-o-transform: scale(0.5, 0.4) !important;
+	display: flex;
+	transition: -webkit-transform 0.1s;
+	transition: transform 0.1s, -webkit-transform 0.1s;
+}
+
+
+.unis-select-icon-47:focus::before {
+	transform: rotate(-180deg) scale(0.5, 0.4) !important;
+	transition: -webkit-transform 0.1s;
+	transition: transform 0.1s, -webkit-transform 0.1s;
+}
+.f-10{
+	font-size: 10px;
+	transform:scale(0.75) !important;
+}
