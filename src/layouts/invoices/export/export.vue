@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex flex-column" style="height: 100%;">
+    <div class="d-flex flex-column" style="height: 90%;">
         <div class="d-flex align-items-center justify-content-end  mb-4">
             <h2 class="mr-auto">Import & Export</h2>
             <div class="unis-adj">
@@ -8,14 +8,15 @@
             </div>
         </div>
         <div class="import-export ">
-            <import-drap/>
-            <div class="f-18 f-b mt-3">Import History</div>
-            <div class="import-history-box roll-background">
+
+
+            <div class="f-18 f-b mt-3">Export Files</div>
+            <div class="import-history-box roll-background" style="top: 100px;">
                 <div class="d-flex flex-wrap justify-content-between">
-                    <div class="import-history d-flex align-items-center justify-content-between" v-for="i in 31">
+                    <div class="import-history d-flex align-items-center justify-content-between" v-for="i in 1">
                         <div class="" style="width: 40%">
                             <div class="ft-grey700"> File name</div>
-                            <p>2020-08.xls</p>
+                            <p>Invoice_Template.xls</p>
                         </div>
                         <div class="" style="width: 40%">
                             <div class="ft-grey700">Uploaded date</div>

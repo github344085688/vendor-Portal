@@ -1,11 +1,5 @@
 <template>
-    <div class="pt-0 p-4 login-moudle m-auto" >
-        <div class="d-flex flex-column justify-content-center align-items-center"  >
-        </div>
-        <div class="d-flex media-t-4 mediaju-center-to-left">
-            <img src="@/assets/img/portal/logon.svg" alt="">
-
-        </div>
+    <div class="sig-in-box"  >
         <div class="d-flex media-t-3 mediaju-center-to-left f-b " style="font-size: 32px; ">
             Create your Vendor account
         </div>

@@ -1,0 +1,23 @@
+.import-export {
+	flex-grow:1;
+	padding: 32px;
+	background: #F6F6F6;
+	border-radius: 4px;
+	position: relative;
+	.import-history-box{
+		position: absolute;
+		left: 32px;
+		right: 32px;
+		bottom: 0;
+		top: 230px;
+		overflow-y: auto;
+		.import-history{
+			background: #F9F9F9;
+			padding: 20px;
+			width: 49.2%;
+			margin-bottom: 24px;
+			border: 1px solid #CECECE;
+		}
+	}
+
+}

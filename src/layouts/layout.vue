@@ -1,15 +1,13 @@
 <template>
     <section class="top-bar" :class="[isSideSpread?'':'side-spread']">
-        <top-bar></top-bar>
+        <top-bar/>
     </section>
-    <side-nav @togoaside="togoaside" :sideSpread="sideSpread"></side-nav>
+    <side-nav @togoaside="togoaside" :sideSpread="sideSpread"  />
     <section class="main-section roll-background" :class="[isSideSpread?'':'side-spread']">
-            <router-view v-slot="{ Component, route }">
-                <transition name="fadee" class="tra-inset" >
+            <router-view v-slot="{ Component, route }"  >
                     <keep-alive>
-                        <component :is="Component" :key="route.path"/>
+                        <component :is="Component" :ref="treeRef" :key="route.path" :init="changeView(route)" />
                     </keep-alive>
-                </transition>
             </router-view>
     </section>
 </template>
