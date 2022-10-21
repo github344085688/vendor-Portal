@@ -1,6 +1,7 @@
 {
   "name": "vendor_portal",
   "description": "Vue 3, Vue Router 4, Vuex 4, Vue Class Component 8, Typescript 4, Jest, Sass,",
+  "author": "344085688@qq.com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
