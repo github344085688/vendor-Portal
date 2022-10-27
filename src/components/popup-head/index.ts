@@ -2,7 +2,6 @@
  * Created by f on 2018/5/22.
  */
 import { Options, Vue } from 'vue-class-component';
-import BaseVue from "../../utils/base-vue";
 import './popup-head.scss';
 import template from "./popup-head.vue";
 @Options({

@@ -14,5 +14,41 @@ import BaseVue from '../../utils/base-vue';
 })
 export default class InvoiceHistory extends BaseVue {
 
+    public Success() {
+        this.$success('sss')
+
+    }
+
+    public Error() {
+        this.$errors('sss')
+    }
+
+    public Warning() {
+        this.$warnings('ssss')
+    }
+
+    public Normal() {
+        this.$normals('ssss')
+    }
+
+    public Self() {
+        this.$self('ssss')
+    }
+
+    public Reconfirm() {
+        this.$reconfirm({
+            title: 'Remove Small Parcel',
+            content: 'Are You Sure You Want To remove this small parcel? ',
+            confirm: 'Yes',
+            cancel: 'No',
+        })
+            .then((ord: any) => {
+                console.log(ord);
+            })
+            .catch((err: any) => {
+                console.log(err);
+            });
+    }
+
 
 }

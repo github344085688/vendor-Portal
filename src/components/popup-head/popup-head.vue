@@ -1,6 +1,6 @@
 <template>
     <Transition name="topIn" mode="out-in" appear>
-        <section id="message" >
+        <section id="message" style="z-index: 99" >
             <transition-group  >
                 <div  class="d-flex align-items-center justify-content-start br-ra4 br-red100  br-1 p-4 message"
                         v-for="item in msgOueue"

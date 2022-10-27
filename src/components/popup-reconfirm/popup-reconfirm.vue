@@ -1,6 +1,6 @@
 <template>
     <Transition name="topIn" mode="out-in" >
-        <section id="popup-reconfirm" v-if="options.show">
+        <section id="popup-reconfirm" v-if="options.show" style="z-index: 99">
             <transition-group name="topIn" tag="div" >
             <div class="unis-modal-primary d-flex flex-column" key="lorem" >
                 <div class=" d-flex pl-4 pr-4  pt-4 justify-content-between wid100">

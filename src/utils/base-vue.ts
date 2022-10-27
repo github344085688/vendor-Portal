@@ -27,6 +27,10 @@ export default class BaseVue extends Vue {
         this.gb_proxy.$message.normal(msg) ;
     }
 
+    $self(msg: any){
+        this.gb_proxy.$message.self(msg) ;
+    }
+
     $reconfirm(options: any){
        return this.gb_proxy.$reconfirm(options) ;
     }

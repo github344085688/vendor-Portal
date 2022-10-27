@@ -5,7 +5,7 @@ import { chartLine } from '@/utils/chartOptions';
 import { defineComponent, h, PropType } from 'vue'
 import { Line } from 'vue-chartjs'
 import {forEach,isArray,isPlainObject} from 'lodash-es';
-type CartConfig = {
+declare interface CartConfig {
     type?: string,
     label?: string,
     data?: Array<number>,

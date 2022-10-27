@@ -1,8 +1,7 @@
 /**
  * Created by f on 2018/5/22.
  */
-import { Options } from 'vue-class-component';
-import BaseVue from "../../utils/base-vue";
+import { Options, Vue } from 'vue-class-component';
 import './popup-reconfirm.scss';
 import template from "./popup-reconfirm.vue";
 @Options({
@@ -10,7 +9,7 @@ import template from "./popup-reconfirm.vue";
     name: 'PopupReconfirm',
 
 })
-export default class PopupReconfirm extends BaseVue {
+export default class PopupReconfirm extends Vue {
 
     public msgOueue: any = [];
     public options: any = { };
