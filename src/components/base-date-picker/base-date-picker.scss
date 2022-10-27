@@ -1,0 +1,22 @@
+.season_base_date_picker{
+	position: relative;
+	min-height: 32px;
+	height: 32px;
+	.button {
+		position: absolute;
+		top:0 !important;
+		left: 0 !important;
+		bottom: 0 !important;
+		padding-right: 40px!important;
+		z-index: 1;
+		font-weight: 700;
+		color: #969696!important;
+	}
+	.date-picker-box{
+		opacity: 0;
+		z-index: 0;
+		max-height: 32px;
+		width: inherit !important;
+
+	}
+}

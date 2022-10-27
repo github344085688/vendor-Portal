@@ -9,8 +9,9 @@
         <div class="car d-flex mt-4 justify-content-between ">
             <div class="col-9 pt-4 pl-4 pr-4 pb-2" style="border-right: 1px solid #E0DDDD;">
                 <div class="row">
-                    <div class="col-2">
-                        <div class=" mb-2" style="width: 140px;">
+                    <div class="mr-2 pl-4">
+                        <span class="f-24 f-b">$4,197.22</span>
+                        <div class=" mb-1" style="width: 140px;">
                             <default-select-triangle
                                     color="#969696"
                                     name="reditCardCountry"
@@ -21,25 +22,16 @@
 
                             />
                         </div>
-                        <span class="f-24 f-b">$4,197.22</span>
+
                     </div>
-                    <div class="col-2">
-                        <div class=" mb-2" style="width: 140px;">
-                            <default-select-triangle
-                                    color="#969696"
-                                    name="month"
-                                    v-model="service.month"
-                                    :selectdata="['June 1,2022','June 2,2022','June 3,2022','June 4,2022']"
-                                    placeholder="Carrier name"
-                                    key="month"
-
-                            />
-                        </div>
-
+                    <div class="col-7">
                         <span class="f-24 f-b" style="color:#969696">$4,197.22</span>
+                        <div class=" mb-1"  >
+                            <base-date-picker  v-model="service.month" @emitChoose="onSelectChartDate"/>
+                        </div>
                     </div>
                 </div>
-                <chart-line height="220" width="100%" :datasets="cartData" />
+                <chart-line height="220" width="100%" :datasets="cartData" :cartOptions="cartOptions" />
             </div>
             <div class="col-3 d-flex flex-column">
                 <div class="row p-4  po-r" style="flex:1">
@@ -72,8 +64,8 @@
                 </div>
             </div>
         </div>
-        <base-date-picker/>
     </div>
+
     <!-- <div class="col-6"><mixed-chart height="250" width="100%" /></div>
      <div class="col-6"><chart-line height="250" width="100%"/></div>
      <div class="col-12 row">

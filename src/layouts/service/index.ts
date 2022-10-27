@@ -16,32 +16,42 @@ import BaseDatePicker  from '@/components/base-date-picker';
     },
 })
 export default class Service extends BaseVue {
-    public cartData: Array<any> = [{
+    public cartData: Array<any> = [
+        [10, 15,20, 40, 100, 120, null, null],
+        [2, 10, 25, 30, 50, 60, 65, 75]
+    ];
+    public cartOptions: Array<any> = [
+        {
         type: 'line',
         label: 'circle',
         borderColor: '#488492',
         backgroundColor: '#488492',
         spot:'last',
-        data: [10, 15,20, 40, 100, 120, null, null],
-    }, {
+       },
+        {
         type: 'line',
         label: 'circle',
         borderColor: '#b0b0b0',
         backgroundColor: '#b0b0b0',
         spot:'none',
-        data: [2, 10, 25, 30, 50, 60, 65, 75],
     }
-
-
     ];
     public isCartData:boolean =true;
     public service:any = {
         business:'Gross Volume',
-        month:'June 1,2022'
+        month:'December 1,2022 ~ November 1,2022'
     };
-    public setData(){
+    private setData(): void{
        this.isCartData =!this.isCartData;
-       this.cartData = this.isCartData?[[10, 15, 10, 25, 40, 80, null, null ]]:[[10, 15, 35, 45, 80, 110, 120, 135 ]];
+       this.cartData =  [
+           [10, 20,15, 35, 110, 130, 135, 140],
+           [2, 10, 25, 30, 50, 60, 65, 75],
+           [10, 20,20, 25, 95, 100, 110, 115],
+       ];
+    }
+
+    public onSelectChartDate(date: string): void {
+        this.setData();
     }
 
 }

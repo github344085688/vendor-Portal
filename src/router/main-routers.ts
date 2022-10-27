@@ -43,7 +43,7 @@ const SideNavConfig: Array<SideNavList> = [
                     name: 'Invoices',
                     component: Invoices,
                     title: 'Invoices',
-                    redirect: {name: 'Service'},
+                    redirect: {name: 'InvoicesList'},
                     children: [{
                         path: 'invoices-list',
                         name: 'InvoicesList',

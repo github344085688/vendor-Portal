@@ -36,9 +36,9 @@ export const chartLine = {
      bottom: 0
      }
      },*/
-    animation: {//设置不做动画 （可以提高性能）
+/*    animation: {//设置不做动画 （可以提高性能）
         duration: 0// general animation time
-    },
+    },*/
     hover: {
         animationDuration: 0// duration of animations when hovering an item
     },

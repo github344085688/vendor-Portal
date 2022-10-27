@@ -4,11 +4,11 @@ import BaseVue from '@/utils/base-vue';
 import { chartLine } from '@/utils/chartOptions';
 import { defineComponent, h, PropType } from 'vue'
 import { Line } from 'vue-chartjs'
-import {forEach,isArray} from 'lodash-es';
+import {forEach,isArray,isPlainObject} from 'lodash-es';
 type CartConfig = {
     type?: string,
     label?: string,
-    data:[],
+    data?: Array<number>,
     borderColor?: string,
     backgroundColor?: string,
     spot?: string,
@@ -69,6 +69,10 @@ ChartJS.register(
         datasets: {
             type: Array,
             default: () => [],
+        },
+        cartOptions: {
+            type: [Object,Array, String],
+            default: '',
         }
     },
     watch:{
@@ -78,6 +82,7 @@ ChartJS.register(
 export default class ChartLine extends BaseVue {
     public chartId!:string;
     public cssClasses!:string;
+    public cartOptions!:object | Array<any> | string;
     public width!: number;
     public height!: number;
     public styles!:Object;
@@ -103,23 +108,46 @@ export default class ChartLine extends BaseVue {
 
     }
 
-    private fillCartData(datas:Array<number>){
+    private fillCartData(datas:Array<number>, isMounted:boolean = false){
+        if(isMounted) this.chartData.datasets = [];
         forEach(datas, (val: any, index: any) => {
-            let cart: CartConfig = {
-                type: val.type ? val.type : 'line',
-                label: val.label ? val.label : '',
-                data: val.data,
-                borderColor: val.borderColor ? val.borderColor : '#488492',
-                backgroundColor: val.backgroundColor ? val.backgroundColor : '#488492',
-                spot: val.spot ? val.spot : '',
-            };
-            this.chartData.datasets.push(cart);
+            if(isMounted){
+                this.fillNewCartData(val, index);
+            }else {
+                if(this.chartData.datasets[index]&&this.chartData.datasets[index].data) this.chartData.datasets[index].data = val;
+                else  this.fillNewCartData(val, 0);
+            }
+
+
         });
     }
 
+    private fillNewCartData(data: Array<number>, index: number): void {
+        let cart: CartConfig = {
+            type: 'line',
+            data: data};
+        if(this.cartOptions){
+            let indexCartOptions:any = {};
+            if (isArray(this.cartOptions)) {
+                indexCartOptions = this.cartOptions[index];
+            }
+            if (isArray(this.cartOptions)) {
+                indexCartOptions = this.cartOptions[index];
+            }
+            if (isPlainObject(this.cartOptions)) {
+                indexCartOptions = this.cartOptions;
+            }
+            cart.type = indexCartOptions.type ? indexCartOptions.type : 'line';
+            cart.label = indexCartOptions.label ? indexCartOptions.label : '';
+            cart.borderColor = indexCartOptions.borderColor ? indexCartOptions.borderColor : '#488492';
+            cart.backgroundColor = indexCartOptions.backgroundColor ? indexCartOptions.backgroundColor : '#488492';
+            cart.spot = indexCartOptions.spot ? indexCartOptions.spot : '';
+        };
+        this.chartData.datasets.push(cart);
+    }
+
     public mounted():void{
-        this.fillCartData(this.datasets);
-        /* this.chartData.datasets[0].data = this.datasets.length>0 ? this.datasets:[5, 20, 35, 45, 80, 110, null, null ];*/
+        this.fillCartData(this.datasets, true);
     }
 
 }
