@@ -15,7 +15,7 @@ import template from "./popup-head.vue";
         }
     },
 })
-export default class PopupHead extends BaseVue {
+export default class PopupHead extends Vue {
 
     public show!: Boolean;
     public msgOueue: any = [];

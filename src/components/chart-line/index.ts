@@ -46,21 +46,13 @@ ChartJS.register(
             type: String,
             default: 'bar'
         },
-        width: {
-            type: Number ,
-            default: '100%'
-        },
         height: {
-            type: Number ,
+            type: Number,
             default: 250
         },
         cssClasses: {
             default: '',
             type: String
-        },
-        styles: {
-            type: Object as PropType<Partial<CSSStyleDeclaration>>,
-            default: () => {}
         },
         plugins: {
             type: Array as PropType<Plugin<'line'>[]>,
@@ -70,13 +62,18 @@ ChartJS.register(
             type: Array,
             default: () => [],
         },
+        chartLabels: {
+            type: Array,
+            default: () => [],
+        },
         cartOptions: {
             type: [Object,Array, String],
             default: '',
         }
     },
     watch:{
-        datasets:{handler : 'watchDatasets', immediate: true ,deep: true}
+        datasets:{handler : 'watchDatasets', immediate: true ,deep: true},
+        chartLabels:{handler:'watchChartLabels', immediate: true ,deep: true}
     }
 })
 export default class ChartLine extends BaseVue {
@@ -88,9 +85,9 @@ export default class ChartLine extends BaseVue {
     public styles!:Object;
     public plugins!: any;
     public datasets!: Array<any>;
+    public chartLabels!: Array<string>;
 
     public chartData: any = {
-        labels: ["April 1","","","May 1","","","","June 1" ],
         datasets:[],
     }
 
@@ -103,9 +100,13 @@ export default class ChartLine extends BaseVue {
         else return 'none';
     }
     public  chartOptions: any =  chartLine;
-    public watchDatasets(value: Array<number> ): void {
+    public watchDatasets<T>(value:Array<number>): void {
         this.fillCartData(value);
 
+    }
+
+    public watchChartLabels<T>(value: T ): void {
+        this.chartData.labels =  value;
     }
 
     private fillCartData(datas:Array<number>, isMounted:boolean = false){
@@ -122,7 +123,7 @@ export default class ChartLine extends BaseVue {
         });
     }
 
-    private fillNewCartData(data: Array<number>, index: number): void {
+    private fillNewCartData<T>(data: Array<number>, index: number): void{
         let cart: CartConfig = {
             type: 'line',
             data: data};
@@ -148,6 +149,7 @@ export default class ChartLine extends BaseVue {
 
     public mounted():void{
         this.fillCartData(this.datasets, true);
+        this.chartData.labels =  this.chartLabels;
     }
 
 }

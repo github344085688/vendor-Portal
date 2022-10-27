@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <chart-line height="220" width="100%" :datasets="cartData" :cartOptions="cartOptions" />
+                <chart-line :height="70" :chartLabels="chartLabels"   :datasets="cartData" :cartOptions="cartOptions" />
             </div>
             <div class="col-3 d-flex flex-column">
                 <div class="row p-4  po-r" style="flex:1">

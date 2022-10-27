@@ -36,6 +36,7 @@ export default class Service extends BaseVue {
         spot:'none',
     }
     ];
+    public chartLabels: Array<any> =  ["April 1","","","May 1","","","","June 1" ];
     public isCartData:boolean =true;
     public service:any = {
         business:'Gross Volume',

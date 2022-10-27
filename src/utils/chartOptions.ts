@@ -19,23 +19,34 @@ const adjustRadiusBasedOnData = (ctx: any)=>{
      : v < 75 ? 11
      : 15;*/
 }
+interface ChartLine <T = {}> {
+    responsive?: boolean;
+    maintainAspectRatio?: boolean;
+    events?: T;
+    hover?: object;
+    layout?: object;
+    responsiveAnimationDuration?: number;
+    scales?: object;
+    tooltips?: object;
+    elements?: object;
+    plugins?: object;
+}
 
-
-export const chartLine = {
+export const chartLine:ChartLine = {
     responsive: true, // 长宽，100%.如果要单设长和宽的话，要将responsive 设为false
     maintainAspectRatio: true,// 保持长宽比
     // borderColor:'#eee1e8',
     // color:'#d2dd7f',
     // indexAxis: 'y',
     events: ['null'],//对事件的反应，null是对任何事件都无反应的设置，默认为["mousemove", "mouseout", "click", "touchstart", "touchmove", "touchend"]
-    /*  layout: {//线形图 位置
-     padding: {
-     left: 0,
-     right:0,
-     top: 0,
-     bottom: 0
-     }
-     },*/
+    layout: {//线形图 位置
+        padding: {
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0
+        }
+    },
 /*    animation: {//设置不做动画 （可以提高性能）
         duration: 0// general animation time
     },*/
