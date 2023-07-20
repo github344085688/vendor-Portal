@@ -10,7 +10,7 @@
                 <Form @submit="onSubmit" class="d-flex flex-column" :validation-schema="schema"
                       v-slot="{ meta, errors }"
                       @invalid-submit="onInvalidSubmit">
-                    <div class="win100  po-r mb-4">
+                    <div class="w-100  po-r mb-4">
                         <label class="pb-0">Email or Username</label>
                         <Field name="firstName" type="text" class="unis-input" v-model="formData.firstName"
                                :error="errors.firstName"/>
@@ -29,7 +29,7 @@
 
                     </div>
 
-                    <div class="win100 po-r mb-4 mt-2">
+                    <div class="w-100 po-r mb-4 mt-2">
                         <label class="pb-0 ">Password </label>
                         <Field name="password" :type="isshowPassword?'password':'text'" v-model="formData.password"
                                class="unis-input" :error="errors.password"/>
@@ -37,7 +37,7 @@
                         <button class="unis-btn unis-btn-text po-a fw-4 " style="right: 10px; top: 32px"
                                 @click.stop.prevent="showPassword()">Show
                         </button>
-                        <div class="d-flex align-items-center mt-1"
+                        <div class="d-flex  mt-1"
                              style="position: absolute;top:100% ;left: 0; height: 15px">
                     <span v-if="errors.password">
                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,26 +51,26 @@
                         </div>
 
                     </div>
-                    <div class="win100 mt-5 ">
+                    <div class="w-100 mt-5 ">
                         <button type="submit"
                                 class="unis-btn unis-btn-primary unis-lag justify-content-center align-items-center"
                                 v-butloding="isLoding">Log in
                         </button>
                     </div>
                 </Form>
-                <div class="win100 mt-3 d-flex justify-content-center align-items-center">
+                <div class="w-100 mt-3 d-flex justify-content-center align-items-center">
                     <input type="checkbox" name="layout" id="KeepMeLoggedIin" class="unis-checkbox"
                            @click="remeberMe"
                            v-model="formData.remeberMe">
                     <label for="KeepMeLoggedIin" class="m-0 pl-3_5">Keep me logged in</label>
                 </div>
-                <div class="win100 mt-4 d-flex justify-content-center align-items-center ">
+                <div class="w-100 mt-4 d-flex justify-content-center align-items-center ">
                     <button class="unis-btn unis-btn-link " @click.stop.prevent="checkPageName('forgotPassword')">
                         Forgot password?
                     </button>
                 </div>
 
-                <div class="d-flex flex-wrap win100 align-items-center mb-5">
+                <div class="d-flex flex-wrap w-100 align-items-center mb-5">
                     <div class="pr-sa-3 pl-0 col  d-flex justify-content-center f-b mt-4">
                         <button class="unis-btn full   unis-btn-tertiary" @click="getRegisterLoging('google')">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
@@ -89,7 +89,7 @@
                         </button>
 
                     </div>
-                    <div class="or">
+                    <div class="or mx-2">
                         or
                     </div>
                     <div class="pl-sa-3 pr-0 col  d-flex justify-content-center f-b mt-4">

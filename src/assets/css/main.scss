@@ -351,14 +351,6 @@
 	transition: all 1s cubic-bezier(0.42, -0.21, 1, 1);
 }
 
-.login-moudle {
-	min-height: 80%;
-	width: 45%;
-	max-height: 80%;
-	height: 80%;
-	position: relative;
-}
-
 .col-media {
 }
 
@@ -527,23 +519,6 @@
 	transition: all 1s cubic-bezier(0.42, -0.21, 1, 1);
 }
 
-.fade-enter-from, .fade-leave-to {
-	transform: translateX(20px);
-	opacity: 0;
-}
-
-.fade-enter-to, .fade-leave-from {
-	opacity: 1;
-}
-
-.fade-enter-active {
-	transition: all 0.7s ease;
-}
-
-.fade-leave-active {
-	transition: all 0.3s cubic-bezier(1, 0.6, 0.6, 1);
-}
-
 .tram-hi {
 	height: 0px;
 	overflow: hidden;
@@ -634,9 +609,7 @@
 }
 
 .sig-in-box {
-	position: absolute;
-	inset: 25px;
-	top: 120px;
+	transition: all 0.2s;
 }
 
 .parent:before, .parent:after {

@@ -1,0 +1,264 @@
+
+/*****/Sass  String Function
+quote(string)
+//给字符串添加引号。
+//quote(runoob)结果: "runoob"
+str-index(string, substring)
+//返回 substring 子字符串第一次在 string 中出现的位置。如果没有匹配到子字符串，则返回 null。
+//str-index(abcd, a)  => 1
+//str-index(abcd, ab) => 1
+//str-index(abcd, X)  => null
+//str-index(abcd, c)  => 3
+str-insert(string, insert, index)
+//在字符串 string 中 index 位置插入 insert。
+//str-insert("Hello world!", " runoob", 6)结果: "Hello runoob world!"
+str-length(string)
+//返回字符串的长度。
+//str-length("runoob")结果: 6
+str-slice(string, start, end)
+//从 string 中截取子字符串，通过 start-at 和 end-at 设置始末位置，未指定结束索引值则默认截取到字符串末尾。
+//str-slice("abcd", 2, 3)   => "bc"
+//str-slice("abcd", 2)      => "bcd"
+//str-slice("abcd", -3, -2) => "bc"
+//str-slice("abcd", 2, -2)  => "bc"
+to-lower-case(string)
+//将字符串转成小写
+//to-lower-case("RUNOOB")结果: "runoob"
+to-upper-case(string)
+//将字符串转成大写
+//to-upper-case("runoob")结果: "RUNOOB"
+unique-id()
+//返回一个无引号的随机字符串作为 id。不过也只能保证在单次的 Sass 编译中确保这个 id 的唯一性。
+unique-id()
+//Result: uad053b1c
+unquote(string)
+//移除字符串的引号
+//unquote("runoob")结果: runoob
+
+/*****/Sass  Number Function
+abs(number)
+//返回一个数值的绝对值。
+//abs(15)结果: 15
+//abs(-15)结果: 15
+ceil(number)
+//向上取整
+//ceil(15.20)结果: 16
+comparable(num1, num2)
+//返回一个布尔值，判断 num1 与 num2 是否可以进行比较
+//comparable(15px, 10px)结果: true
+//comparable(20mm, 1cm)结果: true
+//comparable(35px, 2em)结果: false
+floor(number)
+//向下取整
+//floor(15.80)结果: 15
+max(number...)
+//返回最大值
+//max(5, 7, 9, 0, -3, -7)结果: 9
+min(number...)
+//返回最小值
+//min(5, 7, 9, 0, -3, -7)结果: -7
+percentage(number)
+//将数字转化为百分比的表达形式。
+//percentage(1.2)结果: 120
+random()
+//返回 0-1 区间内的小数，
+//random()结果: 0.45673
+random(number)
+//返回 1 至 number 之间的整数，包括 1 和 limit。
+//random(6)结果: 4
+round(number)
+//返回最接近该数的一个整数，四舍五入。
+//round(15.20)结果: 15
+//round(15.80)结果: 16
+unit()	返回数字单位的字符串表示形式。
+unitless()	返回给定数字是否有单位。
+
+
+/******/Sass Introspection 函数
+
+call(function, arguments...)
+//函数的动态调用，即调用函数 function 参数为 arguments，并返回结果。
+content-exists()
+//查看当前的混入是否传递 @content 块。
+feature-exists(feature)
+//检查当前的 Sass 实现是否支持该特性。
+//feature-exists("at-error");结果: true
+function-exists(functionname)
+//检测指定的函数是否存在
+//function-exists("nonsense")结果: false
+get-function(functionname, css: false)
+//返回指定函数。如果 css 为 true，则返回纯 CSS 函数。
+global-variable-exists(variablename)
+//检测某个全局变量是否定义。
+//variable-exists(a)结果: true
+inspect(value)
+//返回一个字符串的表示形式，value 是一个 sass 表达式。
+mixin-exists(mixinname)	检测指定混入 (mixinname)
+//是否存在。
+//mixin-exists("important-text")结果: true
+type-of(value)
+//返回值类型。返回值可以是 number, string, color, list, map, bool, null, function, arglist。
+//type-of(15px)结果: number
+//type-of(#ff0000)结果: color
+unit(number)
+//返回传入数字的单位（或复合单位）。
+//unit(15px)结果: px
+unitless(number)
+//返回一个布尔值，判断传入的数字是否带有单位。
+//unitless(15px)结果: false
+//unitless(15)结果: true
+variable-exists(variablename)
+//判断变量是否在当前的作用域下。
+//variable-exists(b)结果: true
+
+
+
+/****Map*****/**Sass Map(映射)函数**/
+//$font-sizes: ("small": 12px, "normal": 18px, "large": 24px)
+map-get(map, key)
+//返回 Map 中 key 所对应的 value(值)。如没有对应的 key，则返回 null 值。
+//map-get($font-sizes, "small")结果: 12px
+map-has-key(map, key)
+//判断 map 是否有对应的 key，存在返回 true，否则返回 false。
+//map-has-key($font-sizes, "big")结果: false
+map-keys(map)
+//返回 map 中所有的 key 组成的队列。
+//map-keys($font-sizes)结果: "small", "normal, "large"
+map-merge(map1, map2)
+//合并两个 map 形成一个新的 map 类型，即将 map2 添加到 map1的尾部
+//$font-sizes2: ("x-large": 30px, "xx-large": 36px)
+//map-merge($font-sizes, $font-sizes2) 结果: "small": 12px, "normal": 18px, "large": 24px, "x-large": 30px, "xx-large": 36px
+map-remove(map, keys...)
+//移除 map 中的 keys，多个 key 使用逗号隔开。
+//map-remove($font-sizes, "small")结果: ("normal": 18px, "large": 24px)
+//map-remove($font-sizes, "small", "large")结果: ("normal": 18px)
+map-values(map)
+//返回 map 中所有的 value 并生成一个队列。
+//map-values($font-sizes)结果: 12px, 18px, 24px
+keywords($args)
+//返回一个函数的参数，这个参数可以动态的设置 key 和 value。
+//1.get()取值函数
+//2.deep-remove()/remove()去值函数
+//3.has-key()判存函数
+//4.keys()取全键函数
+//5.merge()/deep-merge()并值函数
+//6.set()设值函数
+//7.values()取全值函数
+
+
+
+///************Sass List 函数**/
+index()
+//返回列表中值的索引。
+append(list, value, [separator])
+//将单个值 value 添加到列表尾部。separator 是分隔符，默认会自动侦测，或者指定为逗号或空格。
+//append((a b c), d) 结果: a b c d
+//append((a b c), (d), comma) 结果: a, b, c, d
+index(list, value)
+//返回元素 value 在列表中的索引位置。
+//index(a b c, b)结果: 2
+//index(a b c, f)结果: null
+is-bracketed(list)
+//判断列表中是否有中括号
+//is-bracketed([a b c])结果: true
+//is-bracketed(a b c)结果: false
+join(list1, list2, [separator, bracketed])
+//合并两列表，将列表 list2 添加到列表 list1 的末尾。separator 是分隔符，默认会自动侦测，或者指定为逗号或空格。 bracketed 默认会自动侦测是否有中括号，可以设置为 true 或 false。
+//join(a b c, d e f)结果: a b c d e f
+//join((a b c), (d e f), comma)结果: a, b, c, d, e, f
+//join(a b c, d e f, $bracketed: true)结果: [a b c d e f]
+length(list)
+//返回列表的长度
+//length(a b c)结果: 3
+list-separator(list)
+//返回一列表的分隔符类型。可以是空格或逗号。
+//list-separator(a b c)结果: "space"
+//list-separator(a, b, c)结果: "comma"
+nth(list, n)
+//获取第 n 项的值。
+//nth(a b c, 3)结果: c
+set-nth(list, n, value)
+//设置列表第 n 项的值为 value。
+//set-nth(a b c, 2, x)结果: a x c
+zip(lists)
+//将多个列表按照以相同索引值为一组，重新组成一个新的多维度列表。
+//zip(1px 2px 3px, solid dashed dotted, red green blue)结果: 1px solid red, 2px dashed green, 3px dotted blue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//color功能说明
+adjust-color()	按固定量增加或减少给定颜色的一种或多种属性。
+adjust-hue()	增加或减少给定颜色的色调。
+alpha()	以 0 到 1 之间的数字形式返回给定颜色的 alpha（不透明度）通道。
+blue()	以 0 到 255 之间的数字形式返回给定颜色的蓝色通道。
+change-color()	将颜色的一个或多个属性设置为新值。
+complement()	返回给定颜色的 RGB 补色。
+darken()	使给定的颜色变暗。
+desaturate()	降低给定颜色的饱和度。
+grayscale()	返回与给定颜色具有相同亮度的灰色。
+green()	以 0 到 255 之间的数字形式返回给定颜色的绿色通道。
+hsl()	返回具有给定色调、饱和度和亮度以及给定 Alpha 通道的颜色。
+hue()	以 0deg 到 255deg 之间的数字形式返回给定颜色的色调。
+ie-hex-str()	返回一个不带引号的字符串，该字符串表示 Internet Explorer 的 -ms-filter 属性所期望的 AARRGBBB 格式的给定颜色。
+invert()	返回给定颜色的反色或负数。
+lighten()	使给定颜色变浅。
+lightness()	以 0% 到 100% 之间的数字形式返回给定颜色的 HSL 亮度。
+mix()	返回一个由给定 color1 和 color2 混合而成的数字。
+opacify()	使给定颜色更加不透明。
+red()	以 0 到 255 之间的数字形式返回给定颜色的红色通道。
+rgb()	返回具有给定红色、绿色、蓝色和 Alpha 通道的颜色。
+saturate()	使给定颜色更加饱和。
+saturation()	以 0% 到 100% 之间的数字形式返回给定颜色的 HSL 饱和度。
+scale-color()	流畅地缩放给定颜色的一个或多个属性。
+transparentize()	使给定颜色更加透明。
+
+ /******          Sass 选择器函数 ***/
+
+is-superselector(super, sub)
+//比较两个选择器匹配的范围，即判断 super 选择器是否包含了 sub 选择器所匹配的范围，是的话返回 true，否则返回 false。
+//is-superselector("div", "div.myInput")结果: true
+//is-superselector("div.myInput", "div")结果: false
+//is-superselector("div", "div")结果: true
+selector-append(selectors)
+//将第二个 (也可以有多个) 添加到第一个选择器的后面。 selector.
+//selector-append("div", ".myInput")结果: div.myInput
+//selector-append(".warning", "__a")结果: .warning__a
+selector-extend(selector, extendee, extender)
+selector-nest(selectors)
+//返回一个新的选择器，该选择器通过提供的列表选择器生成一个嵌套的列表。
+//selector-nest("ul", "li")结果: ul li
+//selector-nest(".warning", "alert", "div")结果: .warning div, alert div
+selector-parse(selector)
+//将字符串的选择符 selector 转换成选择器队列。
+//selector-parse("h1 .myInput .warning")结果: ('h1' '.myInput' '.warning')
+selector-replace(selector, original, replacement)
+//给定一个选择器，用replacement 替换 original 后返回一个新的选择器队列。
+//selector-replace("p.warning", "p", "div")结果: div.warning
+selector-unify(selector1, selector2)
+//将两组选择器合成一个复合选择器。如两个选择器无法合成，则返回 null 值。
+//selector-unify("myInput", ".disabled")结果: myInput.disabled
+//selector-unify("p", "h1")结果: null
+simple-selectors(selectors)
+//将合成选择器拆为单个选择器。
+//simple-selectors("div.myInput")结果: div, .myInput
+//simple-selectors("div.myInput:before")结果: div, .myInput, :before
+
+
+
+$displayGridMap: ( default:("d-grid": (display: grid)));
+$flexWrapMap:(default:("flex-wrap": (-ms-flex-wrap: wrap-reverse,flex-wrap: wrap-reverse)));
+$flexNowrapMap:(default:("flex-nowrap": (-ms-flex-wrap: nowrap,flex-wrap: nowrap )));
+$flexWrapReverseMap:(default:("flex-wrap-reverse": ( -ms-flex-wrap: wrap-reverse, flex-wrap: wrap-reverse)));

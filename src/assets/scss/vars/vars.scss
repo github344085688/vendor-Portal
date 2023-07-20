@@ -1,0 +1,310 @@
+$fontFamily: 'Helvetica Neue B';
+$body: #444545;
+$bodyBoder:#777879;
+$borderColor: #989A9C;
+$themeLight: #F9F9F9;
+$light: #ffffff;
+$timePickLight: #FFF2F2;
+$themeDisabledBg: #ECECEC;
+
+$scrollbarThumbBg:$bodyBoder;
+$scrollbarBg:$themeLight;
+$scrollbarTrackBg:$themeLight;
+$bodyReplenishColor: $bodyBoder;
+
+$DefaultLiBgHover: $themeLight;
+$themeDisabledColor: $borderColor;
+$bodyFont:$bodyBoder;
+$themeDefault: $bodyBoder;
+$themeActive: $bodyBoder;
+$themeHover: $bodyBoder;
+$themePressed: $body;
+$placeholderColor: #B4B5B5;
+$shadowColor: rgba(44, 60, 89, 0.07);
+$error: #D32F2F;
+$errorSecondary: #F6718B;
+$errorHint: #FCD6DE;
+
+$inputHoverColor: $bodyBoder;
+$warning: #E69135;
+
+$themeActivity: #E9F0F2;
+$neutralsPressed: #B6CED3;
+$neutralsColor: #E4E4E4;
+$tableHeardBgAndHover: $themeLight;
+$inputPlaceholderColor: #B4B5B5;
+
+
+$tableBorder: #CECECE;
+$replenishSecondary: #D3E2E5;
+$primaryDefault: $body;
+$primaryHover: $bodyBoder;
+$primaryPressed: $borderColor;
+$primaryDisabledBg: $themeDisabledBg;
+$primaryDisabledColor: $borderColor;
+$specificLink:#1A5CDB;
+$specificLinkHover:#5E8ADF;
+$btnPrimaryBg:#59BA56;
+$btnPrimaryColor: #ffffff;
+$btnPrimaryBgHover: $btnPrimaryBg;
+$btnPrimaryBgActive: $btnPrimaryBg;
+$btnSecondaryFont: #444545;
+$btnSecondaryFontHover: #444545;
+$btnSecondaryFontActive: #444545;
+$btnSecondaryBoder: #444545;
+$btnSecondaryBoderHover:#444545;
+$btnSecondaryBoderActive:#444545;
+$btnTertiaryFont: $bodyBoder;
+$btnTertiaryFontHover: $body;
+$btnTertiaryFontActive: $body;
+$btnTertiaryBoder: $borderColor;
+$btnTertiaryBoderHover: $bodyBoder;
+$btnTertiaryBoderActive:  $borderColor;
+
+$btnOutlineFont: $bodyBoder;
+$btnOutlineFontHover: $body;
+$btnOutlineFontActive: $body;
+$btnOutlineBoder: $borderColor;
+$btnOutlineBoderHover: $borderColor;
+$btnOutlineBoderActive: $borderColor;
+$btnLinkActiveBaseline: $bodyBoder;
+$btnLinkActiveBaselineHover: $bodyBoder;
+$btnLinkActiveBaselineActive: $body;
+$btnLinkFont: $bodyBoder;
+$btnLinkFontHover: $bodyBoder;
+$btnLinkFontActive: $body;
+$btnWIconFont: $body;
+$btnWIconFontHover: $bodyBoder;
+$btnToggleBg: $light;
+$btnToggleBorder:  $borderColor;
+$btnToggleBorderHover: $body;
+$btnToggleBorderActive: $body;
+$btnToggleFont: $bodyBoder;
+$btnToggleFontHover: $body;
+$btnToggleFontActive: $light;
+$btnToggleBgActive: $body;
+$btnOptionOutlineBorderHover:$borderColor;
+$btnOptionOutlineBorderFocus:$bodyBoder;
+$btnOptionOutlineFontHover: $light;
+$btnOptionOutlineBgHover: $borderColor;
+$btnOptionOutlineFontFocus: $light;
+$btnOptionOutlineBgFocus: $bodyBoder;
+$btnOptionOutlineLiBg: $themeLight;
+$btnOptionNoOutlineFontHover: $body;
+$btnOptionNoOutlineBgHover: $themeLight;
+$btnOptionNoOutlineFontFocus: $body;
+$btnOptionNoOutlineBgFocus: $themeDisabledBg;
+$btnOptionNoOutlineLiBg: $themeLight;
+
+$btnIconfont: $borderColor;
+$btnIconBorder: $borderColor;
+$btnIconFontHover: $light;
+$btnIconBgHover: $borderColor;
+$btnIconBorderHover: $borderColor;
+$btnIconFontFocus: $light;
+$btnIconBgFocus: $body;
+$btnIconBorderFocus:$body;
+$btnIconDisabledFont: $light;
+$timePickBtnIconBg:none;
+$timePickBtnIconFont:$body;
+$timePickBtnIconBorder:$borderColor;
+$timePickBtnIconHoverFont: $light;
+$timePickBtnIconHoverBg:$borderColor;
+$timePickBtnIconHoverBorder:$body;
+$timePickBtnIconFocusBg:$body;
+$timePickBtnIconFocusFont:$light;
+$timePickBtnIconFocusBorder: $body;
+
+$btnTableDropdownBgHover: $borderColor;
+$btnTableDropdownBgFocus: $bodyBoder;
+$btnTableDropdownFontHover:$light;
+$btnTableDropdownFontFocus:$light;
+$btnTableDropdownLiBgHover:$themeLight;
+$copyLinkFont :$borderColor;
+$copyLinkBg :$themeDisabledBg;
+$copyLinkFontHover:$bodyBoder;
+$copyLinkBgHover:#DADADA;
+$tooltipBg:$themeDisabledBg;
+$tooltipFont:$borderColor;
+$tooltipFontHover:$bodyBoder;
+$tooltipBgHover:#DADADA;
+$tooltipSupplementBg:#E2F2EF;
+$tooltipSupplementFont:#52AB98;
+$btnBlickBorderHover: $borderColor;
+$btnBlickBorderFocus: $bodyBoder;
+$switchStyle: #B4B5B5;
+$switchCheckedStyle: $body;
+$checkboxBorder: $borderColor;
+$checkboxShadow: none;
+$checkboxLabelBeforeBoder: $bodyBoder;
+$checkedLabelBeforeBg: $body;
+$checkboxLabelAfterBoder: $light;
+$checkedLabelBeforeBoder: $light;
+$radioBorder:  $borderColor;
+$radioLabelBeforeBoder: $body;
+$radioLabelAfterBg: $body;
+$radioCheckedLabelBeforeBoder: #444545;
+$radioCheckedLabelBeforeBg: 444545;
+$radioLabelBeforeBoder: $borderColor;
+$radioLabelBeforeBg: FFFFFF;
+$radioDisabledLabelBeforeBg: 989A9C;
+$bluckRadioBoxLabelBorder:$bodyBoder;
+$bluckRadioBoxLabelCheckedBorder:$body;
+$bluckRadioBoxLabelCheckedBg:$body;
+$bluckRadioBoxLabelCheckedfont:$light;
+$pageFontBorder:$bodyBoder;
+$pageFontFont:$bodyBoder;
+$pageFontFocusBoder:$bodyBoder;
+$pageFontFocusFont:$bodyBoder;
+$pageFontBg:$light;
+$pageFontHoverFont:$light;
+$pageDisabledFont:#B4B5B5;
+$pageDisabledBorder:#B4B5B5;
+$pageDisabledHoverFont:#B4B5B5;
+
+$stepStepBg:#dadada;
+$stepStepBoder:$borderColor;;
+$stepCompletaBorder:$body;
+$stepCompletaBg:$light;
+$stepCompletaStepBg:$body;
+$stepCompletaStepFont:$light;
+$stepCompletaLineBg:$body;
+$stepCompletaTopLineBg:$light;
+$stepStepTitle:#DADADA;
+$stepCompletaTitle:$body;
+$inputfont : $body;
+$inputBorder: #1B76C6;
+$inputborderHover:  $bodyBoder;
+$inputborderfocus: $bodyBoder;
+
+$selectFont: $body;
+$selectFocusBorder: $bodyBoder;
+$selectLiBg:$themeDisabledBg;
+$readySelectedBg:$themeDisabledBg;
+$readySelectedFont:$body;
+$readySelectedHoverFont:#7CA7B1;
+$datePickerOperatingBox: $body;
+$datePickerOperatingBoxDates: #CECECE;
+$datePickerOperatingBoxDay: $body;
+$datePickerOperatingBoxAsingle: $body;
+$datePickerOperatingBoxPitchOnAfter: $body;
+$moduleDisable:$themeLight;
+$moduleError:rgba(200, 216, 228, 0.5);
+
+$searchDropdownLiHover:$themeLight;
+$sortOrderIcom:$borderColor;
+$sortOrderIcomHover:$bodyBoder;
+$sortOrderIcomFocus:$bodyBoder;
+$sortOrderFont:$bodyBoder;
+$sortOrderFontHover:$body;
+$sortOrderFontFocus:$body;
+$pagerFont:#4a4a4a;
+$pagerPaginationPaginatePanelFont:#555;
+$pagerPaginationPaginatePanelBg:$light;
+$pagerPaginationPaginatePanelBorder:#ccc;
+$pagerPaginationSelectsizeFont:#555;
+$pagerPaginationSelectsizeBg:$light;
+$pagerPaginationSelectsizeBorder:#ccc;
+$pagerPaginationPaginateNumFont:$light;
+$pagerPaginationPaginateNumBg:$body;
+$pagerPaginationPaginateNumBorder:#ccc;
+$pagerPaginationPaginateNumButtomFont:$body;
+$pagerPaginationSuspend:$body;
+$pagerPaginationPresen:$body;
+$thead:$bodyBoder;
+$tdbg:#E5F5FD;
+$tdboderleftBule:  #0288D1;
+$tdboderleftYellow:  #FFC555;
+$tdboderHover:   $borderColor;;
+$tdboderActive: $borderColor;
+
+$selectionIconBg: #FCD6DE;
+$rejected: $themeDisabledBg;
+$lightBlue: rgba(200, 216, 228, 0.5);
+$errorHint: #FCD6DE;
+$succeedHint:  #52AB98;
+$unfinishedColor:  rgba(68, 69, 69, 0.3);
+
+$succeed:  #EDF2F6;
+$succeedHint:  #52AB98;
+$succeed-border-color:  #C8D8E4;
+$partition: $themeDisabledBg;
+$unfinished: #DADADA;
+$unfinishedBorder: $borderColor;
+$unfinishedColor:  rgba(68, 69, 69, 0.3);
+$lightGray: $themeLight;
+
+$shadow: 0px 7px 20px $shadowColor;
+$navSubButtonFont:$body;
+$navSubButtonBg:$light;
+$navSubButtonBgHover:$body;
+$navSubButtonFontHover:$light;
+$fileUploaderBg:#DADADA;
+$fileUploaderFont:$body;
+$btnGroupBg:$themeDisabledBg;
+$btnGroupFont: #ACACAC;
+$btnGroupActive: #161616;
+$btnGroupBorder:#DADADA;
+$iconTagsBoxBg: $themeDisabledBg;
+$iconTagsBoxFont: $body;
+$foldBg:$themeLight;
+$foldFont:$body;
+$foldBgHover:$themeLight;
+$foldFontHover:$bodyBoder;
+$foldBgActive:$body;
+$foldFontActive:$body;
+$foldbodybg:$themeLight;
+$readcrumbsFont:$body;
+$readcrumbsFontHover:$body;
+$readcrumbsFontFocus:$body;
+$readcrumbsFontHoverAfter:$body;
+$dateAndTimeSeatBg:$themeLight;
+$dateAndTimeSeatFont:$body;
+$dateAndTimeSameDayBorder:$body;
+$dateAndTimeSameDayFont:$body;
+$searChompactBoderFocus:$body;
+$searChompactBoderctive:$body;
+$leftBrTdBefore:#E5F5FD;
+$leftBrTdAfter:#0288D1;
+$bluckColor: #b4b4b4;
+$whiteColor: #6F6F6F;
+
+$xs:(5px:320px);
+$sm:(320px:640px);
+$md:(640px: 750px);
+$lg:(750px:992px);
+$xl:(992px:1200px);
+$xl2:(1200px:1920px);
+$media-min-max-points: (
+        default:0,
+        xs: $xs,
+        sm: $sm,
+        md: $md,
+        lg: $lg,
+        xl: $xl,
+        2xl:$xl2
+) !default;
+
+@function fullfexName($smcol) {
+  $colpoints: (
+          flex: 0 0 $smcol,
+          width: $smcol,
+          max-width: $smcol);
+  @return $colpoints;
+}
+
+@function fullSquareName($smNumber,$radius) {
+  $colpoints: (
+          width: $smNumber,
+          aspect-ratio: 1 / 1,
+          border-radius: $radius,
+          overflow: hidden,
+  );
+  @return $colpoints;
+}
+
+@function fullfMtName($smcol) {
+  $colpoints: (
+          margin-top: $smcol);
+  @return $colpoints;
+}

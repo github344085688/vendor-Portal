@@ -4,7 +4,7 @@
             <img src="@/assets/img/portal/logon.svg" alt="">
         </div>
     <router-view v-slot="{ Component, route }">
-        <transition name="fade" :init="routeChange(route.name)" >
+        <transition name="fade" :init="routeChange(route.name)"   >
             <keep-alive>
                 <component :is="Component" :key="route.path"/>
             </keep-alive>

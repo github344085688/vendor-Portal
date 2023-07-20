@@ -1,7 +1,6 @@
 <template>
     <div  style=" width: 100%; height: 100%">
         <div class="d-flex" style="height: 100%; position: relative">
-
             <div class="col-8 media-pl-80 col-media pr-0" >
                 <div class="d-flex media-t-4 align-items-center pl-2">
                     <img src="@/assets/img/portal/logon.svg" alt=""/>
@@ -12,11 +11,11 @@
                         <span style="color: #777879"  :class="{'login-up-link':isSwitchTellUsAboutYourBusiness}">About your business</span>
                     </span>
                 </div>
-                <div class=" d-flex media-t-4 flex-wrap"
+                <div class=" d-flex media-t-4 flex-wrap w-70"
                      style="height: calc(100% - 150px);   position: absolute; left:20px; top: 120px; ">
-                    <div class="po-r wid100">
+                    <div class="po-r w-100">
                         <Transition name="topInLoging" mode="out-in">
-                            <transition-group class="wid70 pr-0 po-a bg-white" tag="div" v-if="isSwitchWelcomeToUnis">
+                            <transition-group class="w-70 pr-0 po-a bg-white" tag="div" v-if="isSwitchWelcomeToUnis">
 
                                 <Form @submit="onSubmit" key="welcomeToUnis" class="d-flex flex-column"
                                       :validation-schema="schema"

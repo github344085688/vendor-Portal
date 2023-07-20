@@ -1,0 +1,697 @@
+
+@import "vars";
+/**
+primary buttom
+ */
+$btn-primary-bg: $btnPrimaryBg;
+$btn-primary-bg-hover: $btnPrimaryBgHover;
+$btn-primary-bg-active: $btnPrimaryBgActive;
+$btn-primary-font: $btnPrimaryColor;
+$btn-primary-disabled-font: $primaryDisabledColor;
+$btn-primary-disabled-bg: $primaryDisabledBg;
+/**
+secondary buttom
+ */
+
+$btn-secondary-bg: $light;
+$btn-secondary-bg-hover: none;
+$btn-secondary-bg-active: none;
+$btn-secondary-font: $btnSecondaryFont;
+$btn-secondary-font-hover: $btnSecondaryFontHover;
+$btn-secondary-font-active: $btnSecondaryFontActive;
+$btn-secondary-boder: $btnSecondaryFont;
+$btn-secondary-border-hover: $btnSecondaryBoderHover;
+$btn-secondary-font-active: $btnSecondaryBoderActive;
+$btn-secondary-a: $btnSecondaryFont;
+$btn-secondary-disabled-font: $primaryDisabledColor;
+$btn-secondary-disabled-bg: $primaryDisabledBg;
+/**
+outline buttom
+ */
+
+$btn-outline-bg: $light;
+$btn-outline-bg-hover: none;
+$btn-outline-bg-active: none;
+$btn-outline-font: $btnOutlineFont;
+$btn-outline-font-hover: $btnOutlineFontHover;
+$btn-outline-font-active: $btnOutlineFontActive;
+$btn-outline-boder: $btnOutlineBoder;
+$btn-outline-border-hover: $btnOutlineBoderHover;
+$btn-outline-font-active: $btnOutlineBoderActive;
+$btn-outline-a: $btnOutlineFont;
+$btn-outline-disabled-font: $primaryDisabledColor;
+$btn-outline-disabled-bg: $primaryDisabledBg;
+
+/***
+tertiary buttom
+ */
+$btn-tertiary-bg: none;
+$btn-tertiary-bg-hover: none;
+$btn-tertiary-bg-active: none;
+$btn-tertiary-font: $btnTertiaryFont;
+$btn-tertiary-font-hover: $btnTertiaryFontHover;
+$btn-tertiary-font-active: $btnTertiaryFontActive;
+$btn-tertiary-boder: $btnTertiaryBoder;
+$btn-tertiary-boder-hover: $btnTertiaryBoderHover;
+$btn-tertiary-boder-active: $btnTertiaryBoderActive;
+$btn-tertiary-a: $btnTertiaryFont;
+$btn-tertiary-disabled-font: $primaryDisabledColor;
+$btn-tertiary-disabled-bg: $primaryDisabledBg;
+/***
+outline buttom
+ */
+$btn-outline-bg: none;
+$btn-outline-bg-hover: none;
+$btn-outline-bg-active: none;
+$btn-outline-font: $btnOutlineFont;
+$btn-outline-font-hover: $btnOutlineFontHover;
+$btn-outline-font-active: $btnOutlineFontActive;
+$btn-outline-boder: $btnOutlineBoder;
+$btn-outline-boder-hover: $btnOutlineBoderHover;
+$btn-outline-boder-active: $btnOutlineBoderActive;
+$btn-outline-a: $btnOutlineFont;
+$btn-outline-disabled-font: $primaryDisabledColor;
+$btn-outline-disabled-bg: $primaryDisabledBg;
+/***
+text buttom
+ */
+$btn-text-bg: none;
+$btn-text-bg-hover: none;
+$btn-text-bg-active: none;
+$btn-text-font: $specificLink;
+$btn-text-font-hover: $specificLinkHover;
+$btn-text-font-active: $specificLinkHover;
+$btn-text-a: $specificLink;
+$btn-text-disabled-font: $themeDisabledColor;
+$btn-text-disabled-bg: $themeDisabledBg;
+/***
+link buttom
+ */
+$btn-link-bg: none;
+$btn-link-bg-hover: none;
+$btn-link-bg-active: none;
+$btn-link-bg-focus: none;
+$btn-link-after-bg: $btnLinkActiveBaseline;
+$btn-link-hover-after-bg: $btnLinkActiveBaselineHover;
+$btn-link-focus-after-bg: $btnLinkActiveBaselineActive;
+$btn-link-font: $btnLinkFont;
+$btn-link-font-hover: $btnLinkFontHover;
+$btn-link-font-focus: $btnLinkFontActive;
+
+/***
+wIcon buttom
+ */
+$btn-wIcon-bg: inherit;
+$btn-wIcon-bg-hover: inherit;
+$btn-wIcon-bg-active: inherit;
+$btn-wIcon-disabled-bg: inherit;
+$btn-wIcon-font: $btnWIconFont;
+$btn-wIcon-font-hover: $btnWIconFontHover;
+$btn-wIcon-disabled-font: $themeDisabledColor;
+
+/***
+Toggle buttons
+ */
+$btn-toggle-bg: $btnToggleBg;
+$btn-toggle-border: $btnToggleBorder;
+$btn-toggle-border-hover: $btnToggleBorderHover;
+$btn-toggle-border-active: $btnToggleBorderActive;
+$btn-toggle-font: $btnToggleFont;
+$btn-toggle-font-hover: $btnToggleFontHover;
+$btn-toggle-font-active: $btnToggleFontActive;
+$btn-toggle-bg-active: $btnToggleBgActive;
+
+
+/***
+option buttons
+ */
+$btn-option-bg: $light;
+$btn-option-outline-font: $body;
+$btn-option-outline-border: $body;
+$btn-option-outline-border-hover: $btnOptionOutlineBorderHover;
+$btn-option-outline-border-focus: $btnOptionOutlineBorderFocus;
+$btn-option-outline-hover-font: $btnOptionOutlineFontHover;
+$btn-option-outline-bg-hover: $btnOptionOutlineBgHover;
+$btn-option-outline-font-focus: $btnOptionOutlineFontFocus;
+$btn-option-outline-bg-focus: $btnOptionOutlineBgFocus;
+$btn-option-outline-disabled: $themeDisabledColor;
+$btn-option-outline-bg-disabled: $themeDisabledBg;
+$btn-option-outline-li-bg: $btnOptionOutlineLiBg;
+$btn-option-font: $bodyFont;
+$btn-option-noOutline-font-hover: $btnOptionNoOutlineFontHover;
+$btn-option-noOutline-font-focus: $btnOptionNoOutlineFontFocus;
+$btn-option-noOutline-bg-hover: $btnOptionNoOutlineBgHover;
+$btn-option-noOutline-bg-focus: $btnOptionNoOutlineBgFocus;
+$btn-option-noOutline-font-disabled: $themeDisabledColor;
+$btn-option-noOutline-bg-disabled: $themeDisabledBg;
+$btn-option-noOutline-li-bg: $btnOptionNoOutlineLiBg;
+/***
+Icon Buttons
+ */
+$btn-Icon-font: $btnIconfont;
+$btn-Icon-bg: $light;
+$btn-Icon-border: $btnIconBorder;
+$btn-Icon-font-hover: $btnIconFontHover;
+$btn-Icon-bg-hover: $btnIconBgHover;
+$btn-Icon-border-hover: $btnIconBorderHover;
+$btn-Icon-font-focus: $btnIconFontFocus;
+$btn-Icon-bg-focus: $btnIconBgFocus;
+$btn-Icon-border-focus: $btnIconBorderFocus;
+$btn-Icon-font-disabled: $themeDisabledColor;
+$btn-Icon-bg-disabled: $themeDisabledBg;
+/***
+Time Pick Buttons
+ */
+
+$time-pick-btn-Icon-bg:$timePickBtnIconBg;
+$time-pick-btn-Icon-font:$timePickBtnIconFont;
+$time-pick-btn-Icon-border:$timePickBtnIconBorder;
+$time-pick-btn-Icon-bg-hover:$timePickBtnIconHoverBg;
+$time-pick-btn-Icon-font-hover:$timePickBtnIconHoverFont;
+$time-pick-btn-Icon-border-hover:$timePickBtnIconHoverBorder;
+$time-pick-btn-Icon-bg-focus:$timePickBtnIconFocusBg;
+$time-pick-btn-Icon-font-focus:$timePickBtnIconFocusFont;
+$time-pick-btn-Icon-border-focus:$timePickBtnIconFocusBorder;
+$time-pick-btn-Icon-font-disabled:$themeDisabledColor;
+$time-pick-btn-Icon-bg-disabled:$themeDisabledBg;
+
+/***
+table dropdown Buttons
+ */
+$btn-table-dropdown-bg: $light;
+$btn-table-dropdown-bg-hover: $btnTableDropdownBgHover;
+$btn-table-dropdown-bg-focus: $btnTableDropdownBgFocus;
+$btn-table-dropdown-bg-disabled: $light;
+$btn-table-dropdown-font: $bodyFont;
+$btn-table-dropdown-font-hover: $btnTableDropdownFontHover;
+$btn-table-dropdown-font-focus: $btnTableDropdownFontFocus;
+$btn-table-dropdown-li-bg-hover: $btnTableDropdownLiBgHover;
+$btn-table-dropdown-font-disabled: $themeDisabledColor;
+/***
+Copy Link
+ */
+$copy-link-font :$copyLinkFont;
+$copy-link-bg :$copyLinkBg;
+$copy-link-font-hover:$copyLinkFontHover;
+$copy-link-bg-hover:$copyLinkBgHover;
+/**
+Tooltip
+ */
+$tooltip-font: $tooltipFont;
+$tooltip-font-hover: $tooltipFontHover;
+$tooltip-bg: $tooltipBg;
+$tooltip-bg-hover: $tooltipBgHover;
+
+/***
+blick Buttons
+ */
+$btn-blick-bg: $light;
+$btn-blick-font: $body;
+$btn-blick-border: $light;
+$btn-blick-border-hover: $btnBlickBorderHover;
+$btn-blick-border-focus: $btnBlickBorderFocus;
+$btn-blick-font-disabled: $themeDisabledColor;
+$btn-blick-bg-disabled: $themeDisabledBg;
+
+/***
+switch
+ */
+$switch-switch-style: $switchStyle;
+$switch-switch-style-before: $light;
+$switch-switch-checked-style: $switchCheckedStyle;
+$switch-switch-disabled-style: $placeholderColor;
+$switch-switch-checked-disabled-style: $switchCheckedStyle;
+
+/***
+checkbox
+ */
+$checkbox-border: $checkboxBorder;
+$checkbox-label-before-boder: $checkboxLabelBeforeBoder;
+$checkbox-label-after-boder: $checkboxLabelAfterBoder;
+$checked-label-before-boder: $checkedLabelBeforeBoder;
+$checked-label-before-bg: $checkedLabelBeforeBg;
+$checked-disabled-label-before-boder: $themeDisabledColor;
+$checked-disabled-label-after-boder: $themeDisabledColor;
+$checkbox-disabled-label-font: $themeDisabledColor;
+$checkbox-disabled-label-before-boder: $themeDisabledColor;
+$checkbox-disabled-label-before-bg: $themeDisabledBg;
+$checkbox-disabled-label-hover-before-boder: $themeDisabledColor;
+$checkbox-shadow: $shadowColor;
+$checkbox-border-focus: $themePressed;
+
+/***
+radio
+ */
+$radio-border: $radioBorder;
+$radio-checked-label-before-boder: $radioCheckedLabelBeforeBoder;
+$radio-label-before-boder: $radioLabelBeforeBoder;
+$radio-label-before-bg: $radioLabelBeforeBg;
+$radio-checked-label-before-boder: $radioCheckedLabelBeforeBoder;
+$radio-checked-label-before-bg: $radioCheckedLabelBeforeBg;
+$radio-disable-label-before-bg: $radioDisabledLabelBeforeBg;
+$radio-checked-disabled-label-before-boder: $themeDisabledColor;
+$radio-checked-disabled-label-after-bg: $themeDisabledColor;
+$radio-disabled-label-font: $themeDisabledColor;
+$radio-disabled-label-before-boder: $themeDisabledColor;
+$radio-disabled-label-before-bg: $themeDisabledBg;
+$radio-disabled-label-hover-before-boder: $themeDisabledColor;
+$radio-shadow: $shadowColor;
+$radio-border-focus: $themePressed;
+
+/***
+bluck-radio-box
+ */
+
+$bluck-radio-box-label-border: $bodyBoder;
+$bluck-radio-box-label-checked-border: $bluckRadioBoxLabelCheckedBorder;
+$bluck-radio-box-label-checked-Bg: $bluckRadioBoxLabelCheckedBg;
+$bluck-radio-box-label-checked-font: $bluckRadioBoxLabelCheckedfont;
+$bluck-radio-box-label-disabled-border: $themeDisabledBg;
+$bluck-radio-box-label-disabled-font: $themeDisabledColor;
+
+/***
+page
+ */
+$page-font-border: $pageFontBorder;
+$page-font-font: $pageFontFont;
+$page-font-bg: $pageFontBg;
+$page-font-hover-font: $pageFontHoverFont;
+$page-font-focus-boder: $pageFontFocusBoder;
+$page-font-focus-font: $pageFontFocusFont;
+$page-disabled-font: $pageDisabledFont;
+$page-disabled-border: $pageDisabledBorder;
+$page-disabled-hover-font: $pageDisabledHoverFont;
+
+/***
+step
+ */
+$step-border: $stepStepBoder;
+$step-bg: $light;
+$step-step-bg: $stepStepBg;
+$step-step-font: $light;
+$step-step-title-font: $stepStepTitle;
+$step-step-completa-title: $stepCompletaTitle;
+$step-line-bg: $themeDisabledColor;
+$step-en-es-line-bg: $light;
+$step-top-line-bg: $themeDisabledColor;
+$step-completa-border: $stepCompletaBorder;
+$step-completa-bg: $stepCompletaBg;
+$step-completa-step-bg: $stepCompletaStepBg;
+$step-completa-step-font: $stepCompletaStepFont;
+$step-completa-line-bg: $stepCompletaLineBg;
+$step-completa-top-line-bg: $stepCompletaBorder;
+$step-completa-en-es-line-bg: $light;
+
+/***
+input
+ */
+$input-font: $inputfont;
+$input-bg: #E5E5EA;
+$input-border: $inputBorder;
+
+$input-border-hover: $inputborderHover;
+$input-border-focus: $inputborderfocus;
+$input-border-active: $inputborderfocus;
+$input-border-disabled: $themeDisabledBg;
+$input-disabled-bg: $themeDisabledBg;
+$input-font-disabled: $themeDisabledColor;
+$input-border-error: $error;
+$input-message-font: $error;
+$input-message-warn-bg: $error;
+$input-message-warn-font: $light;
+$input-message-warn-font-before: $light;
+
+/***
+display input
+ */
+$display-input-bg: $light;
+$display-input-disabled-bg: $themeDisabledBg;
+$display-input-font: $body;
+$display-input-font-disabled: $themeDisabledColor;
+$display-input-border: $inputBorder;
+$display-input-border-hover: $inputHoverColor;
+$display-input-border-focus: $themeDefault;
+$display-input-border-active: $themeDefault;
+$display-input-border-disabled: $themeDisabledBg;
+$display-input-border-error: $error;
+$display-input-message-font: $error;
+$display-input-message-warn-bg: $error;
+$display-input-message-warn-font: $light;
+$display-input-message-warn-font-before: $light;
+/***
+trans input
+ */
+$trans-input-bg: transparent;
+$trans-input-bg-disabled: $themeDisabledBg;
+$trans-input-focus-bg: $themeDisabledBg;
+$trans-input-font: $neutralsColor;
+$trans-input-font-disabled: $themeDisabledColor;
+$trans-input-border: $inputBorder;
+$trans-input-border-hover: $inputHoverColor;
+$trans-input-border-focus: $themeHover;
+$trans-input-border-active: $themeDefault;
+$trans-input-border-disabled: $themeDisabledBg;
+$trans-input-border-error: $error;
+$trans-input-message-font: $error;
+$trans-input-message-warn-bg: $error;
+$trans-input-message-warn-font: $light;
+$trans-input-message-warn-font-before: $light;
+/***
+textarea
+ */
+$textarea-bg: $light;
+$textarea-border: $inputBorder;
+$textarea-shadow: $shadowColor;
+$textarea-border-focus: $themePressed;
+
+/***
+dropdown
+ */
+$dropdown-with-multiselect-ready-selected-bg: $readySelectedBg;
+$dropdown-with-multiselect-ready-selected-font: $readySelectedFont;
+$dropdown-with-multiselect-ready-selected-hover-font: $readySelectedHoverFont;
+/***
+ghost Buttons
+ */
+$btn-ghost-bg: none;
+$btn-ghost-bg-after: none;
+$btn-ghost-bg-hover: $themePressed;
+$btn-ghost-font: $themeDisabledColor;
+$btn-ghost-font-hover: $themePressed;
+$btn-ghost-font-focus: $themePressed;
+$btn-ghost-font-disabled: $themeDisabledColor;
+/***
+tabs Buttons
+ */
+$btn-tabs-bg: $light;
+$btn-tabs-font: $bodyReplenishColor;
+$btn-tabs-font-hover: $themePressed;
+$btn-tabs-font-focus: $themePressed;
+$btn-tabs-font-a: $bodyReplenishColor;
+$btn-tabs-border: $light;
+$btn-tabs-border-hover: $themePressed;
+$btn-tabs-border-focus: $themePressed;
+$btn-tabs-active-font: $themePressed;
+$btn-tabs-active-border: $themePressed;
+
+/***
+select
+ */
+$select-font: $selectFont;
+$select-focus-border: $input-bg;
+$select-li-bg:$selectLiBg;
+/***
+scroll
+ */
+$scroll-bg-thumb: #777879;
+$scroll-bg-track: #ececec;
+
+/***
+Date picker
+ */
+$date-picker: #777879;
+$date-picker-operating-box: $datePickerOperatingBox;
+$date-picker-operating-box-dates: $datePickerOperatingBoxDates;
+$date-picker-operating-box-day: $datePickerOperatingBoxDay;
+$date-picker-operating-box-asingle: $datePickerOperatingBoxAsingle;
+$date-picker-operating-box-pitch-on-after: $datePickerOperatingBoxPitchOnAfter;
+$date-picker-date-filter: #777879;
+$scroll-bg-track: #ececec;
+
+/***
+Variants
+ */
+
+$module-disable: $moduleDisable;
+$module-error: $moduleError;
+
+/***
+search dropdown
+ */
+$search-dropdown-li-hover: $searchDropdownLiHover;
+
+/***
+sort order
+ */
+$sort-order-icom: $sortOrderIcom;
+$sort-order-icom-hover: $sortOrderIcomHover;
+$sort-order-icom-focus: $sortOrderIcomFocus;
+$sort-order-font: $sortOrderFont;
+$sort-order-font-hover: $sortOrderFontHover;
+$sort-order-font-focus: $sortOrderFontFocus;
+
+/***
+pager
+ */
+$pager-font: $pagerFont;
+$pager-pagination-paginate-panel-font: $pagerPaginationPaginatePanelFont;
+$pager-pagination-paginate-panel-bg: $pagerPaginationPaginatePanelBg;
+$pager-pagination-paginate-panel-border: $pagerPaginationPaginatePanelBorder;
+$pager-pagination-selectsize-font: $pagerPaginationSelectsizeFont;
+$pager-pagination-selectsize-bg: $pagerPaginationSelectsizeBg;
+$pager-pagination-selectsize-border: $pagerPaginationSelectsizeBorder;
+$pager-pagination-paginate_num-font: $pagerPaginationPaginateNumFont;
+$pager-pagination-paginate_num-buttom-font: $pagerPaginationPaginateNumButtomFont;
+$pager-pagination-paginate_num-bg: $pagerPaginationPaginateNumBg;
+$pager-pagination-paginate_num-border: $pagerPaginationPaginateNumBorder;
+$pager-pagination-suspend: $pagerPaginationSuspend;
+$pager-pagination-present: $pagerPaginationPresen;
+
+/***
+scrollbar
+ */
+$webkit-scrollbar-bg: $scrollbarBg;
+$webkit-scrollbar-thumb-bg: $scrollbarThumbBg;
+$webkit-scrollbar-track-bg: $scrollbarTrackBg;
+
+/***
+/***
+nav-sub-button
+ */
+$nav-sub-button-font: $navSubButtonFont;
+$nav-sub-button-bg: $navSubButtonBg;
+$nav-sub-button-bg-hover: $navSubButtonBgHover;
+$nav-sub-button-font-hover: $navSubButtonFontHover;
+/***
+/***
+file Uploader
+ */
+$file-uploader-bg:$fileUploaderBg;
+$file-uploader-font:$fileUploaderFont;
+/***
+/***
+btn group
+ */
+$btn-group-bg:$btnGroupBg;
+$btn-group-font:$btnGroupFont;
+$btn-group-border :$btnGroupBorder;
+
+/***
+/***
+icon tags box
+ */
+$icon-tags-box-bg:$iconTagsBoxBg;
+$icon-tags-box-font:$iconTagsBoxFont;
+
+/***
+/***
+Accordion fold
+ */
+$fold-bg:$foldBg;
+$fold-font:$foldFont;
+$fold-bg-hover:$foldBgHover;
+$fold-font-hover:$foldFontHover;
+$fold-bg-Active:$foldBgActive;
+$fold-font-Active:$foldFontActive;
+$fold-body-bg:$foldbodybg;
+
+/***
+/***
+readcrumbs
+ */
+
+$readcrumbs-font:$readcrumbsFont;
+$readcrumbs-font-hover:$readcrumbsFontHover;
+$readcrumbs-font-hover-after:$readcrumbsFontHoverAfter;
+$readcrumbs-font-focus:$readcrumbsFontFocus;
+
+/***
+/***
+date and time sept
+ */
+$date-and-time-seat-bg:$dateAndTimeSeatBg;
+$date-and-time-seat-font:$dateAndTimeSeatFont;
+$date-and-time-same-day-border:$dateAndTimeSameDayBorder;
+$date-and-time-same-day-font:$dateAndTimeSameDayFont;
+/***
+/***
+search compact
+ */
+$search-compact-boder-focus:$searChompactBoderFocus;
+$search-compact-boder-active:$searChompactBoderctive;
+/***
+/***
+left-br-td
+ */
+$left-br-td-before:$leftBrTdBefore;
+$left-br-td-after:$leftBrTdAfter;
+/***
+supplement color
+ */
+
+
+
+
+
+@include Colors("themeLight", '', $light);
+@include Colors("themeHover", '', $themeHover);
+@include Colors("themePressed", '', $themePressed);
+@include Colors("selectionIcon", '', $selectionIconBg);
+@include Colors("disabled", '', $themeDisabledColor);
+@include Colors("rejected", '', $rejected);
+@include Colors("changes", '', $lightBlue);
+@include Colors("aLink", '', $themePressed);
+@include Colors("error", '', $error);
+@include Colors("errorHint", '', $errorHint);
+@include Colors("succeedHint", '', $succeedHint);
+@include Colors("unfinished", '', $unfinished);
+@include Colors("warning", '', $warning);
+@include Colors("default", '', $body);
+@include Colors("defaultHover", '', $themePressed, hover);
+@include activeColors("a-active", $themeDisabledBg, $themeActive);
+
+.a-default {
+	color: $themeDefault !important;
+}
+
+.a-hover {
+	color: $themeHover !important;
+}
+
+.a-pressed {
+	color: $themePressed !important;
+}
+.a-pressed[disabled] {
+	color: $themeDisabledColor !important;
+}
+.a-bg-default {
+	background: $themeDefault !important;
+}
+
+.a-light {
+	color: $themeLight !important;
+}
+
+.a-bg-hover {
+	background: $themeHover !important;
+	color: $light !important;
+	&:hover {
+		background: $themePressed !important;
+		color: $light !important;
+	}
+}
+
+.a-bg-light {
+	background: $themeLight !important;
+	color: $themePressed !important;
+	&:hover {
+		background: $themePressed !important;
+		color: $light !important;
+	}
+}
+
+
+
+.bg-light {
+	background: $themeLight !important;
+}
+.time-pick-light{
+	background: $timePickLight !important;
+}
+.a-bg-pressed {
+	background: $themePressed !important;
+	color: $light !important;
+	&:hover {
+		background: $themeHover !important;
+		color: $light !important;
+	}
+}
+
+.ft-unfinished {
+	color: $unfinishedColor;
+}
+
+.bg-themeDefault {
+	background: $themeDefault;
+}
+
+.ft-themeDefault {
+	background: $themeDefault;
+}
+
+.bg-unfinished {
+	background: $unfinished;
+}
+
+.br-unfinished {
+	border-color: $unfinishedBorder;
+}
+
+.ft-succeed {
+	color: $succeed;
+}
+
+.bg-succeed {
+	background: $succeed;
+}
+
+.br-succeed {
+	border-color: $succeed-border-color;
+}
+
+.partition {
+	background: $partition;
+}
+
+.disabledMoudle {
+	background: $lightGray !important;
+}
+
+.roll-background {
+	@include rollBackground;
+}
+
+.no-br-table {
+	border-collapse: separate;
+	border-spacing: 0px;
+	border: none !important;
+	thead {
+		tr {
+			th {
+				border: none !important;
+			}
+		}
+	}
+	tbody {
+		tr {
+			border: none;
+
+			td {
+				border: none;
+				position: relative !important;
+			}
+		}
+	}
+}
+
+.table-fixed-break-all {
+	table-layout: fixed;
+	word-break: break-all;
+}
+.ft-disabled{
+	cursor: not-allowed !important;
+}
+.bg-disabled{
+	cursor: not-allowed !important;
+}
+

@@ -1,0 +1,90 @@
+@mixin btn() {
+  font-family: $fontFamily !important;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  outline: 0;
+  letter-spacing: $em0-5;
+  border: none;
+  width: initial;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: $borderR;
+  &.full{
+    width: 100% !important;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: 0 !important;
+  }
+  &.default {
+    padding-top: inherit !important;
+    padding-bottom: inherit !important;
+    color: $body;
+
+    &:hover, &.active,
+    &:focus {
+      color: $themeHover !important
+    }
+  }
+}
+
+@mixin btn_a($color) {
+  & > a {
+    color: $color;
+
+    &:link,
+    &:visited,
+    &:active,
+    &:hover {
+      color: $color;
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin compact($height ) {
+  &.compact {
+    @include countHeight($height);
+  }
+}
+
+
+@mixin compact-input($border: null) {
+  @if ($border) {
+    &.compact {
+      @include boder32(important);
+
+      & + .message {
+        + .warn {
+          top: $px8 !important;
+        }
+      }
+    }
+
+  } @else {
+    &.compact {
+      @include noboder32(important);
+
+      & + .message {
+        + .warn {
+          top: $px8 !important;
+        }
+      }
+    }
+  }
+
+}
+
+@mixin flexCenter($align) {
+  display: flex;
+  justify-content: $align;
+  align-items: $align;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}

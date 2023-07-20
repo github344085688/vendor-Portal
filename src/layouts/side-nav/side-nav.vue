@@ -31,13 +31,13 @@
                                             <img src="@/assets/img/arrow-down.svg"
                                                  :class="{'transform-180':navName == item.title }"
                                                  v-if="item.children && item.children.length>0">
-                                            <span v-if="(!item.children || item.children.length<1 )&&navName==item.name">
-                                                 <svg width="9" height="14" viewBox="0 0 9 14" fill="none"  xmlns="http://www.w3.org/2000/svg">
+
+                                                 <svg  v-if="(!item.children || item.children.length<1 )&&navName==item.name"  width="9" height="14" viewBox="0 0 9 14" fill="none"  xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                       d="M1.7072 13.7072L8.4143 6.99994L1.70718 0.292969L0.292984 1.7072L5.58587 6.99997L0.292968 12.293L1.7072 13.7072Z"
                                                       fill="white"/>
                                             </svg>
-                                            </span>
+
 
                                         </div>
                                     </div>
@@ -52,15 +52,14 @@
                                             <div class="item-childs-link pr-2  justify-content-between align-items-center"
                                                  :class="[itemChildsLink == nav.name ? 'link_active' :'']"
                                                  @click.stop.prevent="foldChildetails(nav)"> {{nav.title}}
-                                                <span v-if="itemChildsLink == nav.name">
-                                                     <svg width="9" height="14" viewBox="0 0 9 14" fill="none"
+                                                     <svg v-if="itemChildsLink == nav.name"  width="9" height="14" viewBox="0 0 9 14" fill="none"
                                                           xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                       d="M1.7072 13.7072L8.4143 6.99994L1.70718 0.292969L0.292984 1.7072L5.58587 6.99997L0.292968 12.293L1.7072 13.7072Z"
                                                       fill="white"/>
                                             </svg>
 
-                                                </span>
+
                                             </div>
 
 

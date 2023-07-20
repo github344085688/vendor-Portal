@@ -1,0 +1,10 @@
+ .h-32{
+   @include countHeight(31);
+ }
+ .h-40{
+   @include countHeight(40);
+ }
+ .w-70{
+   width: 70%;
+ }
+

@@ -1,0 +1,27 @@
+$GG100:#EAFFF2;
+$GG700:#268C55;
+$BG100:#EEF8EE;
+$BG900:#59BA56;
+$Gr300:#cfd0d1; 
+$Gr500:#989A9C; 
+$Gr900:#444545;
+$Or700: #FF820E;
+$Or300: #FFF1DB;
+$r900:#B71C1C;
+$bl0:#000000;
+$no: none;
+
+
+@include Colors('gg', '100', $GG100);
+@include Colors('gg', '700', $GG700);
+@include Colors('bg', '100', $BG100);
+@include Colors('bg', '900', $BG900);
+@include Colors('gr', '300', $Gr300);
+@include Colors('gr', '500', $Gr500);
+@include Colors('gr', '900', $Gr900);
+@include Colors('or', '700', $Or700);
+@include Colors('or', '300', $Or300);
+@include Colors('r', '900', $r900);
+@include Colors('bl', '', $bl0);
+@include Colors('no', '', $no);
+ 

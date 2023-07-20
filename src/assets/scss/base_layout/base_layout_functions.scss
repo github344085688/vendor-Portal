@@ -1,0 +1,217 @@
+@function filterName($name,$vaule) {
+  $colpoints: (
+          #{$name}: $vaule
+  );
+  @return $colpoints;
+}
+
+@function fullfexName($smcol) {
+  $colpoints: (
+          flex: 0 0 $smcol,
+          width: $smcol,
+          max-width: $smcol);
+  @return $colpoints;
+}
+
+
+
+@function fullGridName($size, $margin:10%, $width:1fr) {
+  $gap: if($margin != 10%, $margin, #{10%/$size});
+  $colpoints: (
+          grid-gap: $gap $gap,
+          grid-template-columns: repeat(#{$size}, grid-repeat-width($size, $margin, $width))
+  );
+  @return $colpoints;
+}
+
+
+@function fullFlexName($i,$margin) {
+  $number: percentage(divide($i, $grid-columns));
+  $colpoints: (
+          flex: 0 0 $number,
+          max-width: $number
+  );
+  @return $colpoints;
+}
+
+@function fullMarginName($i,$margin) {
+  $number: percentage(divide($i, $grid-columns));
+  $colpoints: (
+          flex: 0 0 $number,
+          max-width: $number
+  );
+  @return $colpoints;
+}
+
+
+@function countColumn($grids, $margin,$mapName) {
+  $grids-rol: () !default;
+  @for $i from 1 through $grids {
+    @if "#{$mapName}" == 'grid' {
+      $grids-rol: map-merge($grids-rol, ('#{$i}':fullGridName($i, $margin)));
+    }
+    @if "#{$mapName}" == 'flex' {
+      $grids-rol: map-merge($grids-rol, ('#{$i}':fullFlexName($i, $margin)));
+    }
+
+  }
+  @return $grids-rol;
+}
+
+@function self-mixin-configuration ($names,$count,$maging,$className) {
+  $configGrids: () !default;
+  @each $point in $names{
+    $configGrids: map-merge($configGrids, ($point:(if('#{$point}' == 'default', "", '#{$point}\\:'):countColumn($count, $maging, $className))));
+  }
+  @return $configGrids;
+}
+
+
+
+@function self-mixin-boder-width( $infix:null) {
+  $grids-val: () !default;
+    @each $size, $length in $spacers {
+      $grids-val: map-merge($grids-val, (
+              "#{$infix}border-#{$size}":(border: #{$size}px #{$--bs-border-style} #{$--bs-border-color} !important),
+              "#{$infix}border-t-#{$size},.#{$infix}border-y-#{$size}":(border-top: #{$size}px #{$--bs-border-style} #{$--bs-border-color} !important),
+              "#{$infix}border-r-#{$size},.#{$infix}border-x-#{$size}":(border-right: #{$size}px #{$--bs-border-style} #{$--bs-border-color} !important),
+              "#{$infix}border-b-#{$size},.#{$infix}border-y-#{$size}":(border-bottom: #{$size}px #{$--bs-border-style} #{$--bs-border-color} !important),
+              "#{$infix}border-l-#{$size},.#{$infix}border-x-#{$size}":(border-left: #{$size}px #{$--bs-border-style} #{$--bs-border-color} !important),
+      ));
+  }
+  @return $grids-val;
+}
+@function self-mixin-border-radius($counts:5, $infix:null) {
+  $grids-val: () !default;
+  @for $size from 1 through $counts {
+      $grids-val: map-merge($grids-val, (
+              "#{$infix}rounded-#{$size}":(border-radius: #{$size}px),
+              "#{$infix}rounded-t-l-#{$size}":(border-top-left-radius: #{$size}px ),
+              "#{$infix}rounded-t-r-#{$size}":(border-top-right-radius: #{$size}px ),
+              "#{$infix}rounded-b-l-#{$size}":(border-bottom-left-radius: #{$size}px ),
+              "#{$infix}rounded-b-r-#{$size}":(border-bottom-right-radius: #{$size}px ),
+      ));
+  }
+  @return $grids-val;
+}
+
+
+
+
+@function self-mixin-margin-padding( $infix:null) {
+  $grids-val: () !default;
+  @each $prop, $abbrev in (margin: m, padding: p) {
+    @each $size, $length in $spacers {
+      $grids-val: map-merge($grids-val, (
+              "#{$infix}#{$abbrev}-#{$size}":(#{$prop}: #{$length}),
+              "#{$infix}#{$abbrev}t-#{$size},.#{$infix}#{$abbrev}y-#{$size}":(#{$prop}-top: #{$length}),
+              "#{$infix}#{$abbrev}r-#{$size},.#{$infix}#{$abbrev}x-#{$size}":(#{$prop}-right: #{$length}),
+              "#{$infix}#{$abbrev}b-#{$size},.#{$infix}#{$abbrev}y-#{$size}":(#{$prop}-bottom: #{$length}),
+              "#{$infix}#{$abbrev}l-#{$size},.#{$infix}#{$abbrev}x-#{$size}":(#{$prop}-left: #{$length}),
+      ));
+
+    }
+  }
+  @return $grids-val;
+}
+
+
+@function self-mixin-flex-justify-align( $infix:null) {
+  @return (
+          "#{$infix}flex-row":(flex-direction: row),
+          "#{$infix}flex-column":(flex-direction: column),
+          "#{$infix}flex-row-reverse":(flex-direction: row-reverse),
+          "#{$infix}flex-column-reverse":(flex-direction: column-reverse),
+          "#{$infix}flex-wrap":(flex-wrap: wrap),
+          "#{$infix}flex-nowrap":(flex-wrap: nowrap),
+          "#{$infix}flex-wrap-reverse":(flex-wrap: wrap-reverse),
+          "#{$infix}flex-fill":(flex: 1 1 auto),
+          "#{$infix}flex-grow-0":(flex-grow: 0),
+          "#{$infix}flex-grow-1":(flex-grow: 1),
+          "#{$infix}flex-shrink-0":(flex-shrink: 0),
+          "#{$infix}flex-shrink-1":(flex-shrink: 1),
+          "#{$infix}justify-content-start":(justify-content: flex-start),
+          "#{$infix}justify-content-end":(justify-content: flex-end),
+          "#{$infix}justify-content-center":(justify-content: center),
+          "#{$infix}justify-content-between":(justify-content: space-between),
+          "#{$infix}justify-content-around":(justify-content: space-around),
+          "#{$infix}align-items-start":(align-items: flex-start),
+          "#{$infix}align-items-end":(align-items: flex-end),
+          "#{$infix}align-items-center":(align-items: center),
+          "#{$infix}align-items-baseline":(align-items: baseline),
+          "#{$infix}align-items-stretch":(align-items: stretch),
+          "#{$infix}align-content-start":(align-content: flex-start),
+          "#{$infix}align-content-end":(align-content: flex-end),
+          "#{$infix}align-content-center":(align-content: center),
+          "#{$infix}align-content-between":(align-content: space-between),
+          "#{$infix}align-content-around":(align-content: space-around),
+          "#{$infix}align-content-stretch":(align-content: stretch),
+          "#{$infix}align-self-auto":(align-self: auto),
+          "#{$infix}align-self-start":(align-self: flex-start),
+          "#{$infix}align-self-end":(align-self: flex-end),
+          "#{$infix}align-self-center":(align-self: center),
+          "#{$infix}align-self-baseline":(align-self: baseline),
+          "#{$infix}align-self-stretch":(align-self: stretch),
+  );
+
+
+}
+
+@function self-mixin-display( $infix:null) {
+  @return (
+          "#{$infix}d-none":( display: none ),
+          "#{$infix}d-inline":( display: inline ),
+          "#{$infix}d-inline-block":( display: inline-block ),
+          "#{$infix}d-block":( display: block ),
+          "#{$infix}d-table":( display: table ),
+          "#{$infix}d-table-row":( display: table-row ),
+          "#{$infix}d-table-cell":( display: table-cell ),
+          "#{$infix}d-flex":( display: flex),
+          "#{$infix}d-grid":( display: grid ),
+          "#{$infix}d-inline-flex":(display: inline-flex )
+  );
+
+
+}
+
+@function self-col-px( $counts, $name, $padding) {
+  $configGrids: () !default;
+  $str: " ";
+  @if ($counts =='') {
+    $configGrids: ($name:$padding);
+  } @else {
+    @for $size from 1 through $counts {
+      $str: if($size == length($counts), str-insert(#{$str}, "#{$name}#{$size}", str-length($str)), str-insert(#{$str}, ",.#{$name}#{$size}", str-length($str)));
+    }
+    $configGrids: ($str:$padding);
+  }
+  @return $configGrids;
+}
+
+
+@function self-mixin-tyles-properties($spacers, $name, $style) {
+  $configGrids: () !default;
+  @if (type-of($spacers) == number) {
+    @for $size from 1 through $spacers {
+      $configGrids: map-merge($configGrids, ("#{$name}-#{$size}":('#{$style}': $size)));
+    }
+  }
+  @if (type-of($spacers) == map) {
+    @each $size, $length in $spacers {
+      $configGrids: map-merge($configGrids, ("#{$name}-#{$size}":('#{$style}': $length)));
+    }
+  }
+  @return $configGrids;
+}
+//@return (
+//"#{$infix}d-none":( display: none ),
+//"#{$infix}d-inline":( display: inline ),
+//"#{$infix}d-inline-block":( display: inline-block ),
+//"#{$infix}d-block":( display: block ),
+//"#{$infix}d-table":( display: table ),
+//"#{$infix}d-table-row":( display: table-row ),
+//"#{$infix}d-table-cell":( display: table-cell ),
+//"#{$infix}d-flex":( display: flex ),
+//"#{$infix}d-grid":( display: grid ),
+//"#{$infix}d-inline-flex":(display: inline-flex )
+//);

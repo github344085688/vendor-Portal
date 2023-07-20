@@ -1,0 +1,180 @@
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px
+) !default;
+$rfs-rem-value: 16 !default;
+$rfs-base-font-size: 1.25rem !default;
+$rfs-font-size-unit: rem !default;
+$enable-responsive-font-sizes: true !default;
+$rfs-factor: 10 !default;
+$rfs-two-dimensional: false !default;
+$rfs-breakpoint: 1200px !default;
+$table-cell-padding:          .75rem !default;
+$enable-pointer-cursor-for-buttons:           true !default;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
+$grid-md: (
+				xs: 0,
+				md: 768px,
+) !default;
+
+$breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
+$columns:12;
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+$grid-row-columns:            6 !default;
+$enable-grid-classes:                         true !default;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+		(
+			0: 0,
+			1: ($spacer * .25),
+			2: ($spacer * .5),
+			3: $spacer,
+			4: ($spacer * 1.5),
+			5: ($spacer * 3)
+		),
+		$spacers
+);
+
+$borderR: 4px;
+$px120: 7.5rem;;
+$px110: 6.875rem;
+$px64: 4rem;
+$px54: 3.375rem;
+$px46: 2.875rem;
+$px50: 50px;
+$px40: 2.5rem;
+$px38: 2.375rem;
+$px36: 2.25rem;
+$px34: 2.125rem;
+$px32: 2rem;
+$px31: 1.9375rem;
+$px30: 1.875rem;
+$px28: 1.75rem;;
+$px26-5: 1.65625rem;
+$px26: 1.625rem;
+$px25-5: 1.59375rem;
+$px25: 1.5625rem;
+$px24-5: 1.53125rem;
+$px24: 1.5rem;
+$px23-5: 1.46875rem;
+$px23: 1.4375rem;
+$px22-5: 1.40625rem;
+$px22: 1.375rem;
+$px21-5: 1.34375rem;
+$px21: 1.3125rem;
+$px20-5: 1.28125rem;
+$px20: 1.25rem;
+$px19-5: 1.21875rem;
+$px19: 1.1875rem;
+$px18-5: 1.15625rem;
+$px18: 1.125rem;
+$px17-5: 1.09375rem;
+$px17: 1.0625rem;
+$px16-5: 1.03125rem;
+$px16: 1rem;
+$px15-5: 0.96875rem;
+$px15: 0.9375rem;
+$px14-5: 0.90625rem;
+$px14: 0.875rem;
+$px13-5: 0.84375rem;
+$px13: 0.8125rem;
+$px12-5: 0.78125rem;
+$px12: 0.75rem;
+$px11-5: 0.71875rem;
+$px11: 0.6875rem;
+$px10-5: 0.65625rem;
+$px10: 0.625rem;
+$px9-5: 0.59375rem;
+$px9: 0.5625rem;
+$px8-5: 0.53125rem;
+$px8: 0.5rem;
+$px7-5: 0.46875rem;
+$px7: 0.4375rem;
+$px6-5: 0.40625rem;
+$px6: 0.375rem;
+$px5-5: 0.34375rem;
+$px5: 0.3125rem;
+$px4-5: 0.28125rem;
+$px4: 0.25rem;
+$px3-5: 0.21875rem;
+$px3: 0.1875rem;
+$px2-5: 0.15625rem;
+$px2: 0.125rem;
+$px1-5: 0.09375rem;
+$px1: 1px;
+$pxr1: 1px;
+$pxr0-5: 0.03125rem;
+
+
+$em32: 2em;
+$em26-5: 1.65625em;
+$em26: 1.625em;
+$em25-5: 1.59375em;
+$em25: 1.5625em;
+$em24-5: 1.53125em;
+$em24: 1.5em;
+$em23-5: 1.46875em;
+$em23: 1.4375em;
+$em22-5: 1.40625em;
+$em22: 1.375em;
+$em21-5: 1.34375em;
+$em21: 1.3125em;
+$em20-5: 1.28125em;
+$em20: 1.25em;
+$em19-5: 1.21875em;
+$em19: 1.1875em;
+$em18-5: 1.15625em;
+$em18: 1.125em;
+$em17-5: 1.09375em;
+$em17: 1.0625em;
+$em16-5: 1.03125em;
+$em16: 1em;
+$em15-5: 0.96875em;
+$em15: 0.9375em;
+$em14-5: 0.90625em;
+$em14: 0.875em;
+$em13-5: 0.84375em;
+$em13: 0.8125em;
+$em12-5: 0.78125em;
+$em12: 0.75em;
+$em11-5: 0.71875em;
+$em11: 0.6875em;
+$em10-5: 0.65625em;
+$em10: 0.625em;
+$em9-5: 0.59375em;
+$em9: 0.6785714285714286em;
+$em8-5: 0.53125em;
+$em8: 0.5em;
+$em7-5: 0.46875em;
+$em7: 0.4375em;
+$em6-5: 0.40625em;
+$em6: 0.375em;
+$em5-5: 0.34375em;
+$em5: 0.3125em;
+$em4-5: 0.28125em;
+$em4: 0.25em;
+$em3-5: 0.21875em;
+$em3: 0.1875em;
+$em2-5: 0.15625em;
+$em2: 0.125em;
+$em1-5: 0.09375em;
+$em1: 0.0625em;
+$em0-5: 0.03125em;
