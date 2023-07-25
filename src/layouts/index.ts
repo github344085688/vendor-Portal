@@ -30,7 +30,7 @@ export default class Layouts extends BaseVue {
         this.isSideSpread = isSpread;
         this.sideSpread.bb = isSpread;
         this.sideSpread.aaa = 'bbb';
-        this.treeRef.value?.test();
+        // this.treeRef.value?.test();
 
 
     }

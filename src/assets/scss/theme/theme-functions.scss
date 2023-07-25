@@ -1,0 +1,4 @@
+@function breakpoint-min-max-min($name, $breakpoints) {
+  @return if(breakpoint-min-default($name, $breakpoints) == null, " ", "#{$name}");
+}
+

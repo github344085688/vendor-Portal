@@ -1,0 +1,293 @@
+@mixin transitionAll5($align: 0.5s, $obj: all) {
+  transition: $obj $align;
+}
+
+@mixin countHeight($height, $impo: null) {
+  padding-top: #{($height - 24)/32}rem $impo;
+  padding-bottom: #{($height - 24)/32}rem $impo;
+  line-height: 24px;
+}
+
+@mixin arrowTransition($time, $rotate) {
+  -webkit-transform: rotate($rotate);
+  transform: rotate($rotate);
+  transition: -webkit-transform $time;
+  transition: transform $time, -webkit-transform $time;
+}
+
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+
+
+@mixin Colors($name, $per, $vaule,$isHove:null) {
+  @if $isHove {
+    @each $prop, $abbrev in (br: border-color, bg: background, ft:color) {
+      .#{$prop}-#{$name} {
+        &#{$per} {
+          &:hover, &:focus, &.active {
+            #{$abbrev}: $vaule !important;
+          }
+        }
+      }
+    }
+
+  } @else {
+    @each $prop, $abbrev in (br: border-color, bg: background, ft:color) {
+      .#{$prop}-#{$name} {
+        &#{$per} {
+          #{$abbrev}: $vaule !important;
+        }
+      }
+
+    }
+  }
+
+}
+
+@mixin activeColors($name, $color, $vaule) {
+  @each $prop, $abbrev in (br: border-color, bg: background, ft:color) {
+    .#{$name}-#{$prop} {
+      #{$abbrev}: $color;
+      &:hover, &:focus, &.active {
+        #{$abbrev}: $vaule !important;
+      }
+    }
+  }
+
+  //@if $isHove {
+  //	@each $prop, $abbrev in (br: border-color, bg: background, ft:color) {
+  //		.#{$prop}-#{$name} {
+  //			&#{$per} {
+  //				&:hover, &:focus, &.active {
+  //					#{$abbrev}: $vaule !important;
+  //				}
+  //			}
+  //		}
+  //	}
+  //
+  //} @else {
+  //	@each $prop, $abbrev in (br: border-color, bg: background, ft:color) {
+  //		.#{$prop}-#{$name} {
+  //			&#{$per} {
+  //				#{$abbrev}: $vaule !important;
+  //			}
+  //		}
+  //
+  //	}
+  //}
+
+}
+
+@mixin expecedColors($r, $g, $b) {
+  @if $r {
+    & {
+      color: $r !important;
+    }
+  }
+  & {
+    color: $r !important;
+  }
+  &-70 {
+    color: $g !important;
+  }
+  &-50 {
+    color: $b !important;
+  }
+
+  &-bg {
+    background: $r !important;
+  }
+  &-bg-50 {
+    background: $b !important;
+  }
+  &-bg-70 {
+    background: $g !important;
+  }
+}
+
+@mixin font-size($fs, $important: false) {
+  @include rfs($fs, $important);
+}
+
+@mixin rfs($fs, $important: false) {
+  // Cache $fs unit
+  $fs-unit: if(type-of($fs) == "number", unit($fs), false);
+
+  // Add !important suffix if needed
+  $rfs-suffix: if($important, " !important", "");
+
+  // If $fs isn't a number (like inherit) or $fs has a unit (not px or rem, like 1.5em) or $ is 0, just print the value
+  @if not $fs-unit or $fs-unit != "" and $fs-unit != "px" and $fs-unit != "rem" or $fs == 0 {
+    font-size: #{$fs}#{$rfs-suffix};
+  } @else {
+    // Remove unit from $fs for calculations
+    @if $fs-unit == "px" {
+      $fs: divide($fs, $fs * 0 + 1);
+    } @else if $fs-unit == "rem" {
+      $fs: divide($fs, divide($fs * 0 + 1, $rfs-rem-value));
+    }
+
+    // Set default font size
+    $rfs-static: if($rfs-font-size-unit == rem, #{divide($fs, $rfs-rem-value)}rem, #{$fs}px);
+
+    // Only add the media query if the font size is bigger than the minimum font size
+    @if $fs <= $rfs-base-font-size or not $enable-responsive-font-sizes {
+      font-size: #{$rfs-static}#{$rfs-suffix};
+    } @else {
+      // Calculate the minimum font size for $fs
+      $fs-min: $rfs-base-font-size + divide($fs - $rfs-base-font-size, $rfs-factor);
+
+      // Calculate difference between $fs and the minimum font size
+      $fs-diff: $fs - $fs-min;
+
+      // Base font-size formatting
+      $min-width: if($rfs-font-size-unit == rem, #{divide($fs-min, $rfs-rem-value)}rem, #{$fs-min}px);
+
+      // Use `vmin` if two-dimensional is enabled
+      $variable-unit: if($rfs-two-dimensional, vmin, vw);
+    }
+  }
+}
+
+@mixin rollBackground($thumb-bg:$webkit-scrollbar-thumb-bg,$track-bg:$webkit-scrollbar-track-bg) {
+  &::-webkit-scrollbar {
+    width: $px5;
+    height: $px4;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: $px6;
+    background: $thumb-bg;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background: $track-bg;
+  }
+}
+
+@mixin rollBoder($padding, $minWidth: 220px, $top: calc(100% + 0.571rem)) {
+  & > ul {
+    padding: $padding;
+    left: 0;
+    right: 0;
+    top: $top;
+    min-width: $minWidth;
+  }
+}
+
+@mixin roll($liPadding: $px10 1.1428571428571428em, $liBg: $themeActivity) {
+  & > ul {
+    position: absolute;
+    left: 0;
+    color: $body;
+    background: $light;
+    border-radius: $borderR;
+    border: 1px solid $themeDisabledColor;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 10rem;
+    z-index: 5;
+    @include rollBackground;
+    .label {
+      width: 100%;
+      padding: $liPadding;
+      display: flex;
+      font-weight: bold;
+      align-items: center;
+      justify-content: space-between;
+    }
+    li {
+      font-size: 1rem;
+      list-style: none;
+      cursor: pointer;
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      padding: $liPadding;
+      border-radius: $borderR;
+      &:hover {
+        background: $liBg;
+      }
+    }
+    .active {
+      background: $liBg !important;
+    }
+  }
+}@mixin andAfter() {
+  &::after {
+    display: inline-block;
+    content: ' ';
+    position: absolute;
+    top: 41%;
+    margin-top: -$px5;
+    right: $px11;
+    height: 0.7em !important;
+    width: 0.7em !important;
+    border-width: 0 2px 2px 0;
+    border-color: currentcolor !important;
+    opacity: 1;
+    border-style: solid !important;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    position: absolute;
+    bottom: $px12 !important;
+    margin-left: -0.375em !important;
+  }
+}
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    color: $inputPlaceholderColor;
+  }
+  &:-moz-placeholder {
+    color: $inputPlaceholderColor;
+  }
+  &::-moz-placeholder {
+    color: $inputPlaceholderColor;
+  }
+  &:-ms-input-placeholder {
+    color: $inputPlaceholderColor;
+  }
+}
+
+@mixin input-hover-focus-disabled-active() {
+  &:hover {
+    border-color: $input-border-hover;
+    @include transitionAll5;
+  }
+  &:focus {
+    border-color: $input-border-focus;
+    @include transitionAll5;
+    outline: none;
+  }
+  &.active {
+    border-color: $input-border-active;
+    @include transitionAll5;
+    outline: none;
+  }
+  &[disabled] {
+    background: $input-disabled-bg;
+    border-color: $input-border-disabled;
+    cursor: not-allowed;
+    color: $input-font-disabled;
+    :after {
+      cursor: not-allowed;
+    }
+  }
+  @include placeholder;
+}

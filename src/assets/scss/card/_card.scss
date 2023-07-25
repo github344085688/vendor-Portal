@@ -1,0 +1,187 @@
+
+@import "card-function";
+@import "../base/_border-radius";
+@import "../base/_box-shadow";
+$variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix !default;
+$card-spacer-y:                     $spacer !default;
+$card-spacer-x:                     $spacer !default;
+$card-title-spacer-y:               $spacer * .5 !default;
+$card-title-color:                  null !default;
+$card-subtitle-color:               null !default;
+$card-border-width:                 $--bs-border-width !default;
+$card-border-color:                 $border-color-translucent !default;
+$card-border-radius:                $border-radius !default;
+$card-box-shadow:                   $box-shadow !default;
+$card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
+$card-cap-padding-y:                $card-spacer-y * 1 !default;
+$card-cap-padding-x:                $card-spacer-x !default;
+$card-cap-color:                    null !default;
+$card-height:                       null !default;
+$card-color:                        null !default;
+$card-img-overlay-padding:          $spacer !default;
+$card-group-margin:                 $grid-gutter-width * .5 !default;
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: $card-height;
+  word-wrap: break-word;
+  background-color: $card-bg;
+  background-clip: border-box;
+  border: $card-border-width solid $card-border-color;
+  box-shadow: $card-box-shadow;
+  -webkit-box-shadow: $card-box-shadow;
+  -moz-box-shadow: $card-box-shadow;
+@include border-radius($card-border-radius);
+  @include box-shadow($card-box-shadow);
+
+  > hr {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  > .list-group {
+    border-top: inherit;
+    border-bottom: inherit;
+
+    &:first-child {
+      border-top-width: 0;
+      @include border-top-radius($card-inner-border-radius);
+    }
+
+    &:last-child  {
+      border-bottom-width: 0;
+      @include border-bottom-radius($card-inner-border-radius);
+    }
+  }
+
+  // Due to specificity of the above selector (`.card > .list-group`), we must
+  // use a child selector here to prevent double borders.
+  > .card-header + .list-group,
+  > .list-group + .card-footer {
+    border-top: 0;
+  }
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding:$card-spacer-y $card-spacer-x;
+  color: $card-color ;
+}
+
+.card-title {
+  margin-bottom:$card-title-spacer-y ;
+  color: $card-title-color ;
+}
+
+.card-subtitle {
+  margin-top: calc(-.5 * #{$card-title-spacer-y}); // stylelint-disable-line function-disallowed-list
+  margin-bottom: 0;
+  color: $card-subtitle-color;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link {
+  &:hover {
+    text-decoration: if($link-hover-decoration == underline, none, null);
+  }
+
+  + .card-link {
+    margin-left: $card-spacer-x;
+  }
+}
+
+//
+// Optional textual caps
+//
+
+.card-header {
+  @include countHeight(32);
+  margin-bottom: 0; // Removes the default margin-bottom of <hN>
+  color: $card-cap-color;
+  background-color: $card-cap-bg;
+  border-bottom: $card-border-width solid $card-border-color;
+
+  &:first-child {
+    @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+  }
+}
+
+.card-footer {
+  padding: $card-cap-padding-y $card-cap-padding-x;
+  color: $card-cap-color;
+  background-color: $card-cap-bg;
+  border-top: $card-border-width solid $card-border-color;
+
+  &:last-child {
+    @include border-radius(0 0 $card-inner-border-radius  $card-inner-border-radius );
+  }
+}
+
+
+//
+// Header navs
+//
+
+.card-header-tabs {
+  margin-right: calc(-.5 * #{$card-cap-padding-x}); // stylelint-disable-line function-disallowed-list
+  margin-bottom: calc(-1 * #{$card-cap-padding-y}); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(-.5 * #{$card-cap-padding-x}); // stylelint-disable-line function-disallowed-list
+  border-bottom: 0;
+
+  .nav-link.active {
+    background-color: $card-bg;
+    border-bottom-color: $card-bg;
+  }
+}
+
+.card-header-pills {
+  margin-right: calc(-.5 * #{$card-cap-padding-x}); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(-.5 * #{$card-cap-padding-x}); // stylelint-disable-line function-disallowed-list
+}
+
+// Card image
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: $card-img-overlay-padding;
+  @include border-radius($card-inner-border-radius);
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+}
+
+.card-img,
+.card-img-top {
+  @include border-top-radius($card-inner-border-radius);
+}
+
+.card-img,
+.card-img-bottom {
+  @include border-bottom-radius($card-inner-border-radius);
+}
+
+
+//
+// Card groups
+//
+
+.card-group {
+  // The child selector allows nested `.card` within `.card-group`
+  // to display properly.
+  > .card {
+    margin-bottom: $card-group-margin;
+  }
+}

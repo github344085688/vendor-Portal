@@ -8,7 +8,11 @@ $lg: (750px:992px);
 $xl: (992px:1200px);
 $xl2: (1200px:1920px);
 
-
+@mixin fiterNameVaule($vals) {
+  @each $inf, $val in $vals {
+    #{$inf}: $val;
+  }
+}
 
 @mixin media-only-min-max($name, $breakpoints) {
   $mins: breakpoint-min($name, $breakpoints);

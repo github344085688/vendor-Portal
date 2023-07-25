@@ -3,6 +3,7 @@ import template from "./service.vue";
 import './service.scss';
 import BaseVue from '@/utils/base-vue';
 import ChartLine from '@/components/chart-line';
+import ChartBar from '@/components/chart-bar';
 import MixedChart  from '@/components/mixed-chart';
 import {_DeepPartialArray} from "chart.js/types/utils";
 
@@ -11,7 +12,8 @@ import {_DeepPartialArray} from "chart.js/types/utils";
     name:'Service',
     components: {
         ChartLine,
-        MixedChart
+        MixedChart,
+        ChartBar
     },
 })
 export default class Service extends BaseVue {

@@ -69,19 +69,22 @@ export default class SideNav extends BaseVue {
     public togoaside(isfold: any): void {
         if (this.isFoldDetails) this.isLevelSmall = true;
         this.isFold = !isfold;
-        this.$emit("togoaside", isfold)
+        this.$emit("togoaside", isfold);
     }
 
     public foldDetails(isFoldDetails: any, item: any): void {
-        if(this.navName==item.name) return;
-        if (this.navName == item.name) this.navName = '';
+        if(this.navName==item.name){
+            this.navName = '';
+
+            return;
+        }
         else this.navName = item.name;
         if (item.path && item.name) this.setRouter({name: item.name})
     }
 
     public foldChildetails(item: any): void {
         this.itemChildsLink = item.name;
-        if (item.path && item.name) this.setRouter({name: item.name})
+        if (item.path && item.name) this.setRouter({name: item.name});
     }
 
     public logOut(): void {

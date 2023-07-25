@@ -1,5 +1,4 @@
 @mixin btn() {
-  font-family: $fontFamily !important;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -50,7 +49,7 @@
 
 @mixin compact($height ) {
   &.compact {
-    @include countHeight($height);
+    @include countHeight($height,!important);
   }
 }
 
@@ -58,7 +57,7 @@
 @mixin compact-input($border: null) {
   @if ($border) {
     &.compact {
-      @include boder32(important);
+      @include countHeight(32,!important);
 
       & + .message {
         + .warn {
@@ -69,7 +68,7 @@
 
   } @else {
     &.compact {
-      @include noboder32(important);
+      @include countHeight(important);
 
       & + .message {
         + .warn {

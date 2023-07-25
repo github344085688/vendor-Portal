@@ -8,10 +8,11 @@
                         <i class="right-arrow2"></i>
                     </b>
                 </div>
-                <div class="parent-level-big" :class="{'parent-level-small':isLevelSmall ||isFold}">
+                <div class="parent-level sm:parent-level" :class="{'parent-level-small':isLevelSmall ||isFold}">
                     <div class="log-big"><img src="@/assets/img/logo.svg" alt=""></div>
                     <div class="log-nano"><img src="@/assets/img/logo-nano.svg" alt=""></div>
-                    <div class="nav-link-detales" :class="[isFold?'':'overflow-y']"
+                    <!--                    :class="[isFold?'':'overflow-y']"-->
+                    <div class="nav-link-detales"
                          style="height: calc(100% - 160px); ">
                         <div class="nav-link-groud" v-for="(child, navLinkindex) in navLink" :key="navLinkindex">
                             <div class="group-name" v-if="child.groupName">
@@ -19,53 +20,56 @@
                             </div>
                             <div v-for="(item, childsIndex) in child.children" :key="childsIndex"
                                  class="item_connect">
-                                <div class="item_box" @click.stop.prevent="foldDetails(isFoldDetails,item)"
-                                     :class="{'active':navName==item.name}"
-                                     :init="itemChildren = setItemChildren(item.children)">
-                                    <div class="img-box"><img :src="item.icon"></div>
-                                    <div class="pro-ab">
-                                        <div class="text-box">
-                                            <a href="#" class="unis-a">
-                                                <div class="text but-t1">{{item.title}}</div>
-                                            </a>
-                                            <img src="@/assets/img/arrow-down.svg"
-                                                 :class="{'transform-180':navName == item.title }"
-                                                 v-if="item.children && item.children.length>0">
+                                <button class="nav-button">
+                                    <div class="item_box" @click.stop.prevent="foldDetails(isFoldDetails,item)"
+                                         :class="{'active':navName==item.name}"
+                                         :init="itemChildren = setItemChildren(item.children)">
+                                        <div class="img-box"><img :src="item.icon"></div>
+                                        <div class="pro-ab">
+                                            <div class="text-box">
+                                                <a href="#" class="unis-a">
+                                                    <div class="text but-t1">{{item.title}}</div>
+                                                </a>
+                                                <img src="@/assets/img/arrow-down.svg"
+                                                     :class="{'transform-180':navName == item.title }"
+                                                     v-if="item.children && item.children.length>0">
 
-                                                 <svg  v-if="(!item.children || item.children.length<1 )&&navName==item.name"  width="9" height="14" viewBox="0 0 9 14" fill="none"  xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M1.7072 13.7072L8.4143 6.99994L1.70718 0.292969L0.292984 1.7072L5.58587 6.99997L0.292968 12.293L1.7072 13.7072Z"
-                                                      fill="white"/>
-                                            </svg>
+                                                <svg v-if="(!item.children || item.children.length<1 )&&navName==item.name"
+                                                     width="9" height="14" viewBox="0 0 9 14" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                          d="M1.7072 13.7072L8.4143 6.99994L1.70718 0.292969L0.292984 1.7072L5.58587 6.99997L0.292968 12.293L1.7072 13.7072Z"
+                                                          fill="white"/>
+                                                </svg>
 
 
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div :class="[isFold?'hover-details':'childs-box',(navName != item.name && !isFold)?'show-childs':'']"
-                                     v-if="itemChildren.length>0"
-                                     :style="{'height':(48* itemChildren.length)+'px'}">
-                                    <div :class="[isFold?'hover-details-box':'' ]">
-                                        <div class="pt-0 pb-0 pl-0" :class="[isFold?'hover-details-item':'child-item' ]"
-                                             v-for="nav in itemChildren">
+                                    <div class="childs-box" :class="[ (navName != item.name )?'hide-childs':'']"
+                                         v-if="itemChildren.length>0"
+                                         :style="{'height':(48* itemChildren.length)+'px'}">
+                                        <div class="pt-0 pb-0 pl-0 child-item"
+                                             v-for="nav in itemChildren"
+                                             :class="[itemChildsLink == nav.name ? 'child-item-link' :'']"
+                                        >
                                             <div class="line"></div>
                                             <div class="item-childs-link pr-2  justify-content-between align-items-center"
                                                  :class="[itemChildsLink == nav.name ? 'link_active' :'']"
                                                  @click.stop.prevent="foldChildetails(nav)"> {{nav.title}}
-                                                     <svg v-if="itemChildsLink == nav.name"  width="9" height="14" viewBox="0 0 9 14" fill="none"
-                                                          xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M1.7072 13.7072L8.4143 6.99994L1.70718 0.292969L0.292984 1.7072L5.58587 6.99997L0.292968 12.293L1.7072 13.7072Z"
-                                                      fill="white"/>
-                                            </svg>
+                                                <svg v-if="itemChildsLink == nav.name" width="9" height="14"
+                                                     viewBox="0 0 9 14" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                          d="M1.7072 13.7072L8.4143 6.99994L1.70718 0.292969L0.292984 1.7072L5.58587 6.99997L0.292968 12.293L1.7072 13.7072Z"
+                                                          fill="white"/>
+                                                </svg>
 
 
                                             </div>
-
-
                                         </div>
                                     </div>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>

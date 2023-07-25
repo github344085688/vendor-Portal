@@ -1,0 +1,55 @@
+@mixin media-only-min-max($name, $breakpoints) {
+  $mins: breakpoint-min($name, $breakpoints);
+  @if $mins {
+    @each $min, $max in $mins {
+      @media only screen and (min-width: $min) and (max-width: $max) {
+        @content;
+      }
+    }
+  } @else {
+    @content;
+  }
+}
+
+
+
+@mixin self-mixin-split-screen( $flexPoints,$classPoints) {
+  @each $breakpoint, $resolution in $flexPoints {
+    @include media-only-min-max($breakpoint, $flexPoints) {
+      $infix: breakpoint-min-max-min($breakpoint, $flexPoints);
+      @each $className, $colpoints in $classPoints {
+        @if "#{$className}" == "insert" {
+          @each $point in $colpoints{
+            @each $mame, $vals in $point {
+              @if "#{$mame}" == "#{$infix}" {
+                @each $className, $classVaule in $vals {
+                  .#{$className} {
+                    @each $style, $value in $classVaule {
+                      #{$style}: $value;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+        } @else {
+          @each $mame, $vals in $colpoints {
+            @if "#{$mame}" == "#{$infix}" {
+              @each $key, $cols in $vals {
+                @each $inf, $val in $cols {
+                  .#{$key}#{$className}-#{$inf} {
+                    @include fiterNameVaule($val);
+                  }
+
+                }
+              }
+
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

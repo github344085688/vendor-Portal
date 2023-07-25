@@ -1,3 +1,4 @@
+
 @function filterName($name,$vaule) {
   $colpoints: (
           #{$name}: $vaule
@@ -103,13 +104,12 @@
   @each $prop, $abbrev in (margin: m, padding: p) {
     @each $size, $length in $spacers {
       $grids-val: map-merge($grids-val, (
-              "#{$infix}#{$abbrev}-#{$size}":(#{$prop}: #{$length}),
-              "#{$infix}#{$abbrev}t-#{$size},.#{$infix}#{$abbrev}y-#{$size}":(#{$prop}-top: #{$length}),
-              "#{$infix}#{$abbrev}r-#{$size},.#{$infix}#{$abbrev}x-#{$size}":(#{$prop}-right: #{$length}),
-              "#{$infix}#{$abbrev}b-#{$size},.#{$infix}#{$abbrev}y-#{$size}":(#{$prop}-bottom: #{$length}),
-              "#{$infix}#{$abbrev}l-#{$size},.#{$infix}#{$abbrev}x-#{$size}":(#{$prop}-left: #{$length}),
+              "#{$infix}#{$abbrev}-#{$size}":(#{$prop}: #{$length}!important),
+              "#{$infix}#{$abbrev}t-#{$size},.#{$infix}#{$abbrev}y-#{$size}":(#{$prop}-top: #{$length}!important),
+              "#{$infix}#{$abbrev}r-#{$size},.#{$infix}#{$abbrev}x-#{$size}":(#{$prop}-right: #{$length}!important),
+              "#{$infix}#{$abbrev}b-#{$size},.#{$infix}#{$abbrev}y-#{$size}":(#{$prop}-bottom: #{$length}!important),
+              "#{$infix}#{$abbrev}l-#{$size},.#{$infix}#{$abbrev}x-#{$size}":(#{$prop}-left: #{$length}!important),
       ));
-
     }
   }
   @return $grids-val;
@@ -203,15 +203,21 @@
   }
   @return $configGrids;
 }
-//@return (
-//"#{$infix}d-none":( display: none ),
-//"#{$infix}d-inline":( display: inline ),
-//"#{$infix}d-inline-block":( display: inline-block ),
-//"#{$infix}d-block":( display: block ),
-//"#{$infix}d-table":( display: table ),
-//"#{$infix}d-table-row":( display: table-row ),
-//"#{$infix}d-table-cell":( display: table-cell ),
-//"#{$infix}d-flex":( display: flex ),
-//"#{$infix}d-grid":( display: grid ),
-//"#{$infix}d-inline-flex":(display: inline-flex )
-//);
+
+
+@function fullSquareName($smNumber,$radius) {
+  $colpoints: (
+          width: $smNumber,
+          aspect-ratio: 1 / 1,
+          border-radius: $radius,
+          overflow: hidden,
+  );
+  @return $colpoints;
+}
+
+@function fullfMtName($smcol) {
+  $colpoints: (
+          margin-top: $smcol);
+  @return $colpoints;
+}
+
