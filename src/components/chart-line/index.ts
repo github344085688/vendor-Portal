@@ -37,12 +37,12 @@ ChartJS.register(
             default: 'bar'
         },
         width: {
-            type: Number ,
+            type: String ,
             default: '100%'
         },
         height: {
-            type: Number ,
-            default: 250
+            type: String ,
+            default: '250'
         },
         cssClasses: {
             default: '',
@@ -61,29 +61,29 @@ ChartJS.register(
 export default class ChartLine extends BaseVue {
 
 
-    public chartId!:string;
-    public cssClasses!:string;
-    public width!: Number;
-    public height!: Number;
-    public styles!:Object;
+    public chartId!: string;
+    public cssClasses!: string;
+    public width!: string;
+    public height!: string;
+    public styles!: Object;
     public plugins!: any;
-
+    public datasetIdKey: string = '';
     public chartData: any = {
-        labels: ["April 1","","","May 1","","","","June 1" ],
+        labels: ["April 1", "", "", "May 1", "", "", "", "June 1"],
         datasets: [
-          {
+            {
                 // type: 'line',
                 label: 'circle',
-                data: [5, 20, 35, 45, 80, 110, null, null ],
+                data: [5, 20, 35, 45, 80, 110, null, null],
                 borderColor: '#488492',
                 backgroundColor: '#488492',
-               /* pointStyle: 'triangle',
-                pointRadius: 6,*/
+                /* pointStyle: 'triangle',
+                 pointRadius: 6,*/
             },
             {
                 // type: 'line',
                 label: 'aim',
-                data: [2, 10, 25, 30,50, 60, 65, 75],
+                data: [2, 10, 25, 30, 50, 60, 65, 75],
                 borderColor: 'rgba(255, 99, 132, 0.2)',
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 pointStyle: 'none',
@@ -95,9 +95,9 @@ export default class ChartLine extends BaseVue {
 
     private adjustRadiusBasedOnData(ctx: any) {
         // const v:any = ctx.parsed.y;
-        const index:any = ctx.dataIndex;
-        if(index == 0) return 2;
-        else if(ctx.dataset.data && !ctx.dataset.data[index+1]) return 5;
+        const index: any = ctx.dataIndex;
+        if (index == 0) return 2;
+        else if (ctx.dataset.data && !ctx.dataset.data[index + 1]) return 5;
         else return 0;
         /*return v < 10 ? 5
             : v < 25 ? 7
@@ -107,28 +107,29 @@ export default class ChartLine extends BaseVue {
     }
 
     private alternatePointStyles(ctx: any) {
-        const index:any = ctx.dataIndex;
+        const index: any = ctx.dataIndex;
         // console.log(index);
-        console.log('reality', !ctx.dataset.data[index+1] );
-        if(index == 1) return 'circle';
-        else if(!ctx.dataset.data[index+1]) return 'circle';
+        console.log('reality', !ctx.dataset.data[index + 1]);
+        if (index == 1) return 'circle';
+        else if (!ctx.dataset.data[index + 1]) return 'circle';
         else return 'none';
     }
+
     public chartOptions: any = {
         responsive: true, // 长宽，100%.如果要单设长和宽的话，要将responsive 设为false
         maintainAspectRatio: true,// 保持长宽比
         // borderColor:'#eee1e8',
         // color:'#d2dd7f',
         // indexAxis: 'y',
-         events: ['null'],//对事件的反应，null是对任何事件都无反应的设置，默认为["mousemove", "mouseout", "click", "touchstart", "touchmove", "touchend"]
-      /*  layout: {//线形图 位置
-            padding: {
-                left: 0,
-                right:0,
-                top: 0,
-                bottom: 0
-            }
-        },*/
+        events: ['null'],//对事件的反应，null是对任何事件都无反应的设置，默认为["mousemove", "mouseout", "click", "touchstart", "touchmove", "touchend"]
+        /*  layout: {//线形图 位置
+              padding: {
+                  left: 0,
+                  right:0,
+                  top: 0,
+                  bottom: 0
+              }
+          },*/
         animation: {//设置不做动画 （可以提高性能）
             duration: 0// general animation time
         },
@@ -143,7 +144,7 @@ export default class ChartLine extends BaseVue {
                 max: 150,
                 display: true,//是显示
                 beginAtZero: true,
-                ticks:{   //对Y轴开始配置
+                ticks: {   //对Y轴开始配置
                     //beginAtZero:true,//如果为true，则如果还没有包含，则标度将包括0。
                     // suggestedMin: 1,//计算最小数据值时使用的调整
                     //suggestedMax: 5,//计算最小数据值时使用的调整
@@ -158,13 +159,13 @@ export default class ChartLine extends BaseVue {
                     min: 200,
                     max: 1200,
                     padding: 25,
-                    fontColor:"#6C7383"
+                    fontColor: "#6C7383"
                 },
                 gridLines: {//Y轴网格配置
-                    color:"#f2f2f2",//网格线的颜色。如果指定为数组，第一种颜色适用于第一个网格线，第二个适用于第二个网格线，依此类推
-                    drawBorder:true,//如果为true，则在轴和图表区域之间的边缘绘制边框
-                    precision:0,
-                    display:true, //如果为false，则不显示该轴的网格线。
+                    color: "#f2f2f2",//网格线的颜色。如果指定为数组，第一种颜色适用于第一个网格线，第二个适用于第二个网格线，依此类推
+                    drawBorder: true,//如果为true，则在轴和图表区域之间的边缘绘制边框
+                    precision: 0,
+                    display: true, //如果为false，则不显示该轴的网格线。
 
 
                     /*
@@ -184,9 +185,9 @@ export default class ChartLine extends BaseVue {
                 },
                 grid: {
                     borderColor: '#f6f3f3',
-                    display:false,
-                    offset:true,
-                    tickLength:10,
+                    display: false,
+                    offset: true,
+                    tickLength: 10,
                 },
 
 
@@ -195,25 +196,25 @@ export default class ChartLine extends BaseVue {
 
                 display: true,//是显示
                 grid: {
-                    display:true,
-                    circular:true,
-                    drawBorder:true,
-                    offset:true,
+                    display: true,
+                    circular: true,
+                    drawBorder: true,
+                    offset: true,
                     // z:999999,
-                    borderDash:[90,200,200 ],
+                    borderDash: [90, 200, 200],
                     borderColor: '#E0DDDD',
-                    tickLength:-1,
-                    tickWidth:0,
-                    lineWidth:0.3,//**
-                    borderDashOffset:200,
-                    borderWidth:1,
-                    color:'#E0DDDD',//网格颜色。
-                    tickColor:'#E0DDDD',
+                    tickLength: -1,
+                    tickWidth: 0,
+                    lineWidth: 0.3,//**
+                    borderDashOffset: 200,
+                    borderWidth: 1,
+                    color: '#E0DDDD',//网格颜色。
+                    tickColor: '#E0DDDD',
                 },
                 ticks: {
                     display: true,
                     padding: 3,
-                    fontColor:"#832828"
+                    fontColor: "#832828"
                 },
                 gridLines: {
                     borderColor: '#f6f3f3',
@@ -226,42 +227,42 @@ export default class ChartLine extends BaseVue {
         },
 
         plugins: {
-            legend:{ // title下面的 小标题 和 小图的配置
-                display:false, //是显示
-                position:"top",//显示的位置
-                fullWidth:"true", //标记此框应占据画布的整个宽度（按下其他框）。这在日常使用中不太可能需要改变
-                onClick:function(){
+            legend: { // title下面的 小标题 和 小图的配置
+                display: false, //是显示
+                position: "top",//显示的位置
+                fullWidth: "true", //标记此框应占据画布的整个宽度（按下其他框）。这在日常使用中不太可能需要改变
+                onClick: function () {
                     console.log('sss');
                 },//点击时的回调
-                onHover:function(){
+                onHover: function () {
                 }, //在标签项上注册“mousemove”事件时调用的回调函数
-                reverse:false, //图例将以相反的顺序显示数据集。
-                z:100,
-                labels:{ //图例标签配置
-                    boxWidth:10 ,//彩色框的宽度
-                    fontSize:"12", //文本的字体大小
-                    fontStyle:"normal", //字体风格
-                    fontColor:"red", // 文本的颜色
-                    padding:2, //填充行之间的彩色框
-                    fontFamily:"'Helvetica Neue', 'Helvetica', 'Arial', sans-serif", //字体家族
-                    usePointStyle:false //标签样式将匹配相应的点样式（大小基于fontSize，在这种情况下不使用boxWidth）
+                reverse: false, //图例将以相反的顺序显示数据集。
+                z: 100,
+                labels: { //图例标签配置
+                    boxWidth: 10,//彩色框的宽度
+                    fontSize: "12", //文本的字体大小
+                    fontStyle: "normal", //字体风格
+                    fontColor: "red", // 文本的颜色
+                    padding: 2, //填充行之间的彩色框
+                    fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif", //字体家族
+                    usePointStyle: false //标签样式将匹配相应的点样式（大小基于fontSize，在这种情况下不使用boxWidth）
                 }
             },
             title: {
                 display: false,//是否显示
                 text: 'Custom Chart Title:0.38', //title内容
-                position:"left",     //title位置
-                fontSize:20,   //字体大小 默认为12px
-                fontFamily:"'Helvetica Neue', 'Helvetica', 'Arial', sans-serif", //字体家族文本
-                fontColor:'#666',
-                fontStyle:'bold', //字体样式
-                padding:10, //在标题文本上方和下方添加的像素数量
-                lineHeight:10 //单行文本的高度//对标题的配置
+                position: "left",     //title位置
+                fontSize: 20,   //字体大小 默认为12px
+                fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif", //字体家族文本
+                fontColor: '#666',
+                fontStyle: 'bold', //字体样式
+                padding: 10, //在标题文本上方和下方添加的像素数量
+                lineHeight: 10 //单行文本的高度//对标题的配置
 
             },
-            labels:{
-                color:"#dd343b",
-                boxWidth:'200',
+            labels: {
+                color: "#dd343b",
+                boxWidth: '200',
                 display: false,
             },
 

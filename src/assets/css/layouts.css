@@ -1293,18 +1293,11 @@ html, body {
 .transition-5 {
   transition: all 0.5s; }
 
-.side-navigation {
-  position: fixed;
-  top: 0;
-  left: 0px;
-  width: auto;
-  height: 100%;
-  bottom: 0;
-  z-index: 99; }
+.rotate180 {
+  transform: rotate(180deg); }
 
-.overflow-y {
-  overflow-y: auto;
-  overflow-x: hidden; }
+side-side-navigation {
+  height: 100%; }
 
 .unis-navigation {
   height: 100%;
@@ -1320,47 +1313,38 @@ html, body {
       right: -0.8rem;
       cursor: pointer;
       top: 4.3rem;
-      box-shadow: 0px 0px 0.2142857143rem rgba(44, 60, 89, 0.2);
-      background: #ffffff;
+      box-shadow: 0px 0px 0.2142857143rem rgba(229, 241, 252, 0.2);
+      background: #444545;
       border-radius: 0.1rem;
-      width: 1.45rem;
-      height: 1.45rem;
+      width: 1.8rem;
+      height: 1.8rem;
       display: flex;
       align-items: center;
       justify-content: center; }
       .unis-navigation .aside-unfold .aside-controller .right {
         position: relative; }
       .unis-navigation .aside-unfold .aside-controller .right-arrow1 {
-        left: -0.7142857143rem;
-        border-right: 6px #B4B5B5 solid; }
+        position: relative;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 8px 8px 0;
+        border-color: transparent rgba(198, 225, 236, 0.64) transparent transparent;
+        transition: all 0.8s; }
       .unis-navigation .aside-unfold .aside-controller .right-arrow2 {
-        border-right: 6px #ffffff solid; }
-      .unis-navigation .aside-unfold .aside-controller:hover {
-        background: #777879; }
-        .unis-navigation .aside-unfold .aside-controller:hover .right-arrow1 {
-          border-right: 6px #ffffff solid; }
-        .unis-navigation .aside-unfold .aside-controller:hover .right-arrow2 {
-          border-right: 6px #777879 solid; }
-      .unis-navigation .aside-unfold .aside-controller:active {
-        background: #444545; }
-        .unis-navigation .aside-unfold .aside-controller:active .right-arrow1 {
-          border-right: 6px #ffffff solid; }
-        .unis-navigation .aside-unfold .aside-controller:active .right-arrow2 {
-          border-right: 6px #444545 solid; }
+        position: relative;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 0 8px 8px;
+        border-color: transparent transparent transparent rgba(198, 225, 236, 0.64);
+        transition: all 0.8s; }
     .unis-navigation .aside-unfold .fold-details {
       flex: 1;
       min-width: 10.625rem;
       transition: all 0.5s; }
   .unis-navigation .aside-fold {
-    transition: all 0.5s;
-    /*	.aside-controller {
-    		.right {
-    			-webkit-transform: rotate(-180deg);
-    			transform: rotate(-180deg);
-    			transition: -webkit-transform 0.3s;
-    			transition: transform 0.3s, -webkit-transform 0.3s;
-    		}
-    	}*/ }
+    transition: all 0.5s; }
     .unis-navigation .aside-fold .fold-details {
       width: 0px;
       min-width: 0; }
@@ -1425,9 +1409,9 @@ html, body {
       background: #777879; }
     .parent-level .nav-link-detales::-webkit-scrollbar-track {
       border-radius: 2px;
-      background: #F9F9F9;
+      background: #f9f9f9;
       border-radius: 2px;
-      background: #F9F9F9; }
+      background: #f9f9f9; }
     .parent-level .nav-link-detales .nav-link-groud {
       background: #444545;
       height: auto; }
@@ -1455,190 +1439,136 @@ html, body {
       position: relative;
       background: #444545;
       transition: all 0.5s; }
-      .parent-level .nav-link-detales .item_connect .hover-details {
-        position: absolute;
-        top: 100%;
-        padding-top: 10px;
-        left: 0;
-        width: 175px;
-        display: none;
-        z-index: 999999999; }
-        .parent-level .nav-link-detales .item_connect .hover-details .hover-details-box {
-          padding: 16px 8px;
-          text-align: left;
-          border-radius: 4px;
-          background: #4D4E4E;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); }
-          .parent-level .nav-link-detales .item_connect .hover-details .hover-details-box .hover-details-item {
-            border-radius: 4px;
-            padding-top: 0.5em;
-            padding-bottom: 0.5em;
-            line-height: 1.5rem;
-            padding-left: 16px;
-            padding-right: 16px;
-            color: #FFFFFF; }
-            .parent-level .nav-link-detales .item_connect .hover-details .hover-details-box .hover-details-item:hover {
-              background: #7C8C98; }
-      .parent-level .nav-link-detales .item_connect .nav-button {
-        padding: 0;
+      .parent-level .nav-link-detales .item_connect .item_box {
         width: 100%;
-        margin: 0;
-        user-select: none;
-        background-color: transparent;
-        outline: 0;
-        letter-spacing: 0.03125em;
-        border: none; }
-        .parent-level .nav-link-detales .item_connect .nav-button .item_box {
-          width: 100%;
-          background: #444545;
-          position: relative;
-          transition: all 0.5s;
+        background: #444545;
+        position: relative;
+        transition: all 0.5s;
+        display: flex;
+        border-radius: 6px;
+        align-items: center;
+        justify-content: flex-start !important;
+        font-size: 14px;
+        min-height: 42px;
+        box-sizing: border-box;
+        z-index: 9999;
+        margin-bottom: 1px; }
+        .parent-level .nav-link-detales .item_connect .item_box:hover {
+          background: rgba(200, 216, 228, 0.7);
+          transition: all 0.5s; }
+        .parent-level .nav-link-detales .item_connect .item_box.active {
+          background: rgba(200, 216, 228, 0.7);
+          transition: all 0.5s; }
+        .parent-level .nav-link-detales .item_connect .item_box .img-box {
+          margin-left: 1.4rem;
+          width: 1.4rem;
           display: flex;
-          border-radius: 6px;
           align-items: center;
-          justify-content: flex-start !important;
-          font-size: 14px;
-          min-height: 42px;
-          box-sizing: border-box;
-          z-index: 9999;
-          margin-bottom: 1px;
-          border: 1px solid rgba(20, 28, 28, 0);
-          box-shadow: 0 1px 0 rgba(41, 54, 54, 0);
-          -webkit-box-shadow: 0 1px 0 rgba(41, 54, 54, 0);
-          -moz-box-shadow: 0 1px 0 rgba(41, 54, 54, 0);
-          background: rgba(152, 193, 213, 0);
+          text-align: center; }
+          .parent-level .nav-link-detales .item_connect .item_box .img-box img {
+            height: 1rem;
+            width: auto; }
+        .parent-level .nav-link-detales .item_connect .item_box .pro-ab {
+          width: auto;
+          overflow: hidden;
+          flex: 1;
+          padding-right: 8px;
           transition: all 0.5s; }
-          .parent-level .nav-link-detales .item_connect .nav-button .item_box:hover {
-            background: rgba(152, 193, 213, 0.34);
-            border: 1px solid rgba(20, 28, 28, 0.44);
-            box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
-            -webkit-box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
-            -moz-box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
-            transition: all 0.5s; }
-          .parent-level .nav-link-detales .item_connect .nav-button .item_box.active {
-            transition: all 0.5s;
-            background: rgba(152, 193, 213, 0.34);
-            border: 1px solid rgba(20, 28, 28, 0.44);
-            box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
-            -webkit-box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
-            -moz-box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
-            transition: all 0.5s; }
-          .parent-level .nav-link-detales .item_connect .nav-button .item_box .img-box {
-            margin-left: 1.4rem;
-            width: 1.4rem;
+          .parent-level .nav-link-detales .item_connect .item_box .pro-ab .arrow-down {
+            font-size: 8px;
+            color: #ffffff;
+            transform: scale(0.75) !important; }
+          .parent-level .nav-link-detales .item_connect .item_box .pro-ab .text-box {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            text-align: center; }
-            .parent-level .nav-link-detales .item_connect .nav-button .item_box .img-box img {
-              height: 1rem;
-              width: auto; }
-          .parent-level .nav-link-detales .item_connect .nav-button .item_box .pro-ab {
-            width: auto;
-            overflow: hidden;
-            flex: 1;
-            padding-right: 8px;
-            transition: all 0.5s; }
-            .parent-level .nav-link-detales .item_connect .nav-button .item_box .pro-ab .arrow-down {
-              font-size: 8px;
-              color: #ffffff;
-              transform: scale(0.75) !important; }
-            .parent-level .nav-link-detales .item_connect .nav-button .item_box .pro-ab .text-box {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              margin-left: 1rem; }
-              .parent-level .nav-link-detales .item_connect .nav-button .item_box .pro-ab .text-box a {
-                border: none;
-                outline: none;
-                text-decoration: none; }
-              .parent-level .nav-link-detales .item_connect .nav-button .item_box .pro-ab .text-box img {
-                height: 0.65rem;
-                width: auto;
-                transition: all 0.5s; }
-              .parent-level .nav-link-detales .item_connect .nav-button .item_box .pro-ab .text-box .text {
-                white-space: nowrap;
-                color: #ffffff;
-                font-style: normal;
-                padding-right: 0.3571428571rem;
-                font-weight: bold;
-                font-size: 0.875rem; }
-        .parent-level .nav-link-detales .item_connect .nav-button .hide-childs {
-          height: 0 !important;
-          overflow: hidden !important;
-          transition: all 0.5s; }
-          .parent-level .nav-link-detales .item_connect .nav-button .hide-childs .child-item {
-            opacity: 0 !important;
-            transition: opacity 0.8s; }
-        .parent-level .nav-link-detales .item_connect .nav-button .childs-box {
-          flex: 0 0 100%;
-          max-width: 100%;
-          overflow: inherit;
-          z-index: 0;
-          transition: all 0.5s; }
-          .parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item {
-            opacity: 1;
-            display: block;
-            transition: opacity 0.7s;
-            position: relative;
-            padding: 0 0 1px 14px;
-            margin-left: 32px;
-            font-size: 0.875rem;
-            color: white;
-            cursor: pointer;
-            transition: all 0.5s; }
-            .parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item::before {
-              position: absolute;
-              content: " ";
-              top: 50%;
-              left: -2px;
-              width: 15px;
-              height: 1px;
-              background: #9b9b9b; }
-            .parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item .item-childs-link {
-              display: flex;
-              border-radius: 6px;
-              align-items: center;
-              font-size: 14px;
-              min-height: 40px;
-              margin-left: 13px;
-              box-sizing: border-box;
-              padding-left: 10px;
-              background: rgba(152, 193, 213, 0);
-              border: 1px solid rgba(20, 28, 28, 0);
-              box-shadow: 0 1px 0 rgba(41, 54, 54, 0);
-              -webkit-box-shadow: 0 1px 0 rgba(41, 54, 54, 0);
-              -moz-box-shadow: 0 1px 0 rgba(41, 54, 54, 0);
+            margin-left: 1rem; }
+            .parent-level .nav-link-detales .item_connect .item_box .pro-ab .text-box img {
+              height: 0.65rem;
+              width: auto;
               transition: all 0.5s; }
-              .parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item .item-childs-link sapn {
-                margin-top: -3px; }
-              .parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item .item-childs-link:hover {
-                background: rgba(152, 193, 213, 0.34);
-                border: 1px solid rgba(20, 28, 28, 0.44);
-                box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
-                -webkit-box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
-                -moz-box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
-                transition: all 0.5s; }
-            .parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item .link_active {
+            .parent-level .nav-link-detales .item_connect .item_box .pro-ab .text-box .text {
+              white-space: nowrap;
+              color: #ffffff;
+              font-style: normal;
+              padding-right: 0.3571428571rem;
+              font-weight: bold;
+              font-size: 0.875rem; }
+      .parent-level .nav-link-detales .item_connect .show-childs {
+        height: 0 !important;
+        overflow: hidden !important;
+        transition: all 0.5s; }
+        .parent-level .nav-link-detales .item_connect .show-childs .child-item {
+          opacity: 0 !important;
+          transition: opacity 0.8s; }
+      .parent-level .nav-link-detales .item_connect .childs-box {
+        flex: 0 0 100%;
+        max-width: 100%;
+        overflow: inherit;
+        z-index: 0;
+        transition: all 0.5s; }
+        .parent-level .nav-link-detales .item_connect .childs-box .child-item {
+          opacity: 1;
+          display: block;
+          transition: opacity 0.7s;
+          position: relative;
+          padding: 0px 0 0px 15px;
+          margin-left: 32px;
+          font-size: 0.875rem;
+          color: white;
+          transition: all 0.5s; }
+          .parent-level .nav-link-detales .item_connect .childs-box .child-item::before {
+            position: absolute;
+            content: " ";
+            top: 50%;
+            left: -2px;
+            width: 15px;
+            height: 1px;
+            background: #9b9b9b; }
+          .parent-level .nav-link-detales .item_connect .childs-box .child-item .line {
+            position: absolute;
+            top: 0;
+            left: -2px;
+            width: 1px;
+            bottom: 0;
+            background: #9b9b9b; }
+          .parent-level .nav-link-detales .item_connect .childs-box .child-item:last-child .line {
+            bottom: 49% !important; }
+          .parent-level .nav-link-detales .item_connect .childs-box .child-item:first-child {
+            margin-top: 5px; }
+          .parent-level .nav-link-detales .item_connect .childs-box .child-item:hover {
+            color: rgba(200, 216, 228, 0.7);
+            transition: all 0.5s; }
+          .parent-level .nav-link-detales .item_connect .childs-box .child-item .item-childs-link {
+            display: flex;
+            border-radius: 6px;
+            align-items: center;
+            font-size: 14px;
+            min-height: 40px;
+            box-sizing: border-box;
+            padding-left: 10px;
+            background: rgba(152, 193, 213, 0);
+            border: 1px solid rgba(20, 28, 28, 0);
+            box-shadow: 0 1px 0 rgba(41, 54, 54, 0);
+            -webkit-box-shadow: 0 1px 0 rgba(41, 54, 54, 0);
+            -moz-box-shadow: 0 1px 0 rgba(41, 54, 54, 0);
+            transition: all 0.5s; }
+            .parent-level .nav-link-detales .item_connect .childs-box .child-item .item-childs-link sapn {
+              margin-top: -3px; }
+            .parent-level .nav-link-detales .item_connect .childs-box .child-item .item-childs-link:hover {
               background: rgba(152, 193, 213, 0.34);
               border: 1px solid rgba(20, 28, 28, 0.44);
               box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
               -webkit-box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
               -moz-box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
               transition: all 0.5s; }
-            .parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item .line {
-              position: absolute;
-              top: 0;
-              left: -2px;
-              width: 1px;
-              bottom: 0;
-              background: #9b9b9b; }
-            .parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item:last-child .line {
-              bottom: 49% !important; }
-            .parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item:first-child {
-              margin-top: 3px; }
-            .parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item:hover {
-              color: rgba(200, 216, 228, 0.7);
-              transition: all 0.5s; }
+          .parent-level .nav-link-detales .item_connect .childs-box .child-item .link_active {
+            background: rgba(152, 193, 213, 0.34);
+            border: 1px solid rgba(20, 28, 28, 0.44);
+            box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
+            -webkit-box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
+            -moz-box-shadow: 0 1px 0 rgba(41, 54, 54, 0.3);
+            transition: all 0.5s; }
 
 .parent-level-small {
   width: 4.375rem;
@@ -1650,72 +1580,63 @@ html, body {
     display: block; }
   .parent-level-small .nav-link-detales .group-name {
     display: none; }
-  .parent-level-small .nav-link-detales .item_connect:hover .hover-details {
-    display: block !important; }
-  .parent-level-small .nav-link-detales .item_connect .nav-button {
+  .parent-level-small .nav-link-detales .item_connect .childs-box {
+    height: 0px !important;
+    position: absolute;
+    top: -10px;
+    left: 2.5rem;
+    z-index: 999999999;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 22px;
+    min-width: 250px;
+    overflow: initial !important;
+    transition: all 0.5s;
+    display: none; }
+    .parent-level-small .nav-link-detales .item_connect .childs-box .child-item {
+      padding: 0 !important;
+      opacity: 0;
+      transition: opacity 0.8s; }
+      .parent-level-small .nav-link-detales .item_connect .childs-box .child-item::before {
+        content: initial; }
+    .parent-level-small .nav-link-detales .item_connect .childs-box .line {
+      display: none; }
+    .parent-level-small .nav-link-detales .item_connect .childs-box .child-item {
+      padding: 0 8px;
+      opacity: 1 !important;
+      text-align: left;
+      border-radius: 4px;
+      margin-left: 0;
+      background: #4d4e4e;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); }
+  .parent-level-small .nav-link-detales .item_connect .show-childs {
+    height: auto !important;
+    overflow: initial !important;
+    transition: all 0.5s; }
+    .parent-level-small .nav-link-detales .item_connect .show-childs .child-item {
+      opacity: 1 !important; }
+  .parent-level-small .nav-link-detales .item_connect:hover, .parent-level-small .nav-link-detales .item_connect.hover {
     position: relative; }
-    .parent-level-small .nav-link-detales .item_connect .nav-button .item_box {
-      width: 100% !important;
-      justify-content: center !important; }
-      .parent-level-small .nav-link-detales .item_connect .nav-button .item_box .img-box {
-        display: contents !important; }
-      .parent-level-small .nav-link-detales .item_connect .nav-button .item_box .pro-ab {
-        width: 0px;
-        overflow: hidden;
-        transition: all 0.5s;
-        display: none; }
-    .parent-level-small .nav-link-detales .item_connect .nav-button .hide-childs {
-      height: initial !important;
-      overflow: hidden;
+    .parent-level-small .nav-link-detales .item_connect:hover .item_box, .parent-level-small .nav-link-detales .item_connect.hover .item_box {
+      background: rgba(200, 216, 228, 0.7);
       transition: all 0.5s; }
-      .parent-level-small .nav-link-detales .item_connect .nav-button .hide-childs .child-item {
-        opacity: 1 !important;
-        transition: opacity 0.8s; }
-    .parent-level-small .nav-link-detales .item_connect .nav-button .childs-box {
-      display: none;
-      padding: 5px;
-      height: initial !important;
-      position: absolute;
-      left: 115%;
-      top: 0;
-      max-width: inherit;
-      width: auto;
-      border-radius: 0 6px 6px 0;
-      background: #444545; }
-      .parent-level-small .nav-link-detales .item_connect .nav-button .childs-box .child-item {
-        padding: 0;
-        margin-left: 0px;
-        margin-top: 4px; }
-        .parent-level-small .nav-link-detales .item_connect .nav-button .childs-box .child-item::before {
-          display: none; }
-        .parent-level-small .nav-link-detales .item_connect .nav-button .childs-box .child-item .item-childs-link {
-          display: flex;
-          padding-left: 15px;
-          padding-right: 15px;
-          min-width: 200px;
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;
-          line-height: 24px;
-          border-radius: 6px;
-          align-items: center;
-          font-size: 14px;
-          min-height: 40px;
-          margin-left: 0; }
-          .parent-level-small .nav-link-detales .item_connect .nav-button .childs-box .child-item .item-childs-link sapn {
-            margin-top: -3px; }
-        .parent-level-small .nav-link-detales .item_connect .nav-button .childs-box .child-item .link_active {
-          transition: all 0.5s; }
-        .parent-level-small .nav-link-detales .item_connect .nav-button .childs-box .child-item .line {
-          display: none; }
-        .parent-level-small .nav-link-detales .item_connect .nav-button .childs-box .child-item:last-child .line {
-          display: none; }
-        .parent-level-small .nav-link-detales .item_connect .nav-button .childs-box .child-item:hover {
-          color: rgba(200, 216, 228, 0.7);
-          transition: all 0.5s; }
-    .parent-level-small .nav-link-detales .item_connect .nav-button:focus .childs-box {
+    .parent-level-small .nav-link-detales .item_connect:hover .childs-box, .parent-level-small .nav-link-detales .item_connect.hover .childs-box {
+      height: auto !important;
       display: block; }
+      .parent-level-small .nav-link-detales .item_connect:hover .childs-box .child-item, .parent-level-small .nav-link-detales .item_connect.hover .childs-box .child-item {
+        opacity: 1;
+        transition: opacity 0.8s; }
+  .parent-level-small .nav-link-detales .item_connect .item_box {
+    z-index: 0;
+    width: 100% !important;
+    justify-content: center !important; }
+    .parent-level-small .nav-link-detales .item_connect .item_box .img-box {
+      display: contents !important;
+      text-align: center; }
+    .parent-level-small .nav-link-detales .item_connect .item_box .pro-ab {
+      display: none; }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .sm\:parent-level {
     width: 4.375rem;
     min-width: 4.375rem;
@@ -1726,70 +1647,61 @@ html, body {
       display: block; }
     .sm\:parent-level .nav-link-detales .group-name {
       display: none; }
-    .sm\:parent-level .nav-link-detales .item_connect:hover .hover-details {
-      display: block !important; }
-    .sm\:parent-level .nav-link-detales .item_connect .nav-button {
+    .sm\:parent-level .nav-link-detales .item_connect .childs-box {
+      height: 0px !important;
+      position: absolute;
+      top: -10px;
+      left: 2.5rem;
+      z-index: 999999999;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 22px;
+      min-width: 250px;
+      overflow: initial !important;
+      transition: all 0.5s;
+      display: none; }
+      .sm\:parent-level .nav-link-detales .item_connect .childs-box .child-item {
+        padding: 0 !important;
+        opacity: 0;
+        transition: opacity 0.8s; }
+        .sm\:parent-level .nav-link-detales .item_connect .childs-box .child-item::before {
+          content: initial; }
+      .sm\:parent-level .nav-link-detales .item_connect .childs-box .line {
+        display: none; }
+      .sm\:parent-level .nav-link-detales .item_connect .childs-box .child-item {
+        padding: 0 8px;
+        opacity: 1 !important;
+        text-align: left;
+        border-radius: 4px;
+        margin-left: 0;
+        background: #4d4e4e;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); }
+    .sm\:parent-level .nav-link-detales .item_connect .show-childs {
+      height: auto !important;
+      overflow: initial !important;
+      transition: all 0.5s; }
+      .sm\:parent-level .nav-link-detales .item_connect .show-childs .child-item {
+        opacity: 1 !important; }
+    .sm\:parent-level .nav-link-detales .item_connect:hover, .sm\:parent-level .nav-link-detales .item_connect.hover {
       position: relative; }
-      .sm\:parent-level .nav-link-detales .item_connect .nav-button .item_box {
-        width: 100% !important;
-        justify-content: center !important; }
-        .sm\:parent-level .nav-link-detales .item_connect .nav-button .item_box .img-box {
-          display: contents !important; }
-        .sm\:parent-level .nav-link-detales .item_connect .nav-button .item_box .pro-ab {
-          width: 0px;
-          overflow: hidden;
-          transition: all 0.5s;
-          display: none; }
-      .sm\:parent-level .nav-link-detales .item_connect .nav-button .hide-childs {
-        height: initial !important;
-        overflow: hidden;
+      .sm\:parent-level .nav-link-detales .item_connect:hover .item_box, .sm\:parent-level .nav-link-detales .item_connect.hover .item_box {
+        background: rgba(200, 216, 228, 0.7);
         transition: all 0.5s; }
-        .sm\:parent-level .nav-link-detales .item_connect .nav-button .hide-childs .child-item {
-          opacity: 1 !important;
+      .sm\:parent-level .nav-link-detales .item_connect:hover .childs-box, .sm\:parent-level .nav-link-detales .item_connect.hover .childs-box {
+        height: auto !important;
+        display: block; }
+        .sm\:parent-level .nav-link-detales .item_connect:hover .childs-box .child-item, .sm\:parent-level .nav-link-detales .item_connect.hover .childs-box .child-item {
+          opacity: 1;
           transition: opacity 0.8s; }
-      .sm\:parent-level .nav-link-detales .item_connect .nav-button .childs-box {
-        display: none;
-        padding: 5px;
-        height: initial !important;
-        position: absolute;
-        left: 115%;
-        top: 0;
-        max-width: inherit;
-        width: auto;
-        border-radius: 0 6px 6px 0;
-        background: #444545; }
-        .sm\:parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item {
-          padding: 0;
-          margin-left: 0px;
-          margin-top: 4px; }
-          .sm\:parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item::before {
-            display: none; }
-          .sm\:parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item .item-childs-link {
-            display: flex;
-            padding-left: 15px;
-            padding-right: 15px;
-            min-width: 200px;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            line-height: 24px;
-            border-radius: 6px;
-            align-items: center;
-            font-size: 14px;
-            min-height: 40px;
-            margin-left: 0; }
-            .sm\:parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item .item-childs-link sapn {
-              margin-top: -3px; }
-          .sm\:parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item .link_active {
-            transition: all 0.5s; }
-          .sm\:parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item .line {
-            display: none; }
-          .sm\:parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item:last-child .line {
-            display: none; }
-          .sm\:parent-level .nav-link-detales .item_connect .nav-button .childs-box .child-item:hover {
-            color: rgba(200, 216, 228, 0.7);
-            transition: all 0.5s; }
-      .sm\:parent-level .nav-link-detales .item_connect .nav-button:focus .childs-box {
-        display: block; } }
+    .sm\:parent-level .nav-link-detales .item_connect .item_box {
+      z-index: 0;
+      width: 100% !important;
+      justify-content: center !important; }
+      .sm\:parent-level .nav-link-detales .item_connect .item_box .img-box {
+        display: contents !important;
+        text-align: center; }
+      .sm\:parent-level .nav-link-detales .item_connect .item_box .pro-ab {
+        display: none; } }
 .unis-topBar {
   background: #f1f1f1;
   height: 3.75rem;
@@ -3764,5 +3676,21 @@ supplement color
   max-width: 580px;
   max-height: 80%;
   position: relative; }
+
+.h-100 {
+  height: 100%; }
+
+.component-view {
+  overflow-y: auto;
+  height: calc(100% - 60px); }
+  .component-view::-webkit-scrollbar {
+    width: 0.3125rem;
+    height: 0.25rem; }
+  .component-view::-webkit-scrollbar-thumb {
+    border-radius: 0.375rem;
+    background: #777879; }
+  .component-view::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background: #F9F9F9; }
 
 /*# sourceMappingURL=layouts.css.map */

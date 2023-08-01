@@ -1,5 +1,5 @@
 <template>
-    <div class=" my-5">
+    <div class="p-5">
         <div class="row">
             <div class="col-3  xs:col-12 md:col-6 lg:col-6  ">
                 <div class="an-panel-main-info-single color-cyan with-shadow wow fadeIn" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
@@ -28,7 +28,7 @@
 
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-6 sm:col-12 md:col-12">
                 <div class="card shadow-1">
                     <div class="card-header px-4">
                         <div>DOWNLOADS</div>
@@ -50,7 +50,7 @@
 
 
             </div>
-            <div class="col-6">
+            <div class="col-6 sm:col-12 md:col-12">
                 <div class="card">
                     <div class="card-header px-4">
                         <div >STATISTICS</div>

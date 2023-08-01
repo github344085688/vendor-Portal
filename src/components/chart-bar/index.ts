@@ -37,12 +37,12 @@ ChartJS.register(
             default: 'bar'
         },
         width: {
-            type: Number ,
+            type: String ,
             default: '100%'
         },
         height: {
-            type: Number ,
-            default: 250
+            type: String ,
+            default: '250'
         },
         cssClasses: {
             default: '',
@@ -63,10 +63,11 @@ export default class ChartBar extends BaseVue {
 
     public chartId!:string;
     public cssClasses!:string;
-    public width!: Number;
-    public height!: Number;
+    public width!: string;
+    public height!: string;
     public styles!:Object;
     public plugins!: any;
+    public datasetIdKey: string = '';
     public chartData: any = {
         labels: [
            'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',

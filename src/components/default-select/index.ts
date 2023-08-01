@@ -99,7 +99,6 @@ export default class DefaultSelect extends BaseVue {
     }
 
     public  watchModelValue(val: any, oldVal: any) {
-        console.log('watchValue',val);
         if (!val) {
             this.transitionValue = '';
         }

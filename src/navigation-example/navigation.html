@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>UNIS Design System v4</title>
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <link rel="stylesheet" href="./unis.css">
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+</head>
+<div style="  height: 100%; " id="childApp">
+    <div class="side-navigation" style="background:green" :class="{'show-side-bar':isShowSidebar}">
+        <div class="unis-navigation">
+            <div class="aside-unfold" :class="{'aside-fold':isFold}">
+                <div class="aside-controller">
+                    <b class="right display-xl" @click.stop.prevent="togoaside(isFold)">
+                        <i class="right-arrow1"></i>
+                        <i class="right-arrow2"></i>
+                    </b>
+                </div>
+                <div class="parent-level-big" :class="{'parent-level-small':isLevelSmall ||isFold}">
+                    <div class="log-big"><img src="img/logo.svg" alt=""></div>
+                    <div class="log-nano"><img src="img/logo-nano.svg" alt=""></div>
+                    <div class="nav-link-detales" :class="[isFold?'':'overflow-y']">
+                        <div class="nav-link-groud" v-for="(child, navLinkindex) in navLink" :key="navLinkindex">
+                            <div class="group-name" v-if="child.groupName">
+                                <div class="text">{{child.groupName}}</div>
+                            </div>
+                            <div v-for="(item, childsIndex) in child.childs" :key="childsIndex"
+                                 class="item_connect">
+                                <div class="item_box" @click.stop.prevent="foldDetails(isFoldDetails,item)"
+                                     :class="{'active':navName==item.title}">
+                                    <div class="img-box"><img :src="item.icon"></div>
+                                    <div class="pro-ab">
+                                        <div class="text-box">
+                                            <a href="#" class="unis-a">
+                                                <div class="text but-t1">{{item.title}}</div>
+                                            </a>
+                                            <img src="img/arrow-down.svg"
+                                                 :class="{'transform-180':navName == item.title }"
+                                                 v-if="item.childs && item.childs.length>0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div :class="[isFold?'hover-details':'childs-box',(navName != item.title && !isFold)?'show-childs':'']"
+                                     v-if="item.childs && item.childs.length>0"
+                                     :style="{'height':(42* item.childs.length)+'px'}">
+                                    <div :class="[isFold?'hover-details-box':'' ]">
+                                        <div class="" :class="[isFold?'hover-details-item':'child-item' ]"
+                                             v-for="nav in item.childs">
+                                            <div class="line"></div>
+                                            {{nav.title}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+
+  new Vue({
+    el: "#childApp",
+    data: function () {
+      return {
+        idShowCode: false,
+        isFold: false,
+        isLevelSmall: false,
+        isFoldDetails: false,
+        navName: 'Dashboard',
+        isShowSidebar: false,
+        navLink: [
+          {
+            groupName: '',
+            childs: [{
+              title: 'Dashboard',
+              icon: "img/dashboard.svg",
+              childs: [],
+
+            },]
+          },
+          {
+            groupName: 'MAIN MENU', childs: [
+            {
+              title: 'TMS',
+              icon: "img/tms2.svg",
+              childs: [{
+                title: 'Invoices'
+              }, {
+                title: 'Invoice History'
+              }],
+            },
+            {
+              title: 'Service',
+              icon: "img/service.svg",
+              childs: [{
+                title: 'Option1',
+              }, {
+                title: 'Option2',
+              }, {
+                title: 'Option3',
+              }, {
+                title: 'Option4',
+              }, {
+                title: 'Option5',
+              }, {
+                title: 'Option6',
+              }, {
+                title: 'Option7',
+              }, {
+                title: 'Option8',
+              }, {
+                title: 'Option9',
+              },],
+            },
+            {
+              title: 'Brokerage',
+              icon: "img/brokerage.svg",
+              childs: [{
+                title: 'Option1',
+              }, {
+                title: 'Option2',
+              }, {
+                title: 'Option3',
+              }, {
+                title: 'Option4',
+              }, {
+                title: 'Option5',
+              }, {
+                title: 'Option6',
+              }, {
+                title: 'Option7',
+              },],
+            },
+          ]
+          },
+          {
+            groupName: 'MY BUSINESS', childs: [
+            {
+              title: 'Payments ',
+              icon: "img/payments.svg"
+            }, {
+              title: 'Business Info  ',
+              icon: "img/businessInfo.svg"
+            },
+          ]
+          },
+          {
+            groupName: 'GENERAL', childs: [
+            {
+              title: 'Message Center ',
+              icon: "img/MessageCenter.svg"
+            }, {
+              title: 'Settings',
+              icon: "img/setting.svg"
+            },
+          ]
+          },
+        ],
+      };
+    },
+
+    computed: {},
+    beforeCreate(){
+
+    },
+    methods: {
+      showCode: function () {
+        this.idShowCode = !this.idShowCode;
+      },
+      togoaside: function (isfold) {
+        if (this.isFoldDetails) this.isLevelSmall = true;
+        this.isFold = !isfold;
+      },
+      foldDetails: function (isFoldDetails, item) {
+        if (this.navName == item.title) this.navName = '';
+        else this.navName = item.title;
+      },
+
+    }
+
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
