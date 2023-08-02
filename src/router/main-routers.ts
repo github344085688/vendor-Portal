@@ -1,6 +1,8 @@
 /**
  * Created by f on 2022/9/28.
  */
+
+import Dashboard from "@/layouts/dashboard";
 import Invoices from "@/layouts/invoices";
 import InvoicesList from "@/layouts/invoices/invoices-list";
 import ImportExport from "@/layouts/invoices/import-export";
@@ -26,6 +28,8 @@ const SideNavConfig: Array<SideNavList> = [
       {
         title: "Dashboard",
         name: "Dashboard",
+        path: "dashboard",
+        component: Dashboard,
         icon: require("../assets/img/nav-icons/1.svg"),
         children: [],
       },
@@ -45,7 +49,7 @@ const SideNavConfig: Array<SideNavList> = [
             name: "Invoices",
             component: Invoices,
             title: "Invoices",
-            redirect: { name: "Service" },
+            // redirect: { name: "Service" },
             children: [
               {
                 path: "invoices-list",

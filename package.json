@@ -8,12 +8,15 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@highlightjs/vue-plugin": "^2.1.0",
     "@vuelidate/core": "^2.0.0-alpha.44",
     "@vuelidate/validators": "^2.0.0-alpha.31",
     "axios": "^0.27.2",
     "chart.js": "^3.9.1",
     "echarts": "^5.4.0",
+    "highlight.js": "^11.7.0",
     "lodash-es": "^4.17.21",
+    "marked": "^4.2.8",
     "mitt": "^3.0.0",
     "moment": "^2.29.4",
     "rxjs": "^7.5.6",
@@ -22,6 +25,7 @@
     "vue-chartjs": "^4.1.2",
     "vue-class-component": "^8.0.0-0",
     "vue-property-decorator": "^9.1.2",
+    "vue-resource": "^1.5.3",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0",
     "yup": "^0.32.11"

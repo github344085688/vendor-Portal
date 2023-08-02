@@ -7,7 +7,7 @@
                     Are you a new or existing customer?
                     <button class="unis-btn unis-btn-text" @click.stop.prevent="onSignInOrUp('Sign up')">Sign up</button>
                 </div>
-                <Form @submit="onSubmit" class="d-flex flex-column" :validation-schema="schema"
+                <Form @submit="onSubmit('schema')" class="d-flex flex-column" :validation-schema="schema"
                       v-slot="{ meta, errors }"
                       @invalid-submit="onInvalidSubmit">
                     <div class="w-100  po-r mb-4">

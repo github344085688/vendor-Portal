@@ -1,27 +1,173 @@
-$GG100:#EAFFF2;
-$GG700:#268C55;
-$BG100:#EEF8EE;
-$BG900:#59BA56;
-$Gr300:#cfd0d1; 
-$Gr500:#989A9C; 
-$Gr900:#444545;
-$Or700: #FF820E;
-$Or300: #FFF1DB;
-$r900:#B71C1C;
-$bl0:#000000;
-$no: none;
 
+$white: white;
+$G900: #444545;
+$G700: #777879;
+$G500: #989a9c;
+$G400: #b4b5b5;
+$G300: #cecece;
+$G200: #dadada;
+$G100: #ececec;
+///* ACCENT BLUE */
+$B900: #488492;
+$B700: #7fa9b3;
+$B600: #91b5be;
+$B500: #a3c1c8;
+$B400: #b6ced3;
+$B200: #d3e2e5;
+$B100: #e9f0f2;
+///* BACKGROUND */
+$BK900: #f9f9f9;
+$BK100: #ffffff;
+///* SECONDAY COLORS */
+///* SECONDAY GREEN */
+$SG900: #52ab98;
+$SG700: #7ebdaf;
+$SG500: #97cdc1;
+$SG400: #abe2d6;
+$SG200: #caede4;
+$SG100: #e2f2ef;
+///* SECONDARY BLUE */
+$SB900: #7c8c98;
+$SB700: #afbfcb;
+$SB500: #c8d8e4;
+$SB400: #d9e4ec;
+$SB200: #edf2f6;
+$SB100: #f7f8f9;
+///* EXTENDED COLORS */
+///* PINK */
+$P500: #ffb3c3;
+$P100: #feebee;
+$P200: #fcd6de;
+$P400: #ffbecc;
+$P700: #f6718b;
+$P900: #f23459;
+///* OCEAN BLUE */
+$OB500: #03a9f4;
+$OB100: #e5f5fd;
+$OB200: #c5e8f9;
+$OB400: #93d7f8;
+$OB700: #0288d1;
+$OB900: #002f6c;
+///* LAVENDER */
+$L500: #9fa6ff;
+$L100: #f9f9ff;
+$L200: #ebecff;
+$L400: #b9beff;
+$L700: #6269c5;
+$L900: #232a5c;
+///* YELLOW */
+$Y600: #ff781e;
+$Y500: #ffc555;
+$Y100: #fff6e6;
+$Y200: #ffefcd;
+$Y400: #fdd88e;
+$Y700: #ce7129;
+$Y900: #b24319;
+///* RED */
+$R500: #e52628;
+$R100: #ffecec;
+$R200: #ffdada;
+$R400: #f07b7c;
+$R700: #d32f2f;
+$R900: #b71c1c;
+///*GRASS GREEN */
+$GG500: #39ac6e;
+$GG100: #eafff2;
+$GG200: #d6fce7;
+$GG400: #56c288;
+$GG700: #268c55;
+$GG900: #003c1c;
 
-@include Colors('gg', '100', $GG100);
-@include Colors('gg', '700', $GG700);
-@include Colors('bg', '100', $BG100);
-@include Colors('bg', '900', $BG900);
-@include Colors('gr', '300', $Gr300);
-@include Colors('gr', '500', $Gr500);
-@include Colors('gr', '900', $Gr900);
-@include Colors('or', '700', $Or700);
-@include Colors('or', '300', $Or300);
-@include Colors('r', '900', $r900);
-@include Colors('bl', '', $bl0);
-@include Colors('no', '', $no);
- 
+$greenTint: #d5e9fa;
+$greenbled: #009934;
+$green: #52ab98;
+$greenLine: #ccebd6;
+$purplebled: #472ddd;
+$purpleLine: #dad5f8;
+$pinkbled: #b2158b;
+$pinkLine: #ffdaf6;
+$lightGreenBled: #06a59a;
+$lightGreenLine: #def9f3;
+$blueBled: #0b76b7;
+$blueGreen: #7fa9b3;
+$blueLine: #d0f0fd;
+$accenteTex: #488492;
+$accenteBlck: #7fa9b3;
+$accente: #e9f0f2;
+
+@include Colors('wh', 'ite', $white);
+@include Colors('grey', '900', $G900);
+@include Colors('grey', '700', $G700);
+@include Colors('grey', '500', $G500);
+@include Colors('grey', '400', $G400);
+@include Colors('grey', '300', $G300);
+@include Colors('grey', '200', $G200);
+@include Colors('grey', '100', $G100);
+
+@include Colors('accentblue', '900', $B900);
+@include Colors('accentblue', '700', $B700);
+@include Colors('accentblue', '600', $B600);
+@include Colors('accentblue', '500', $B500);
+@include Colors('accentblue', '400', $B400);
+@include Colors('accentblue', '200', $B200);
+@include Colors('accentblue', '100', $B100);
+
+@include Colors('secgreen', '900', $SG900);
+@include Colors('secgreen', '700', $SG700);
+@include Colors('secgreen', '500', $SG500);
+@include Colors('secgreen', '400', $SG400);
+@include Colors('secgreen', '200', $SG200);
+@include Colors('secgreen', '100', $SG100);
+
+@include Colors('secblue', '900', $SB900);
+@include Colors('secblue', '700', $SB700);
+@include Colors('secblue', '500', $SB500);
+@include Colors('secblue', '400', $SB400);
+@include Colors('secblue', '200', $SB200);
+@include Colors('secblue', '100', $SB100);
+
+@include Colors('pink', '900', $P900);
+@include Colors('pink', '700', $P700);
+@include Colors('pink', '500', $P500);
+@include Colors('pink', '400', $P400);
+@include Colors('pink', '200', $P200);
+@include Colors('pink', '100', $P100);
+
+@include Colors('oceanblue', '900', $OB900);
+@include Colors('oceanblue', '700', $OB700);
+@include Colors('oceanblue', '500', $OB500);
+@include Colors('oceanblue', '400', $OB400);
+@include Colors('oceanblue', '200', $OB200);
+@include Colors('oceanblue', '100', $OB100);
+
+@include Colors('lavender', '900', $L900);
+@include Colors('lavender', '700', $L700);
+@include Colors('lavender', '500', $L500);
+@include Colors('lavender', '400', $L400);
+@include Colors('lavender', '200', $L200);
+@include Colors('lavender', '100', $L100);
+
+@include Colors('yellow', '900', $Y900);
+@include Colors('yellow', '700', $Y700);
+@include Colors('yellow', '600', $Y600);
+@include Colors('yellow', '500', $Y500);
+@include Colors('yellow', '400', $Y400);
+@include Colors('yellow', '200', $Y200);
+@include Colors('yellow', '100', $Y100);
+
+@include Colors('red', '900', $R900);
+@include Colors('red', '700', $R700);
+@include Colors('red', '500', $R500);
+@include Colors('red', '400', $R400);
+@include Colors('red', '200', $R200);
+@include Colors('red', '100', $R100);
+
+@include Colors('grassgreen', '900', $GG900);
+@include Colors('grassgreen', '700', $GG700);
+@include Colors('grassgreen', '500', $GG500);
+@include Colors('grassgreen', '400', $GG400);
+@include Colors('grassgreen', '200', $GG200);
+@include Colors('grassgreen', '100', $GG100);
+
+@include Colors('background', '900', $BK900);
+@include Colors('background', '100', $BK100);

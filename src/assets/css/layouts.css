@@ -1296,6 +1296,25 @@ html, body {
 .rotate180 {
   transform: rotate(180deg); }
 
+.br-s {
+  border-style: solid !important; }
+
+.br-0 {
+  border-width: 0px !important; }
+
+.br-1 {
+  border-width: 1px !important;
+  border-style: solid !important; }
+
+.br-2 {
+  border-width: 2px; }
+
+.br-3 {
+  border-width: 3px; }
+
+.br-4 {
+  border-width: 4px; }
+
 side-side-navigation {
   height: 100%; }
 
