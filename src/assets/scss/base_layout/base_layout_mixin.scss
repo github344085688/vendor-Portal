@@ -18,7 +18,8 @@ $xl2: (1200px:1920px);
   $mins: breakpoint-min($name, $breakpoints);
   @if $mins {
     @each $min, $max in $mins {
-      @media only screen and (min-width: $min) and (max-width: $max) {
+      //@media only screen and (min-width: $min) and (max-width: $max) {
+      @media (max-width: $max) {
         @content;
       }
     }

@@ -110,6 +110,7 @@ $w-100: (
 $insertMap:  $col-map,$displayMap,$flex-justify-align,$row-px,$margin-padding,$w-100,$grid-row-gap,$grid-column-gap,$grid-column-start,$grid-column-end,$col-px,
 $grid-row-start,$grid-row-end,$hr,$box-shadow,$boder-width,$boder-border-radius;
 // $insertMap:  $grid-column-gap,$grid-row-gap,$grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end,$box-shadow,$boder-width,$boder-border-radius,$hr;
+ $insertMap:  $displayMap,$margin-padding;
 
 //@debug list-separator([1px, 2px, 3px]);
 
@@ -118,7 +119,7 @@ $gridPoints: self-mixin-configuration($configFlex,12,16px,'grid');
 $flexPoints: self-mixin-configuration($configFlex, 12,15px,'flex');
 
 
+//$classPoints:(col:$flexPoints,grid:$gridPoints,insert:$insertMap);
 $classPoints:(col:$flexPoints,grid:$gridPoints,insert:$insertMap);
-//$classPoints:(insert:$insertMap);
 
 @include self-mixin-split-screen($media-min-max-points,$classPoints);

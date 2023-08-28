@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="175c7981-bea1-4ccb-85af-d64f682dce6b" name="Default" comment="vue 3 cli">
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/theme/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/dashboard/dashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/dashboard/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/invoice-history/codes/side-nav.ts" afterDir="false" />
+    <list default="true" id="492e7b81-5853-41c6-8fda-099ca38d3d48" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/tailwind.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base-components/base-menu/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base-components/base-menu/menu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base-components/multiple-elements/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base-components/multiple-elements/menu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base-components/radio-group/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base-components/radio-group/radio-group.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base-components/select-menus/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base-components/select-menus/select-menus.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base-components/switch/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base-components/switch/switch.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/simulation-window/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/simulation-window/simulation-window.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/simulation-window/simulation-window.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/sidebar-navigation/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/sidebar-navigation/sidebar-navigation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/sidebar-navigation/sidebar-navigation.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vendor-Portal.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/.sass-cache/20f9dccfef214b02a6712d94184dae25ab2821aa/base.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/.sass-cache/20f9dccfef214b02a6712d94184dae25ab2821aa/base.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/.sass-cache/20f9dccfef214b02a6712d94184dae25ab2821aa/main.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/.sass-cache/20f9dccfef214b02a6712d94184dae25ab2821aa/main.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/.sass-cache/20f9dccfef214b02a6712d94184dae25ab2821aa/_gridSystem.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/.sass-cache/20f9dccfef214b02a6712d94184dae25ab2821aa/_gridSystem.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/.sass-cache/71af29604a729b6db7eac9d72384fd7e1138c6e0/base_layout_mixin.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/.sass-cache/71af29604a729b6db7eac9d72384fd7e1138c6e0/base_layout_mixin.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/layouts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/layouts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/layouts.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/layouts.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/theme.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/unisUi.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/unisUi.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/unisUi.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/unisUi.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/_gridSystem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/_gridSystem.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/base_layout/base_layout_mixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/base_layout/base_layout_mixin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/theme/themes.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/invoice-history/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/invoice-history/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/invoice-history/invoice-history.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/invoice-history/invoice-history.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/user/sign-in/sign-in-page/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/sign-in/sign-in-page/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/user/sign-in/sign-in-page/sign-in-page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/sign-in/sign-in-page/sign-in-page.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/card/cardvariables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/card/cardvariables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/router-views/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/router-views/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/router-views/router-views.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/router-views/router-views.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/user-routers-views/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/user-routers-views/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/user-routers-views/user-routers-views.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/user-routers-views/user-routers-views.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/user/sign-up/resend-email/resend-email.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/sign-up/resend-email/resend-email.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/user/sign-up/verify-email/verify-email.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/sign-up/verify-email/verify-email.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/main-routers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/main-routers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation-example/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation-example/js/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/user-routers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user-routers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shims-vue.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shims-vue.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,88 +54,37 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="TypeScript File" />
-        <option value="HTML File" />
-        <option value="SCSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2RuJErYI25IxiQlFOWHYJ9ciAgN" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": -1
+}]]></component>
+  <component name="ProjectId" id="2UbcmEca4ALjtVghBXXCkQFwcyN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="JavaScriptPreferStrict" value="false" />
-    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/scss" />
-    <property name="list.type.of.created.stylesheet" value="SCSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path" value="node" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="D:\vendor-Portal\node_modules\prettier" />
-    <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
-    <property name="ts.external.directory.path" value="D:\vendor-Portal\node_modules\typescript\lib" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\vendor_portal\vendor-Portal\src\layouts\login2" />
-      <recent name="F:\vendor_portal\vendor-Portal\src\layouts\login2\components" />
-      <recent name="F:\vendor_portal\vendor-Portal\src\layouts" />
-      <recent name="F:\vendor_portal\vendor-Portal\src\components\pops" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\vendor-Portal\src\assets\scss" />
-      <recent name="D:\vendor-Portal\src\layouts" />
-      <recent name="D:\vendor-Portal\src\layouts\invoice-history\codes" />
-      <recent name="D:\vendor-Portal\src" />
-      <recent name="D:\vendor-Portal\src\assets\img\nav-icons" />
-    </key>
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "2022-10-17",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "E:\\vendor_portal\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
-    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unnamed" type="js.build_tools.npm">
+    <configuration name="serve" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -146,185 +95,19 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\34408\AppData\Roaming\Subversion</configuration>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="175c7981-bea1-4ccb-85af-d64f682dce6b" name="Default" comment="" />
-      <created>1663560532528</created>
+      <changelist id="492e7b81-5853-41c6-8fda-099ca38d3d48" name="Changes" comment="" />
+      <created>1693211877330</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1663560532528</updated>
-      <workItem from="1663560533832" duration="2420000" />
-      <workItem from="1663564080149" duration="17334000" />
-      <workItem from="1663638315404" duration="22228000" />
-      <workItem from="1663724972317" duration="29627000" />
-      <workItem from="1663897295458" duration="16411000" />
-      <workItem from="1664156651079" duration="24020000" />
-      <workItem from="1664243256989" duration="61025000" />
-      <workItem from="1664502688626" duration="5054000" />
-      <workItem from="1665193689963" duration="10691000" />
-      <workItem from="1665212163601" duration="8098000" />
-      <workItem from="1665279009263" duration="5013000" />
-      <workItem from="1665284920058" duration="33000" />
-      <workItem from="1688093925619" duration="562000" />
-      <workItem from="1688094592457" duration="172000" />
-      <workItem from="1688094778898" duration="807000" />
-      <workItem from="1688095688671" duration="8957000" />
-      <workItem from="1689651599650" duration="4651000" />
-      <workItem from="1689728221790" duration="58256000" />
-      <workItem from="1690161591069" duration="29276000" />
-      <workItem from="1690350242583" duration="11281000" />
-      <workItem from="1690421009368" duration="4239000" />
-      <workItem from="1690770332066" duration="39184000" />
+      <updated>1693211877330</updated>
+      <workItem from="1693211878444" duration="463000" />
     </task>
-    <task id="LOCAL-00001" summary="vue 3 cli">
-      <created>1663560836564</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1663560836564</updated>
-    </task>
-    <task id="LOCAL-00002" summary="vue 3 cli">
-      <created>1663565244075</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1663565244075</updated>
-    </task>
-    <task id="LOCAL-00003" summary="vue 3 cli">
-      <created>1663643201025</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1663643201025</updated>
-    </task>
-    <task id="LOCAL-00004" summary="vue 3 cli">
-      <created>1663734546444</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1663734546444</updated>
-    </task>
-    <task id="LOCAL-00005" summary="vue 3 cli">
-      <created>1663923330688</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1663923330688</updated>
-    </task>
-    <task id="LOCAL-00006" summary="vue 3 cli">
-      <created>1664438561026</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1664438561026</updated>
-    </task>
-    <task id="LOCAL-00007" summary="vue 3 cli">
-      <created>1689819989665</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1689819989665</updated>
-    </task>
-    <task id="LOCAL-00008" summary="vue 3 cli">
-      <created>1690274682743</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1690274682743</updated>
-    </task>
-    <task id="LOCAL-00009" summary="vue 3 cli">
-      <created>1690857262428</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1690857262428</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="vue 3 cli" />
-    <option name="LAST_COMMIT_MESSAGE" value="vue 3 cli" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="414" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1688095799254">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="414" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1688095799254" />
-    <state x="1010" y="442" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1689669796422">
-      <screen x="0" y="0" width="2560" height="1392" />
-    </state>
-    <state x="1010" y="442" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1689669796422" />
-    <state x="-927" y="873" key="FileChooserDialogImpl" timestamp="1690361844318">
-      <screen x="-1920" y="611" width="1920" height="1032" />
-    </state>
-    <state x="-927" y="873" key="FileChooserDialogImpl/-1920.611.1920.1032/0.0.2560.1392@-1920.611.1920.1032" timestamp="1690361844318" />
-    <state x="1324" y="353" key="FileChooserDialogImpl/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1690361257329" />
-    <state width="2554" height="350" key="GridCell.Tab.0.bottom" timestamp="1690877693268">
-      <screen x="0" y="0" width="2560" height="1392" />
-    </state>
-    <state width="2554" height="350" key="GridCell.Tab.0.bottom/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1690877693268" />
-    <state width="1899" height="245" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1690449102625" />
-    <state width="2554" height="350" key="GridCell.Tab.0.center" timestamp="1690877693268">
-      <screen x="0" y="0" width="2560" height="1392" />
-    </state>
-    <state width="2554" height="350" key="GridCell.Tab.0.center/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1690877693268" />
-    <state width="1899" height="245" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1690449102625" />
-    <state width="2554" height="350" key="GridCell.Tab.0.left" timestamp="1690877693268">
-      <screen x="0" y="0" width="2560" height="1392" />
-    </state>
-    <state width="2554" height="350" key="GridCell.Tab.0.left/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1690877693268" />
-    <state width="1899" height="245" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1690449102625" />
-    <state width="2554" height="350" key="GridCell.Tab.0.right" timestamp="1690877693268">
-      <screen x="0" y="0" width="2560" height="1392" />
-    </state>
-    <state width="2554" height="350" key="GridCell.Tab.0.right/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1690877693268" />
-    <state width="1899" height="245" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1690449102625" />
-    <state x="-1309" y="791" width="1095" height="708" key="SettingsEditor" timestamp="1690361934317">
-      <screen x="-1920" y="611" width="1920" height="1032" />
-    </state>
-    <state x="-1309" y="791" width="1095" height="708" key="SettingsEditor/-1920.611.1920.1032/0.0.2560.1392@-1920.611.1920.1032" timestamp="1690361934317" />
-    <state x="815" y="243" width="1459" height="711" key="SettingsEditor/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1690361478434" />
-    <state x="461" y="160" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1688095590608" />
-    <state x="872" y="415" key="Vcs.Push.Dialog.v2" timestamp="1689819994998">
-      <screen x="0" y="0" width="2560" height="1392" />
-    </state>
-    <state x="872" y="415" key="Vcs.Push.Dialog.v2/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1689819994998" />
-    <state x="982" y="404" width="596" height="584" key="find.popup" timestamp="1690882224950">
-      <screen x="0" y="0" width="2560" height="1392" />
-    </state>
-    <state x="982" y="404" width="596" height="584" key="find.popup/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1690882224950" />
-    <state x="1261" y="407" key="jetbrains.nodejs.interpreters-dialog" timestamp="1690360734909">
-      <screen x="0" y="0" width="2560" height="1392" />
-    </state>
-    <state x="1261" y="407" key="jetbrains.nodejs.interpreters-dialog/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1690360734909" />
-    <state x="943" y="313" width="672" height="678" key="search.everywhere.popup" timestamp="1690188969663">
-      <screen x="0" y="0" width="2560" height="1392" />
-    </state>
-    <state x="943" y="313" width="672" height="678" key="search.everywhere.popup/-1920.611.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1690188969663" />
+    <option name="version" value="3" />
   </component>
 </project>

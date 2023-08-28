@@ -1,7 +1,7 @@
 import { Options } from 'vue-class-component';
 import template from "./user-routers-views.vue";
 import BaseVue from '@/utils/base-vue';
-import RouterViews from '@/components/router-views';
+import RouterViews from '../router-views';
 @Options({
     mixins: [template],
     name: 'UserRouters',

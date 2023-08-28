@@ -2,9 +2,12 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import "@/assets/css/unisUi.css";
-import "@/assets/css/layouts.css";
-import "@/assets/css/theme.css";
+// import "@/assets/css/unisUi.css";
+// import "@/assets/css/layouts.css";
+// import "@/assets/css/theme.css";
+
+
+import "@/assets/css/tailwind.css";
 import plugin from "@/utils/plugin";
 import { loding, butloding } from "@/directives/loding";
 const app = createApp(App);

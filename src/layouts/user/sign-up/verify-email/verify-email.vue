@@ -3,7 +3,7 @@
         <div class="d-flex" style="height: 100%; position: relative">
             <div class="col-8 media-pl-80 col-media pr-0" >
                 <div class="d-flex media-t-4 align-items-center pl-2">
-                    <img src="@/assets/img/portal/logon.svg" alt=""/>
+<!--                    <img src="@/assets/img/portal/logon.svg" alt=""/>-->
                     <span class="media-d-no" v-if="!isSwitchComplete" >
                         <span style="color: #777879" @click="linkBusiness()" class="cursor-p"
                               :class="{'login-up-link':isSwitchWelcomeToUnis}"  >About you</span>&nbsp;&nbsp;

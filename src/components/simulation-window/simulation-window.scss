@@ -1,0 +1,74 @@
+.bg-grid-slate-900\/\[0\.04\] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")
+}
+.\[mask-image\:linear-gradient\(0deg\2c transparent\2c black\)\] {
+  -webkit-mask-image: linear-gradient(0deg,#0000,#000);
+  mask-image: linear-gradient(0deg,#0000,#000);
+}
+@media (min-width: 720px){
+  .demo-sm\:-mt-2\.5 {
+    margin-top: -0.625rem;
+  }
+
+  .demo-sm\:-mt-24 {
+    margin-top: -24px;
+  }
+
+}
+.drag-input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  margin: 5px 0;
+  cursor: ew-resize !important;
+}
+
+.drag-input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 6px;
+  height: 32px;
+  background: #64748b99;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.drag-input[type="range"]:hover::-webkit-slider-thumb,
+.drag-input[type="range"]:focus::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+
+.drag-input[type="range"]:hover::-moz-range-thumb,
+.drag-input[type="range"]:focus::-moz-range-thumb {
+  transform: scale(1.2);
+}
+
+
+.drag-input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 32px;
+  cursor: pointer;
+  background: none;
+  border-radius: 6px;
+}
+
+.drag-input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: none;
+  border-radius: 6px;
+}
+
+.drag-input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: none;
+}
+.drag-input[type="range"]:active::-webkit-slider-runnable-track {
+  background: none;
+}
